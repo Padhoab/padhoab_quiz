@@ -29,6 +29,12 @@ text-align:center;
 color:#1e3a8a;
 }
 
+.timer{
+color:red;
+font-weight:bold;
+text-align:right;
+}
+
 .panel button{
 width:40px;
 height:40px;
@@ -54,16 +60,6 @@ background:#dbeafe;
 
 .selected{
 background:#2563eb;
-color:white;
-}
-
-.correct{
-background:#22c55e;
-color:white;
-}
-
-.wrong{
-background:#ef4444;
 color:white;
 }
 
@@ -106,6 +102,8 @@ let answers=[];
 let userName="";
 let subject="";
 let dataAll=[];
+let timer;
+let timeLeft=60;
 
 const qAPI =
 "https://sheetdb.io/api/v1/yqs4b4igymmwc";
@@ -194,7 +192,31 @@ answers.push(null);
 
 }
 
+timeLeft=60;
+
 showQuizUI();
+
+startTimer();
+
+}
+
+
+function startTimer(){
+
+timer=setInterval(()=>{
+
+timeLeft--;
+
+document.getElementById("timer").innerHTML=
+"Time: "+timeLeft;
+
+if(timeLeft<=0){
+
+submitTest();
+
+}
+
+},1000);
 
 }
 
@@ -204,6 +226,8 @@ function showQuizUI(){
 let html="";
 
 html+="<h2>"+subject+" Quiz</h2>";
+
+html+="<div class='timer' id='timer'></div>";
 
 html+="<div id='panel' class='panel'></div>";
 
@@ -310,6 +334,8 @@ load();
 
 async function submitTest(){
 
+clearInterval(timer);
+
 let score=0;
 
 for(let i=0;i<quiz.length;i++){
@@ -341,18 +367,22 @@ time:new Date().toLocaleString()
 
 });
 
-showLeaderboard();
+showResult(score);
 
 }
 
 
-async function showLeaderboard(){
+async function showResult(score){
 
 let res=await fetch(rAPI);
 
 let data=await res.json();
 
-let html="<h2>"+subject+" Leaderboard</h2>";
+let html="<h2>Result</h2>";
+
+html+="Your Score: "+score+" / "+quiz.length+"<br><br>";
+
+html+="<h3>"+subject+" Leaderboard</h3>";
 
 for(let i=0;i<data.length;i++){
 
