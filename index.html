@@ -63,20 +63,18 @@ let url =
 let res = await fetch(url);
 let text = await res.text();
 
-let rows = text.split("\n");
+let rows = text.trim().split("\n");
 
 for (let i = 1; i < rows.length; i++) {
 
-let cols = rows[i].split(",");
+let cols = rows[i].split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
 
 if (cols.length < 6) continue;
 
 quiz.push({
-
 question: cols[0],
 options: [cols[1], cols[2], cols[3], cols[4]],
 correct: parseInt(cols[5])
-
 });
 
 }
@@ -86,6 +84,8 @@ loadQuestion();
 }
 
 function loadQuestion() {
+
+if (quiz.length == 0) return;
 
 document.getElementById("question").innerHTML =
 quiz[q].question;
@@ -104,12 +104,11 @@ function answer(i) {
 if (i == quiz[q].correct) {
 
 score++;
-
-document.getElementById("result").innerHTML = "Correct";
+document.getElementById("result").innerHTML="Correct";
 
 } else {
 
-document.getElementById("result").innerHTML = "Wrong";
+document.getElementById("result").innerHTML="Wrong";
 
 }
 
