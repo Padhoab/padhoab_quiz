@@ -9,31 +9,81 @@
 
 <style>
 
-body {
-font-family: Arial;
-background:#eef2f7;
+body{
 margin:0;
+font-family:Arial;
+background:#eef2f7;
 }
 
 .container{
-max-width:700px;
+max-width:800px;
 margin:auto;
 background:white;
 padding:15px;
 border-radius:10px;
-margin-top:20px;
+margin-top:10px;
+}
+
+h2{
+text-align:center;
+color:#1e3a8a;
 }
 
 .panel button{
 width:40px;
 height:40px;
 margin:3px;
+border:none;
+border-radius:6px;
+background:#e5e7eb;
 }
 
 .option{
 width:100%;
 padding:10px;
 margin:5px 0;
+border:none;
+border-radius:8px;
+background:#f1f5f9;
+font-size:16px;
+}
+
+.option:hover{
+background:#dbeafe;
+}
+
+.selected{
+background:#2563eb;
+color:white;
+}
+
+.correct{
+background:#22c55e;
+color:white;
+}
+
+.wrong{
+background:#ef4444;
+color:white;
+}
+
+.nav button{
+padding:10px;
+margin:5px;
+background:#2563eb;
+color:white;
+border:none;
+border-radius:6px;
+}
+
+.subjectBtn{
+padding:10px;
+margin:5px;
+background:#2563eb;
+color:white;
+border:none;
+border-radius:6px;
+width:100%;
 }
 
 </style>
@@ -42,7 +92,7 @@ margin:5px 0;
 
 <body>
 
-<div class="container" id="app">
+<div id="app" class="container">
 
 Loading...
 
@@ -100,9 +150,9 @@ let html="<h2>Select Subject</h2>";
 for(let i=0;i<subjects.length;i++){
 
 html+=
-"<button onclick=\"selectSubject('"+subjects[i]+"')\">"+
+"<button class='subjectBtn' onclick=\"selectSubject('"+subjects[i]+"')\">"+
 subjects[i]+
-"</button><br>";
+"</button>";
 
 }
 
@@ -153,7 +203,9 @@ function showQuizUI(){
 
 let html="";
 
-html+="<div id='panel'></div>";
+html+="<h2>"+subject+" Quiz</h2>";
+
+html+="<div id='panel' class='panel'></div>";
 
 html+="<h3 id='qno'></h3>";
 
@@ -164,11 +216,11 @@ html+="<button class='option' id='b1' onclick='answer(1)'></button>";
 html+="<button class='option' id='b2' onclick='answer(2)'></button>";
 html+="<button class='option' id='b3' onclick='answer(3)'></button>";
 
-html+="<br>";
-
+html+="<div class='nav'>";
 html+="<button onclick='prev()'>Prev</button>";
 html+="<button onclick='next()'>Next</button>";
 html+="<button onclick='submitTest()'>Submit</button>";
+html+="</div>";
 
 document.getElementById("app").innerHTML=html;
 
@@ -206,15 +258,21 @@ p.appendChild(b);
 function load(){
 
 document.getElementById("qno").innerHTML=
-subject+" Q "+(q+1)+" / "+quiz.length;
+"Question "+(q+1)+" / "+quiz.length;
 
 document.getElementById("question").innerHTML=
 quiz[q].question;
 
 for(let i=0;i<4;i++){
 
-document.getElementById("b"+i).innerHTML=
-quiz[q].options[i];
+let b=document.getElementById("b"+i);
+
+b.className="option";
+
+b.innerHTML=quiz[q].options[i];
+
+if(answers[q]==i)
+b.classList.add("selected");
 
 }
 
@@ -224,6 +282,8 @@ quiz[q].options[i];
 function answer(i){
 
 answers[q]=i;
+
+load();
 
 }
 
