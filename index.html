@@ -76,8 +76,8 @@ background:#f8fafc;
 margin-top:10px;
 }
 
-.correct{color:green;font-weight:bold}
-.wrong{color:red;font-weight:bold}
+.correct{color:green}
+.wrong{color:red}
 .final{color:purple;font-weight:bold}
 
 </style>
@@ -101,6 +101,7 @@ let dataAll=[];
 let userName="";
 let exam="";
 let subject="";
+let topic="";
 let timer;
 let timeLeft=60;
 
@@ -116,13 +117,10 @@ function getTelegramUser(){
 try{
 
 let tg = window.Telegram.WebApp;
-
 let user = tg.initDataUnsafe.user;
 
 if(user){
-
 return user.username || user.first_name;
-
 }
 
 }catch(e){}
@@ -213,6 +211,44 @@ function selectSubject(s){
 
 subject=s;
 
+let topics=[];
+
+for(let i=0;i<dataAll.length;i++){
+
+if(
+dataAll[i].Exam==exam &&
+dataAll[i].Subject==subject
+){
+
+let t=dataAll[i].Topic;
+
+if(!topics.includes(t))
+topics.push(t);
+
+}
+
+}
+
+let html="<h2>Select Topic</h2>";
+
+for(let i=0;i<topics.length;i++){
+
+html+=
+"<button class='subjectBtn' onclick=\"selectTopic('"+topics[i]+"')\">"+
+topics[i]+
+"</button>";
+
+}
+
+app.innerHTML=html;
+
+}
+
+
+function selectTopic(t){
+
+topic=t;
+
 quiz=[];
 answers=[];
 q=0;
@@ -221,7 +257,8 @@ for(let i=0;i<dataAll.length;i++){
 
 if(
 dataAll[i].Exam==exam &&
-dataAll[i].Subject==subject
+dataAll[i].Subject==subject &&
+dataAll[i].Topic==topic
 ){
 
 quiz.push({
@@ -274,7 +311,7 @@ function showQuiz(){
 
 let html="";
 
-html+="<h2>"+exam+" - "+subject+"</h2>";
+html+="<h2>"+exam+" - "+subject+" - "+topic+"</h2>";
 
 html+="<div>User: "+userName+"</div>";
 
@@ -406,6 +443,7 @@ score:final,
 total:quiz.length,
 exam:exam,
 subject:subject,
+topic:topic,
 time:new Date().toLocaleString()
 }
 
@@ -430,8 +468,8 @@ html+="<div class='resultBox'>";
 
 html+="Correct: <span class='correct'>"+c+"</span><br>";
 html+="Wrong: <span class='wrong'>"+w+"</span><br>";
-html+="Raw Marks: "+raw+"<br>";
-html+="Final Marks: <span class='final'>"+final+"</span>";
+html+="Raw: "+raw+"<br>";
+html+="Final: <span class='final'>"+final+"</span>";
 
 html+="</div>";
 
@@ -441,7 +479,8 @@ for(let i=0;i<data.length;i++){
 
 if(
 data[i].exam==exam &&
-data[i].subject==subject
+data[i].subject==subject &&
+data[i].topic==topic
 ){
 
 html+=
