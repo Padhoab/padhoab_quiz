@@ -1,3 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Padhoab Quiz</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body {
+font-family: Arial;
+background:#eef2f7;
+margin:0;
+}
+
+.container{
+max-width:700px;
+margin:auto;
+background:white;
+padding:15px;
+border-radius:10px;
+margin-top:20px;
+}
+
+.panel button{
+width:40px;
+height:40px;
+margin:3px;
+}
+
+.option{
+width:100%;
+padding:10px;
+margin:5px 0;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container" id="app">
+
+Loading...
+
+</div>
+
 <script>
 
 let q=0;
@@ -13,15 +63,14 @@ const qAPI =
 const rAPI =
 "https://sheetdb.io/api/v1/qejobk1s0ferj?sheet=results";
 
+
 async function start(){
 
 userName = prompt("Enter Name");
 
 if(!userName){
-
 start();
 return;
-
 }
 
 let res = await fetch(qAPI);
@@ -32,44 +81,47 @@ showSubjects();
 
 }
 
+
 function showSubjects(){
 
-let subjects = [];
+let subjects=[];
 
 for(let i=0;i<dataAll.length;i++){
 
-let s = dataAll[i].subject;
+let s=dataAll[i].Subject;
 
-if(!subjects.includes(s)){
-
+if(!subjects.includes(s))
 subjects.push(s);
 
 }
 
-}
-
-let html = "<h2>Select Subject</h2>";
+let html="<h2>Select Subject</h2>";
 
 for(let i=0;i<subjects.length;i++){
 
-html +=
-"<button onclick=\"selectSubject('"+subjects[i]+"')\">"
-+ subjects[i] +
+html+=
+"<button onclick=\"selectSubject('"+subjects[i]+"')\">"+
+subjects[i]+
 "</button><br>";
 
 }
 
-document.body.innerHTML = html;
+document.getElementById("app").innerHTML=html;
 
 }
 
+
 function selectSubject(s){
 
-subject = s;
+subject=s;
+
+quiz=[];
+answers=[];
+q=0;
 
 for(let i=0;i<dataAll.length;i++){
 
-if(dataAll[i].subject == subject){
+if(dataAll[i].Subject==subject){
 
 quiz.push({
 
@@ -96,34 +148,36 @@ showQuizUI();
 
 }
 
+
 function showQuizUI(){
 
-document.body.innerHTML = `
+let html="";
 
-<div id="panel"></div>
+html+="<div id='panel'></div>";
 
-<h3 id="qno"></h3>
+html+="<h3 id='qno'></h3>";
 
-<p id="question"></p>
+html+="<p id='question'></p>";
 
-<button id="b0" onclick="answer(0)"></button>
-<button id="b1" onclick="answer(1)"></button>
-<button id="b2" onclick="answer(2)"></button>
-<button id="b3" onclick="answer(3)"></button>
+html+="<button class='option' id='b0' onclick='answer(0)'></button>";
+html+="<button class='option' id='b1' onclick='answer(1)'></button>";
+html+="<button class='option' id='b2' onclick='answer(2)'></button>";
+html+="<button class='option' id='b3' onclick='answer(3)'></button>";
 
-<br><br>
+html+="<br>";
 
-<button onclick="prev()">Prev</button>
-<button onclick="next()">Next</button>
-<button onclick="submitTest()">Submit</button>
+html+="<button onclick='prev()'>Prev</button>";
+html+="<button onclick='next()'>Next</button>";
+html+="<button onclick='submitTest()'>Submit</button>";
 
-`;
+document.getElementById("app").innerHTML=html;
 
 createPanel();
 
 load();
 
 }
+
 
 function createPanel(){
 
@@ -148,22 +202,24 @@ p.appendChild(b);
 
 }
 
+
 function load(){
 
-document.getElementById("qno").innerHTML =
-subject + " Q"+(q+1);
+document.getElementById("qno").innerHTML=
+subject+" Q "+(q+1)+" / "+quiz.length;
 
-document.getElementById("question").innerHTML =
+document.getElementById("question").innerHTML=
 quiz[q].question;
 
 for(let i=0;i<4;i++){
 
-document.getElementById("b"+i).innerHTML =
+document.getElementById("b"+i).innerHTML=
 quiz[q].options[i];
 
 }
 
 }
+
 
 function answer(i){
 
@@ -171,27 +227,26 @@ answers[q]=i;
 
 }
 
+
 function next(){
 
 if(q<quiz.length-1){
-
 q++;
 load();
-
 }
 
 }
+
 
 function prev(){
 
 if(q>0){
-
 q--;
 load();
-
 }
 
 }
+
 
 async function submitTest(){
 
@@ -230,6 +285,7 @@ showLeaderboard();
 
 }
 
+
 async function showLeaderboard(){
 
 let res=await fetch(rAPI);
@@ -242,17 +298,25 @@ for(let i=0;i<data.length;i++){
 
 if(data[i].subject==subject){
 
-html+=data[i].name+
-" - "+data[i].score+"<br>";
+html+=
+data[i].name+
+" - "+
+data[i].score+
+"<br>";
 
 }
 
 }
 
-document.body.innerHTML=html;
+document.getElementById("app").innerHTML=html;
 
 }
+
 
 start();
 
 </script>
+
+</body>
+
+</html>
