@@ -2,7 +2,6 @@
 <html>
 
 <head>
-
 <title>Padhoab Quiz</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -81,7 +80,7 @@ data[i].op3,
 data[i].op4
 ],
 
-correct: Number(data[i].correct)
+correct: parseInt(data[i].correct)   // FIX HERE
 
 });
 
@@ -92,6 +91,8 @@ load();
 }
 
 function load() {
+
+if (quiz.length == 0) return;
 
 document.getElementById("question").innerHTML =
 quiz[q].question;
@@ -107,7 +108,7 @@ quiz[q].options[i];
 
 function answer(i) {
 
-if (i == quiz[q].correct) {
+if (i === quiz[q].correct) {
 
 score++;
 
