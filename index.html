@@ -5,49 +5,84 @@ let quiz=[];
 let answers=[];
 let userName="";
 let subject="";
-let timer;
-let timeLeft=60;
+let dataAll=[];
 
-const qAPI=
+const qAPI =
 "https://sheetdb.io/api/v1/yqs4b4igymmwc";
 
-const rAPI=
+const rAPI =
 "https://sheetdb.io/api/v1/qejobk1s0ferj?sheet=results";
 
-async function login(){
+async function start(){
 
-userName=prompt("Enter Name");
+userName = prompt("Enter Name");
 
-subject=prompt("Enter Subject");
+if(!userName){
 
-if(!userName||!subject) login();
+start();
+return;
 
 }
 
-async function loadSheet(){
+let res = await fetch(qAPI);
 
-await login();
+dataAll = await res.json();
 
-let res=await fetch(qAPI);
+showSubjects();
 
-let data=await res.json();
+}
 
-for(let i=0;i<data.length;i++){
+function showSubjects(){
 
-if(data[i].subject==subject){
+let subjects = [];
+
+for(let i=0;i<dataAll.length;i++){
+
+let s = dataAll[i].subject;
+
+if(!subjects.includes(s)){
+
+subjects.push(s);
+
+}
+
+}
+
+let html = "<h2>Select Subject</h2>";
+
+for(let i=0;i<subjects.length;i++){
+
+html +=
+"<button onclick=\"selectSubject('"+subjects[i]+"')\">"
++ subjects[i] +
+"</button><br>";
+
+}
+
+document.body.innerHTML = html;
+
+}
+
+function selectSubject(s){
+
+subject = s;
+
+for(let i=0;i<dataAll.length;i++){
+
+if(dataAll[i].subject == subject){
 
 quiz.push({
 
-question:data[i].question,
+question:dataAll[i].question,
 
 options:[
-data[i].op1,
-data[i].op2,
-data[i].op3,
-data[i].op4
+dataAll[i].op1,
+dataAll[i].op2,
+dataAll[i].op3,
+dataAll[i].op4
 ],
 
-correct:parseInt(data[i].correct)
+correct:parseInt(dataAll[i].correct)
 
 });
 
@@ -57,27 +92,36 @@ answers.push(null);
 
 }
 
-startTimer();
+showQuizUI();
+
+}
+
+function showQuizUI(){
+
+document.body.innerHTML = `
+
+<div id="panel"></div>
+
+<h3 id="qno"></h3>
+
+<p id="question"></p>
+
+<button id="b0" onclick="answer(0)"></button>
+<button id="b1" onclick="answer(1)"></button>
+<button id="b2" onclick="answer(2)"></button>
+<button id="b3" onclick="answer(3)"></button>
+
+<br><br>
+
+<button onclick="prev()">Prev</button>
+<button onclick="next()">Next</button>
+<button onclick="submitTest()">Submit</button>
+
+`;
 
 createPanel();
 
 load();
-
-}
-
-function startTimer(){
-
-timeLeft=60;
-
-timer=setInterval(()=>{
-
-timeLeft--;
-
-document.getElementById("timer").innerHTML=timeLeft;
-
-if(timeLeft<=0) submitTest();
-
-},1000);
 
 }
 
@@ -106,15 +150,15 @@ p.appendChild(b);
 
 function load(){
 
-document.getElementById("qno").innerHTML=
-subject+" Q"+(q+1);
+document.getElementById("qno").innerHTML =
+subject + " Q"+(q+1);
 
-document.getElementById("question").innerHTML=
+document.getElementById("question").innerHTML =
 quiz[q].question;
 
 for(let i=0;i<4;i++){
 
-document.getElementById("b"+i).innerHTML=
+document.getElementById("b"+i).innerHTML =
 quiz[q].options[i];
 
 }
@@ -150,8 +194,6 @@ load();
 }
 
 async function submitTest(){
-
-clearInterval(timer);
 
 let score=0;
 
@@ -211,6 +253,6 @@ document.body.innerHTML=html;
 
 }
 
-loadSheet();
+start();
 
 </script>
