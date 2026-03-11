@@ -100,14 +100,10 @@ quiz[q].options[i];
 function answer(i) {
 
 if (i == quiz[q].correct) {
-
 score++;
 document.getElementById("result").innerHTML="Correct";
-
 } else {
-
 document.getElementById("result").innerHTML="Wrong";
-
 }
 
 }
@@ -117,15 +113,11 @@ function next() {
 q++;
 
 if (q < quiz.length) {
-
 load();
 document.getElementById("result").innerHTML="";
-
 } else {
-
 document.getElementById("question").innerHTML =
 "Finished Score = " + score;
-
 }
 
 }
