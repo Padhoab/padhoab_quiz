@@ -92,23 +92,23 @@ background: #dbeafe;
 
 }
 
+.selected {
+
+background: #2563eb;
+color: white;
+
+}
+
 .correct {
 
-background: #22c55e !important;
+background: #22c55e;
 color: white;
 
 }
 
 .wrong {
 
-background: #ef4444 !important;
-color: white;
-
-}
-
-.selected {
-
-background: #2563eb;
+background: #ef4444;
 color: white;
 
 }
@@ -117,7 +117,6 @@ color: white;
 
 background: #2563eb;
 color: white;
-margin-top: 10px;
 
 }
 
@@ -125,6 +124,19 @@ margin-top: 10px;
 
 color: red;
 font-weight: bold;
+
+}
+
+.navButtons {
+
+display: flex;
+gap: 5px;
+
+}
+
+.navButtons button {
+
+flex: 1;
 
 }
 
@@ -154,7 +166,13 @@ font-weight: bold;
 <button class="option" id="b2" onclick="answer(2)"></button>
 <button class="option" id="b3" onclick="answer(3)"></button>
 
-<button class="next" onclick="next()">Next</button>
+<div class="navButtons">
+
+<button onclick="prev()">Previous</button>
+<button onclick="next()">Next</button>
+<button onclick="submitTest()">Submit</button>
+
+</div>
 
 </div>
 
@@ -162,6 +180,8 @@ font-weight: bold;
 
 let q = 0;
 let score = 0;
+let wrong = 0;
+let answers = [];
 let quiz = [];
 let timer = 15;
 let interval;
@@ -190,6 +210,8 @@ data[i].op4
 correct: parseInt(data[i].correct)
 
 });
+
+answers.push(null);
 
 }
 
@@ -231,6 +253,44 @@ b.className = "option";
 
 b.innerHTML = quiz[q].options[i];
 
+if (answers[q] == i) {
+
+b.classList.add("selected");
+
+}
+
+}
+
+}
+
+function answer(i) {
+
+answers[q] = i;
+
+load();
+
+}
+
+function next() {
+
+if (q < quiz.length-1) {
+
+q++;
+
+load();
+
+}
+
+}
+
+function prev() {
+
+if (q > 0) {
+
+q--;
+
+load();
+
 }
 
 }
@@ -245,53 +305,45 @@ percent + "%";
 
 }
 
-function answer(i) {
+function submitTest() {
 
-clearInterval(interval);
+score = 0;
+wrong = 0;
 
-for (let x = 0; x < 4; x++) {
+let attempted = 0;
 
-document.getElementById("b"+x).classList.remove(
-"selected","correct","wrong"
-);
+for (let i = 0; i < quiz.length; i++) {
 
-}
+if (answers[i] != null) {
 
-document.getElementById("b"+i).classList.add("selected");
+attempted++;
 
-if (i === quiz[q].correct) {
+if (answers[i] == quiz[i].correct) {
 
 score++;
 
-document.getElementById("b"+i).classList.add("correct");
-
 } else {
 
-document.getElementById("b"+i).classList.add("wrong");
-
-document
-.getElementById("b"+quiz[q].correct)
-.classList.add("correct");
+wrong++;
+score -= 0.33;
 
 }
 
 }
 
-function next() {
-
-q++;
-
-if (q < quiz.length) {
-
-load();
-
-} else {
+}
 
 document.querySelector(".container").innerHTML =
 
-"<h2>Finished</h2><h3>Score = " + score + "</h3>";
+"<h2>Result</h2>" +
 
-}
+"<p>Total: " + quiz.length + "</p>" +
+
+"<p>Attempted: " + attempted + "</p>" +
+
+"<p>Wrong: " + wrong + "</p>" +
+
+"<h3>Score: " + score.toFixed(2) + "</h3>";
 
 }
 
