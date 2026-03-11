@@ -2,6 +2,7 @@
 <html>
 
 <head>
+
 <title>Padhoab Quiz</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,24 +10,122 @@
 <style>
 
 body {
-font-family: Arial;
-background: #f2f2f2;
-text-align: center;
+margin: 0;
+font-family: Arial, sans-serif;
+background: #eef2f7;
 }
 
 .container {
+
+max-width: 500px;
+margin: 20px auto;
 background: white;
-padding: 20px;
-margin: 20px;
-border-radius: 10px;
+padding: 15px;
+border-radius: 12px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+}
+
+h2 {
+
+text-align: center;
+color: #1e3a8a;
+
+}
+
+#progressBar {
+
+height: 8px;
+background: #e5e7eb;
+border-radius: 5px;
+margin-bottom: 10px;
+
+}
+
+#progress {
+
+height: 8px;
+background: #2563eb;
+width: 0%;
+border-radius: 5px;
+
+}
+
+#topRow {
+
+display: flex;
+justify-content: space-between;
+font-size: 14px;
+margin-bottom: 10px;
+
+}
+
+#question {
+
+font-size: 18px;
+margin: 10px 0;
+font-weight: bold;
+
 }
 
 button {
-display: block;
+
 width: 100%;
-margin: 5px;
-padding: 10px;
+padding: 12px;
+margin: 6px 0;
+border-radius: 8px;
+border: none;
 font-size: 16px;
+cursor: pointer;
+
+}
+
+.option {
+
+background: #f1f5f9;
+
+}
+
+.option:hover {
+
+background: #dbeafe;
+
+}
+
+.correct {
+
+background: #22c55e !important;
+color: white;
+
+}
+
+.wrong {
+
+background: #ef4444 !important;
+color: white;
+
+}
+
+.selected {
+
+background: #2563eb;
+color: white;
+
+}
+
+.next {
+
+background: #2563eb;
+color: white;
+margin-top: 10px;
+
+}
+
+.timer {
+
+color: red;
+font-weight: bold;
+
 }
 
 </style>
@@ -37,18 +136,25 @@ font-size: 16px;
 
 <div class="container">
 
-<h2>Padhoab Daily Quiz</h2>
+<h2>Padhoab Quiz</h2>
+
+<div id="progressBar">
+<div id="progress"></div>
+</div>
+
+<div id="topRow">
+<div id="qno">Q1</div>
+<div class="timer" id="timer">15</div>
+</div>
 
 <p id="question">Loading...</p>
 
-<button id="b0" onclick="answer(0)"></button>
-<button id="b1" onclick="answer(1)"></button>
-<button id="b2" onclick="answer(2)"></button>
-<button id="b3" onclick="answer(3)"></button>
+<button class="option" id="b0" onclick="answer(0)"></button>
+<button class="option" id="b1" onclick="answer(1)"></button>
+<button class="option" id="b2" onclick="answer(2)"></button>
+<button class="option" id="b3" onclick="answer(3)"></button>
 
-<p id="result"></p>
-
-<button onclick="next()">Next</button>
+<button class="next" onclick="next()">Next</button>
 
 </div>
 
@@ -57,6 +163,8 @@ font-size: 16px;
 let q = 0;
 let score = 0;
 let quiz = [];
+let timer = 15;
+let interval;
 
 async function loadSheet() {
 
@@ -64,7 +172,6 @@ let url =
 "https://sheetdb.io/api/v1/yqs4b4igymmwc";
 
 let res = await fetch(url);
-
 let data = await res.json();
 
 for (let i = 0; i < data.length; i++) {
@@ -80,7 +187,7 @@ data[i].op3,
 data[i].op4
 ],
 
-correct: parseInt(data[i].correct)   // FIX HERE
+correct: parseInt(data[i].correct)
 
 });
 
@@ -92,33 +199,79 @@ load();
 
 function load() {
 
-if (quiz.length == 0) return;
+clearInterval(interval);
+
+timer = 15;
+
+document.getElementById("timer").innerHTML = timer;
+
+interval = setInterval(() => {
+
+timer--;
+
+document.getElementById("timer").innerHTML = timer;
+
+if (timer == 0) next();
+
+},1000);
+
+updateProgress();
+
+document.getElementById("qno").innerHTML =
+"Q " + (q+1) + " / " + quiz.length;
 
 document.getElementById("question").innerHTML =
 quiz[q].question;
 
 for (let i = 0; i < 4; i++) {
 
-document.getElementById("b"+i).innerHTML =
-quiz[q].options[i];
+let b = document.getElementById("b"+i);
+
+b.className = "option";
+
+b.innerHTML = quiz[q].options[i];
 
 }
+
+}
+
+function updateProgress() {
+
+let percent =
+((q) / quiz.length) * 100;
+
+document.getElementById("progress").style.width =
+percent + "%";
 
 }
 
 function answer(i) {
 
+clearInterval(interval);
+
+for (let x = 0; x < 4; x++) {
+
+document.getElementById("b"+x).classList.remove(
+"selected","correct","wrong"
+);
+
+}
+
+document.getElementById("b"+i).classList.add("selected");
+
 if (i === quiz[q].correct) {
 
 score++;
 
-document.getElementById("result").innerHTML =
-"Correct";
+document.getElementById("b"+i).classList.add("correct");
 
 } else {
 
-document.getElementById("result").innerHTML =
-"Wrong";
+document.getElementById("b"+i).classList.add("wrong");
+
+document
+.getElementById("b"+quiz[q].correct)
+.classList.add("correct");
 
 }
 
@@ -132,12 +285,11 @@ if (q < quiz.length) {
 
 load();
 
-document.getElementById("result").innerHTML = "";
-
 } else {
 
-document.getElementById("question").innerHTML =
-"Finished. Score = " + score;
+document.querySelector(".container").innerHTML =
+
+"<h2>Finished</h2><h3>Score = " + score + "</h3>";
 
 }
 
