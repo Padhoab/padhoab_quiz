@@ -82,6 +82,34 @@ border-radius:6px;
 width:100%;
 }
 
+.resultBox{
+padding:15px;
+margin-top:10px;
+border-radius:8px;
+background:#f8fafc;
+}
+
+.correct{
+color:#16a34a;
+font-weight:bold;
+}
+
+.wrong{
+color:#dc2626;
+font-weight:bold;
+}
+
+.raw{
+color:#1d4ed8;
+font-weight:bold;
+}
+
+.final{
+color:#7c3aed;
+font-weight:bold;
+font-size:18px;
+}
+
 </style>
 
 </head>
@@ -336,14 +364,28 @@ async function submitTest(){
 
 clearInterval(timer);
 
-let score=0;
+let correct=0;
+let wrong=0;
+let attempted=0;
 
 for(let i=0;i<quiz.length;i++){
 
+if(answers[i]!=null){
+
+attempted++;
+
 if(answers[i]==quiz[i].correct)
-score++;
+correct++;
+
+else
+wrong++;
 
 }
+
+}
+
+let rawMarks = correct;
+let finalMarks = (correct - (wrong*0.33)).toFixed(2);
 
 await fetch(rAPI,{
 
@@ -357,7 +399,7 @@ body:JSON.stringify({
 
 data:{
 name:userName,
-score:score,
+score:finalMarks,
 total:quiz.length,
 subject:subject,
 time:new Date().toLocaleString()
@@ -367,12 +409,12 @@ time:new Date().toLocaleString()
 
 });
 
-showResult(score);
+showResult(correct,wrong,rawMarks,finalMarks);
 
 }
 
 
-async function showResult(score){
+async function showResult(correct,wrong,rawMarks,finalMarks){
 
 let res=await fetch(rAPI);
 
@@ -380,7 +422,14 @@ let data=await res.json();
 
 let html="<h2>Result</h2>";
 
-html+="Your Score: "+score+" / "+quiz.length+"<br><br>";
+html+="<div class='resultBox'>";
+
+html+="Correct: <span class='correct'>"+correct+"</span><br>";
+html+="Incorrect: <span class='wrong'>"+wrong+"</span><br>";
+html+="Raw Marks: <span class='raw'>"+rawMarks+"</span><br>";
+html+="Final Marks: <span class='final'>"+finalMarks+"</span>";
+
+html+="</div>";
 
 html+="<h3>"+subject+" Leaderboard</h3>";
 
@@ -388,11 +437,7 @@ for(let i=0;i<data.length;i++){
 
 if(data[i].subject==subject){
 
-html+=
-data[i].name+
-" - "+
-data[i].score+
-"<br>";
+html+=data[i].name+" - "+data[i].score+"<br>";
 
 }
 
@@ -401,7 +446,6 @@ data[i].score+
 document.getElementById("app").innerHTML=html;
 
 }
-
 
 start();
 
