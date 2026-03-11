@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Padhoab Quiz</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+  font-family: Arial;
+  background: #f2f2f2;
+  text-align: center;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  margin: 5px;
+  padding: 10px;
+  font-size: 16px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Padhoab Daily Quiz</h2>
+
+<p id="question">Who is PM of India?</p>
+
+<button onclick="check(1)">Narendra Modi</button>
+<button onclick="check(0)">Rahul Gandhi</button>
+<button onclick="check(0)">Amit Shah</button>
+<button onclick="check(0)">Yogi Adityanath</button>
+
+<p id="result"></p>
+
+</div>
+
+<script>
+
+function check(x) {
+  if (x == 1) {
+    document.getElementById("result").innerHTML = "Correct ✅";
+  } else {
+    document.getElementById("result").innerHTML = "Wrong ❌";
+  }
+}
+
+</script>
+
+</body>
+</html>
