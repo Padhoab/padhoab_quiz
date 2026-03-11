@@ -58,8 +58,7 @@ let quiz = [];
 async function loadSheet() {
 
 let url =
-"https://docs.google.com/spreadsheets/d/e/2PACX-1vTinxhiXxpng1TdgUWHRoYIoopW4ZuP-Z2MG3DGPVhlZE--AF6poruaYuULnLsgUetIIB5by5d_wgSv/pub?output=csv";
-
+https://docs.google.com/spreadsheets/d/e/2PACX-1vTinxhiXxpng1TdgUWHRoYIoopW4ZuP-Z2MG3DGPVhlZE--AF6poruaYuULnLsgUetIIB5by5d_wgSv/pub?gid=0&single=true&output=csv
 let res = await fetch(url);
 let text = await res.text();
 
