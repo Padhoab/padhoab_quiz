@@ -49,16 +49,48 @@ button {
 <script src="questions.js"></script>
 <script>
 
+<script>
+
 let q = 0;
 let score = 0;
+let quiz = [];
 
+async function loadSheet() {
 
-function load() {
+let url =
+"https://docs.google.com/spreadsheets/d/e/2PACX-1vTinxhiXxpng1TdgUWHRoYIoopW4ZuP-Z2MG3DGPVhlZE--AF6poruaYuULnLsgUetIIB5by5d_wgSv/pub?output=csv";
+
+let res = await fetch(url);
+let text = await res.text();
+
+let rows = text.split("\n");
+
+for (let i = 1; i < rows.length; i++) {
+
+let cols = rows[i].split(",");
+
+if (cols.length < 6) continue;
+
+quiz.push({
+
+question: cols[0],
+options: [cols[1], cols[2], cols[3], cols[4]],
+correct: parseInt(cols[5])
+
+});
+
+}
+
+loadQuestion();
+
+}
+
+function loadQuestion() {
 
 document.getElementById("question").innerHTML =
 quiz[q].question;
 
-for (let i=0;i<4;i++) {
+for (let i = 0; i < 4; i++) {
 
 document.getElementById("b"+i).innerHTML =
 quiz[q].options[i];
@@ -73,13 +105,11 @@ if (i == quiz[q].correct) {
 
 score++;
 
-document.getElementById("result").innerHTML =
-"Correct";
+document.getElementById("result").innerHTML = "Correct";
 
 } else {
 
-document.getElementById("result").innerHTML =
-"Wrong";
+document.getElementById("result").innerHTML = "Wrong";
 
 }
 
@@ -91,7 +121,7 @@ q++;
 
 if (q < quiz.length) {
 
-load();
+loadQuestion();
 document.getElementById("result").innerHTML="";
 
 } else {
@@ -103,9 +133,6 @@ document.getElementById("question").innerHTML =
 
 }
 
-load();
+loadSheet();
 
 </script>
-
-</body>
-</html>
