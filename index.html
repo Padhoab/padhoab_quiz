@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
 <title>Padhoab Quiz</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
+
 body {
-  font-family: Arial;
-  background: #f2f2f2;
-  text-align: center;
+font-family: Arial;
+background: #f2f2f2;
+text-align: center;
 }
 
 .container {
-  background: white;
-  padding: 20px;
-  margin: 20px;
-  border-radius: 10px;
+background: white;
+padding: 20px;
+margin: 20px;
+border-radius: 10px;
 }
 
 button {
-  display: block;
-  width: 100%;
-  margin: 5px;
-  padding: 10px;
-  font-size: 16px;
+display: block;
+width: 100%;
+margin: 5px;
+padding: 10px;
+font-size: 16px;
 }
+
 </style>
+
 </head>
 
 <body>
@@ -34,20 +40,18 @@ button {
 
 <h2>Padhoab Daily Quiz</h2>
 
-<p id="question"></p>
+<p id="question">Loading...</p>
 
-<button onclick="answer(0)" id="b0"></button>
-<button onclick="answer(1)" id="b1"></button>
-<button onclick="answer(2)" id="b2"></button>
-<button onclick="answer(3)" id="b3"></button>
+<button id="b0" onclick="answer(0)"></button>
+<button id="b1" onclick="answer(1)"></button>
+<button id="b2" onclick="answer(2)"></button>
+<button id="b3" onclick="answer(3)"></button>
 
 <p id="result"></p>
 
 <button onclick="next()">Next</button>
 
 </div>
-<script src="questions.js"></script>
-<script>
 
 <script>
 
@@ -58,23 +62,27 @@ let quiz = [];
 async function loadSheet() {
 
 let url =
-"https://docs.google.com/spreadsheets/d/e/2PACX-1vRPEuhITwjotKTuSMwkJCpxxzqmxml3WYiI9VCyVJ26bGBaj0d9LMb9lT27NhMty5TTlD0LxXFvxlYH/pub?output=csv";
+"https://sheetdb.io/api/v1/yqs4b4igymmwc";
 
 let res = await fetch(url);
-let text = await res.text();
 
-let rows = text.trim().split("\n");
+let data = await res.json();
 
-for (let i = 1; i < rows.length; i++) {
-
-let cols = rows[i].split(",");
-
-if (cols.length < 6) continue;
+for (let i = 0; i < data.length; i++) {
 
 quiz.push({
-question: cols[0],
-options: [cols[1], cols[2], cols[3], cols[4]],
-correct: Number(cols[5])
+
+question: data[i].question,
+
+options: [
+data[i].op1,
+data[i].op2,
+data[i].op3,
+data[i].op4
+],
+
+correct: Number(data[i].correct)
+
 });
 
 }
@@ -88,7 +96,7 @@ function load() {
 document.getElementById("question").innerHTML =
 quiz[q].question;
 
-for (let i=0;i<4;i++) {
+for (let i = 0; i < 4; i++) {
 
 document.getElementById("b"+i).innerHTML =
 quiz[q].options[i];
@@ -100,10 +108,17 @@ quiz[q].options[i];
 function answer(i) {
 
 if (i == quiz[q].correct) {
+
 score++;
-document.getElementById("result").innerHTML="Correct";
+
+document.getElementById("result").innerHTML =
+"Correct";
+
 } else {
-document.getElementById("result").innerHTML="Wrong";
+
+document.getElementById("result").innerHTML =
+"Wrong";
+
 }
 
 }
@@ -113,11 +128,16 @@ function next() {
 q++;
 
 if (q < quiz.length) {
+
 load();
-document.getElementById("result").innerHTML="";
+
+document.getElementById("result").innerHTML = "";
+
 } else {
+
 document.getElementById("question").innerHTML =
-"Finished Score = " + score;
+"Finished. Score = " + score;
+
 }
 
 }
@@ -125,3 +145,7 @@ document.getElementById("question").innerHTML =
 loadSheet();
 
 </script>
+
+</body>
+
+</html>
