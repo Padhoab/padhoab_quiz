@@ -1,34 +1,40 @@
 <script>
 
-let q = 0;
-let quiz = [];
-let answers = [];
-let visited = [];
-let userName = "";
+let q=0;
+let quiz=[];
+let answers=[];
+let userName="";
+let subject="";
+let timer;
+let timeLeft=60;
 
-const questionAPI =
+const qAPI=
 "https://sheetdb.io/api/v1/yqs4b4igymmwc";
 
-const resultAPI =
+const rAPI=
 "https://sheetdb.io/api/v1/qejobk1s0ferj?sheet=results";
 
-async function login() {
+async function login(){
 
-userName = prompt("Enter your name");
+userName=prompt("Enter Name");
 
-if (!userName) login();
+subject=prompt("Enter Subject");
+
+if(!userName||!subject) login();
 
 }
 
-async function loadSheet() {
+async function loadSheet(){
 
 await login();
 
-let res = await fetch(questionAPI);
+let res=await fetch(qAPI);
 
-let data = await res.json();
+let data=await res.json();
 
-for (let i=0;i<data.length;i++) {
+for(let i=0;i<data.length;i++){
+
+if(data[i].subject==subject){
 
 quiz.push({
 
@@ -46,12 +52,32 @@ correct:parseInt(data[i].correct)
 });
 
 answers.push(null);
-visited.push(false);
 
 }
 
+}
+
+startTimer();
+
 createPanel();
+
 load();
+
+}
+
+function startTimer(){
+
+timeLeft=60;
+
+timer=setInterval(()=>{
+
+timeLeft--;
+
+document.getElementById("timer").innerHTML=timeLeft;
+
+if(timeLeft<=0) submitTest();
+
+},1000);
 
 }
 
@@ -64,8 +90,6 @@ for(let i=0;i<quiz.length;i++){
 let b=document.createElement("button");
 
 b.innerHTML=i+1;
-
-b.className="notVisited";
 
 b.onclick=()=>{
 
@@ -80,47 +104,18 @@ p.appendChild(b);
 
 }
 
-function updatePanel(){
-
-let p=document.getElementById("panel").children;
-
-for(let i=0;i<quiz.length;i++){
-
-if(answers[i]!=null)
-p[i].className="answered";
-
-else if(visited[i])
-p[i].className="visited";
-
-else
-p[i].className="notVisited";
-
-}
-
-}
-
 function load(){
 
-visited[q]=true;
-
-updatePanel();
-
 document.getElementById("qno").innerHTML=
-"Question "+(q+1)+" / "+quiz.length;
+subject+" Q"+(q+1);
 
 document.getElementById("question").innerHTML=
 quiz[q].question;
 
 for(let i=0;i<4;i++){
 
-let b=document.getElementById("b"+i);
-
-b.className="option";
-
-b.innerHTML=quiz[q].options[i];
-
-if(answers[q]==i)
-b.classList.add("selected");
+document.getElementById("b"+i).innerHTML=
+quiz[q].options[i];
 
 }
 
@@ -129,7 +124,6 @@ b.classList.add("selected");
 function answer(i){
 
 answers[q]=i;
-load();
 
 }
 
@@ -157,6 +151,8 @@ load();
 
 async function submitTest(){
 
+clearInterval(timer);
+
 let score=0;
 
 for(let i=0;i<quiz.length;i++){
@@ -166,9 +162,7 @@ score++;
 
 }
 
-// save result
-
-await fetch(resultAPI,{
+await fetch(rAPI,{
 
 method:"POST",
 
@@ -182,6 +176,7 @@ data:{
 name:userName,
 score:score,
 total:quiz.length,
+subject:subject,
 time:new Date().toLocaleString()
 }
 
@@ -189,7 +184,30 @@ time:new Date().toLocaleString()
 
 });
 
-alert("Score = "+score);
+showLeaderboard();
+
+}
+
+async function showLeaderboard(){
+
+let res=await fetch(rAPI);
+
+let data=await res.json();
+
+let html="<h2>"+subject+" Leaderboard</h2>";
+
+for(let i=0;i<data.length;i++){
+
+if(data[i].subject==subject){
+
+html+=data[i].name+
+" - "+data[i].score+"<br>";
+
+}
+
+}
+
+document.body.innerHTML=html;
 
 }
 
