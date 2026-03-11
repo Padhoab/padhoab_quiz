@@ -35,15 +35,6 @@ font-weight:bold;
 text-align:right;
 }
 
-.panel button{
-width:40px;
-height:40px;
-margin:3px;
-border:none;
-border-radius:6px;
-background:#e5e7eb;
-}
-
 .option{
 width:100%;
 padding:10px;
@@ -63,6 +54,16 @@ background:#2563eb;
 color:white;
 }
 
+.subjectBtn{
+width:100%;
+padding:10px;
+margin:5px;
+background:#2563eb;
+color:white;
+border:none;
+border-radius:6px;
+}
+
 .nav button{
 padding:10px;
 margin:5px;
@@ -72,43 +73,15 @@ border:none;
 border-radius:6px;
 }
 
-.subjectBtn{
-padding:10px;
-margin:5px;
-background:#2563eb;
-color:white;
-border:none;
-border-radius:6px;
-width:100%;
-}
-
 .resultBox{
-padding:15px;
-margin-top:10px;
-border-radius:8px;
+padding:10px;
 background:#f8fafc;
+margin-top:10px;
 }
 
-.correct{
-color:#16a34a;
-font-weight:bold;
-}
-
-.wrong{
-color:#dc2626;
-font-weight:bold;
-}
-
-.raw{
-color:#1d4ed8;
-font-weight:bold;
-}
-
-.final{
-color:#7c3aed;
-font-weight:bold;
-font-size:18px;
-}
+.correct{color:green;font-weight:bold}
+.wrong{color:red;font-weight:bold}
+.final{color:purple;font-weight:bold}
 
 </style>
 
@@ -127,9 +100,10 @@ Loading...
 let q=0;
 let quiz=[];
 let answers=[];
-let userName="";
-let subject="";
 let dataAll=[];
+let userName="";
+let exam="";
+let subject="";
 let timer;
 let timeLeft=60;
 
@@ -144,45 +118,75 @@ async function start(){
 
 userName = prompt("Enter Name");
 
-if(!userName){
-start();
-return;
-}
-
 let res = await fetch(qAPI);
 
 dataAll = await res.json();
 
-showSubjects();
+showExams();
 
 }
 
 
-function showSubjects(){
+function showExams(){
 
-let subjects=[];
+let exams=[];
 
 for(let i=0;i<dataAll.length;i++){
 
+let e=dataAll[i].Exam;
+
+if(!exams.includes(e))
+exams.push(e);
+
+}
+
+let html="<h2>Select Exam</h2>";
+
+for(let i=0;i<exams.length;i++){
+
+html+=
+"<button class='subjectBtn' onclick=\"selectExam('"+exams[i]+"')\">"+
+exams[i]+
+"</button>";
+
+}
+
+app.innerHTML=html;
+
+}
+
+
+function selectExam(e){
+
+exam=e;
+
+let subs=[];
+
+for(let i=0;i<dataAll.length;i++){
+
+if(dataAll[i].Exam==exam){
+
 let s=dataAll[i].Subject;
 
-if(!subjects.includes(s))
-subjects.push(s);
+if(!subs.includes(s))
+subs.push(s);
+
+}
 
 }
 
 let html="<h2>Select Subject</h2>";
 
-for(let i=0;i<subjects.length;i++){
+for(let i=0;i<subs.length;i++){
 
 html+=
-"<button class='subjectBtn' onclick=\"selectSubject('"+subjects[i]+"')\">"+
-subjects[i]+
+"<button class='subjectBtn' onclick=\"selectSubject('"+subs[i]+"')\">"+
+subs[i]+
 "</button>";
 
 }
 
-document.getElementById("app").innerHTML=html;
+app.innerHTML=html;
 
 }
 
@@ -197,7 +201,10 @@ q=0;
 
 for(let i=0;i<dataAll.length;i++){
 
-if(dataAll[i].Subject==subject){
+if(
+dataAll[i].Exam==exam &&
+dataAll[i].Subject==subject
+){
 
 quiz.push({
 
@@ -222,7 +229,7 @@ answers.push(null);
 
 timeLeft=60;
 
-showQuizUI();
+showQuiz();
 
 startTimer();
 
@@ -235,29 +242,23 @@ timer=setInterval(()=>{
 
 timeLeft--;
 
-document.getElementById("timer").innerHTML=
-"Time: "+timeLeft;
+timerBox.innerHTML="Time: "+timeLeft;
 
-if(timeLeft<=0){
-
+if(timeLeft<=0)
 submitTest();
-
-}
 
 },1000);
 
 }
 
 
-function showQuizUI(){
+function showQuiz(){
 
 let html="";
 
-html+="<h2>"+subject+" Quiz</h2>";
+html+="<h2>"+exam+" - "+subject+"</h2>";
 
-html+="<div class='timer' id='timer'></div>";
-
-html+="<div id='panel' class='panel'></div>";
+html+="<div id='timerBox' class='timer'></div>";
 
 html+="<h3 id='qno'></h3>";
 
@@ -274,45 +275,21 @@ html+="<button onclick='next()'>Next</button>";
 html+="<button onclick='submitTest()'>Submit</button>";
 html+="</div>";
 
-document.getElementById("app").innerHTML=html;
+app.innerHTML=html;
 
-createPanel();
+timerBox=document.getElementById("timerBox");
 
 load();
-
-}
-
-
-function createPanel(){
-
-let p=document.getElementById("panel");
-
-for(let i=0;i<quiz.length;i++){
-
-let b=document.createElement("button");
-
-b.innerHTML=i+1;
-
-b.onclick=()=>{
-
-q=i;
-load();
-
-};
-
-p.appendChild(b);
-
-}
 
 }
 
 
 function load(){
 
-document.getElementById("qno").innerHTML=
-"Question "+(q+1)+" / "+quiz.length;
+qno.innerHTML=
+"Q "+(q+1)+" / "+quiz.length;
 
-document.getElementById("question").innerHTML=
+question.innerHTML=
 quiz[q].question;
 
 for(let i=0;i<4;i++){
@@ -334,7 +311,6 @@ b.classList.add("selected");
 function answer(i){
 
 answers[q]=i;
-
 load();
 
 }
@@ -366,17 +342,13 @@ clearInterval(timer);
 
 let correct=0;
 let wrong=0;
-let attempted=0;
 
 for(let i=0;i<quiz.length;i++){
 
 if(answers[i]!=null){
 
-attempted++;
-
 if(answers[i]==quiz[i].correct)
 correct++;
-
 else
 wrong++;
 
@@ -384,8 +356,19 @@ wrong++;
 
 }
 
-let rawMarks = correct;
-let finalMarks = (correct - (wrong*0.33)).toFixed(2);
+let pos=1;
+let neg=0;
+
+if(exam=="UPSC"){pos=2;neg=0.66;}
+else if(exam=="SSC/Railway"){pos=2;neg=0.5;}
+else if(exam=="PCS"){pos=2;neg=0.66;}
+else if(exam=="Law"){pos=1;neg=0;}
+
+let raw=correct*pos;
+
+let final=(correct*pos)-(wrong*neg);
+
+final=final.toFixed(2);
 
 await fetch(rAPI,{
 
@@ -399,8 +382,9 @@ body:JSON.stringify({
 
 data:{
 name:userName,
-score:finalMarks,
+score:final,
 total:quiz.length,
+exam:exam,
 subject:subject,
 time:new Date().toLocaleString()
 }
@@ -409,12 +393,12 @@ time:new Date().toLocaleString()
 
 });
 
-showResult(correct,wrong,rawMarks,finalMarks);
+showResult(correct,wrong,raw,final);
 
 }
 
 
-async function showResult(correct,wrong,rawMarks,finalMarks){
+async function showResult(c,w,raw,final){
 
 let res=await fetch(rAPI);
 
@@ -424,26 +408,31 @@ let html="<h2>Result</h2>";
 
 html+="<div class='resultBox'>";
 
-html+="Correct: <span class='correct'>"+correct+"</span><br>";
-html+="Incorrect: <span class='wrong'>"+wrong+"</span><br>";
-html+="Raw Marks: <span class='raw'>"+rawMarks+"</span><br>";
-html+="Final Marks: <span class='final'>"+finalMarks+"</span>";
+html+="Correct: <span class='correct'>"+c+"</span><br>";
+html+="Wrong: <span class='wrong'>"+w+"</span><br>";
+html+="Raw Marks: "+raw+"<br>";
+html+="Final Marks: <span class='final'>"+final+"</span>";
 
 html+="</div>";
 
-html+="<h3>"+subject+" Leaderboard</h3>";
+html+="<h3>Leaderboard</h3>";
 
 for(let i=0;i<data.length;i++){
 
-if(data[i].subject==subject){
+if(
+data[i].exam==exam &&
+data[i].subject==subject
+){
 
-html+=data[i].name+" - "+data[i].score+"<br>";
+html+=
+data[i].name+" - "+
+data[i].score+"<br>";
 
 }
 
 }
 
-document.getElementById("app").innerHTML=html;
+app.innerHTML=html;
 
 }
 
