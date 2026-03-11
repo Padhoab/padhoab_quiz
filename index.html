@@ -58,7 +58,8 @@ let quiz = [];
 async function loadSheet() {
 
 let url =
-https://docs.google.com/spreadsheets/d/e/2PACX-1vTinxhiXxpng1TdgUWHRoYIoopW4ZuP-Z2MG3DGPVhlZE--AF6poruaYuULnLsgUetIIB5by5d_wgSv/pub?gid=0&single=true&output=csv
+"https://docs.google.com/spreadsheets/d/e/2PACX-1vRPEuhITwjotKTuSMwkJCpxxzqmxml3WYiI9VCyVJ26bGBaj0d9LMb9lT27NhMty5TTlD0LxXFvxlYH/pub?output=csv";
+
 let res = await fetch(url);
 let text = await res.text();
 
@@ -66,30 +67,28 @@ let rows = text.trim().split("\n");
 
 for (let i = 1; i < rows.length; i++) {
 
-let cols = rows[i].split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
+let cols = rows[i].split(",");
 
 if (cols.length < 6) continue;
 
 quiz.push({
 question: cols[0],
 options: [cols[1], cols[2], cols[3], cols[4]],
-correct: parseInt(cols[5])
+correct: Number(cols[5])
 });
 
 }
 
-loadQuestion();
+load();
 
 }
 
-function loadQuestion() {
-
-if (quiz.length == 0) return;
+function load() {
 
 document.getElementById("question").innerHTML =
 quiz[q].question;
 
-for (let i = 0; i < 4; i++) {
+for (let i=0;i<4;i++) {
 
 document.getElementById("b"+i).innerHTML =
 quiz[q].options[i];
@@ -119,13 +118,13 @@ q++;
 
 if (q < quiz.length) {
 
-loadQuestion();
+load();
 document.getElementById("result").innerHTML="";
 
 } else {
 
 document.getElementById("question").innerHTML =
-"Finished. Score = " + score;
+"Finished Score = " + score;
 
 }
 
