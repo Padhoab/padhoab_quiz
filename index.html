@@ -292,7 +292,7 @@ answers.push(null);
 
 }
 
-timeLeft = quiz.length * 30;
+timeLeft = 30;
 
 showQuiz();
 
@@ -303,14 +303,32 @@ startTimer();
 
 function startTimer(){
 
-timer=setInterval(()=>{
+clearInterval(timer);
+
+timeLeft = 30;
+
+timer = setInterval(()=>{
 
 timeLeft--;
 
-timerBox.innerHTML="Time: "+timeLeft;
+timerBox.innerHTML = "Time: " + timeLeft;
 
-if(timeLeft<=0)
+if(timeLeft <= 0){
+
+clearInterval(timer);
+
+if(q < quiz.length-1){
+
+q++;
+load();
+
+}else{
+
 submitTest();
+
+}
+
+}
 
 },1000);
 
@@ -353,6 +371,9 @@ load();
 
 function load(){
 
+clearInterval(timer);
+startTimer();
+  
 qno.innerHTML=
 "Q "+(q+1)+" / "+quiz.length;
 
