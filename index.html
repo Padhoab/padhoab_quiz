@@ -3,43 +3,73 @@
 
 <head>
 
-<title>Padhoab Quiz</title>
+<title>Test KaroAB</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Laila:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 
 body{
+
 margin:0;
-font-family:Arial;
+
+font-family:'Laila', serif;
+
 background:#eef2f7;
+
 }
 
 .container{
-max-width:800px;
-margin:auto;
+
+max-width:950px;
+
+margin:30px auto;
+
 background:white;
-padding:15px;
-border-radius:10px;
-margin-top:10px;
+
+padding:60px;
+
+border-radius:25px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+
 }
 
 h2{
+
 text-align:center;
+
 color:#1e3a8a;
+
+font-size:56px;
+
+font-weight:700;
+
+margin-bottom:15px;
+
+line-height:1.2;
+
 }
 
 .subtitle{
 
-font-size:18px;
-
-color:#666;
-
-margin-top:-10px;
-
-margin-bottom:25px;
-
 text-align:center;
+
+font-size:22px;
+
+font-weight:500;
+
+color:#6b7280;
+
+margin-top:-5px;
+
+margin-bottom:40px;
 
 }
   
@@ -64,13 +94,41 @@ color:white;
 }
 
 .subjectBtn{
+
 width:100%;
-padding:10px;
-margin:5px;
+
+padding:18px;
+
+margin:10px 0;
+
 background:#2563eb;
+
 color:white;
+
 border:none;
-border-radius:6px;
+
+border-radius:15px;
+
+font-size:22px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:0.3s;
+
+box-shadow:0 4px 15px rgba(37,99,235,.25);
+
+}
+
+.subjectBtn:hover{
+
+background:#1d4ed8;
+
+transform:translateY(-2px);
+
+box-shadow:0 8px 20px rgba(37,99,235,.35);
+
 }
 
 .nav button{
@@ -144,15 +202,22 @@ Practice Smart • Compete Better • Learn Faster
 </p>
 
 <input
+
 id="nameInput"
+
 placeholder="Enter Your Name to Start Practicing"
+
 style="
 width:100%;
-padding:12px;
-margin:15px 0;
-border:1px solid #ccc;
-border-radius:8px;
-">
+padding:20px;
+margin:25px 0;
+border:1px solid #d1d5db;
+border-radius:15px;
+font-size:22px;
+outline:none;
+box-sizing:border-box;
+"
+>
 
 <button
 class="subjectBtn"
