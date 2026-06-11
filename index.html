@@ -119,28 +119,46 @@ const qAPI =
 const rAPI =
 "https://sheetdb.io/api/v1/qejobk1s0ferj?sheet=results";
 
+function start(){
 
-function getTelegramUser(){
+app.innerHTML=`
 
-try{
+<h2>Welcome to PadhoAB Quiz Portal</h2>
 
-let tg = window.Telegram.WebApp;
-let user = tg.initDataUnsafe.user;
+<input
+id="nameInput"
+placeholder="Enter Your Name"
+style="
+width:100%;
+padding:12px;
+margin:15px 0;
+border:1px solid #ccc;
+border-radius:8px;
+">
 
-if(user){
-return user.username || user.first_name;
+<button
+class="subjectBtn"
+onclick="continueQuiz()">
+
+Continue
+
+</button>
+
+`;
+
 }
+async function continueQuiz(){
 
-}catch(e){}
+userName =
+document.getElementById("nameInput").value;
 
-return "Guest";
+if(userName==""){
+
+alert("Please enter your name");
+
+return;
 
 }
-
-
-async function start(){
-
-userName = getTelegramUser();
 
 let res = await fetch(qAPI);
 
@@ -149,8 +167,7 @@ dataAll = await res.json();
 showExams();
 
 }
-
-
+  
 function showExams(){
 
 let exams=[];
