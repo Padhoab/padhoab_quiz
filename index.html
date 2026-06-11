@@ -286,20 +286,25 @@ dataAll[i].Subject==subject &&
 dataAll[i].Topic==topic
 ){
 
+```javascript
 quiz.push({
 
 question:dataAll[i].question,
 
 options:[
-dataAll[i].op1,
-dataAll[i].op2,
-dataAll[i].op3,
-dataAll[i].op4
+dataAll[i].optionA,
+dataAll[i].optionB,
+dataAll[i].optionC,
+dataAll[i].optionD
 ],
 
-correct:parseInt(dataAll[i].correct)
+correct:parseInt(dataAll[i].correct),
+
+explanation:dataAll[i].Explanation
 
 });
+```
+
 
 answers.push(null);
 
