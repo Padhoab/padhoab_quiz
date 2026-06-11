@@ -29,6 +29,20 @@ text-align:center;
 color:#1e3a8a;
 }
 
+.subtitle{
+
+font-size:18px;
+
+color:#666;
+
+margin-top:-10px;
+
+margin-bottom:25px;
+
+text-align:center;
+
+}
+  
 .timer{
 color:red;
 font-weight:bold;
@@ -123,11 +137,15 @@ function start(){
 
 app.innerHTML=`
 
-<h2>Welcome to PadhoAB Quiz Portal</h2>
+<h1>Welcome to Test KaroAB</h1>
+
+<p class="subtitle">
+Practice Smart • Compete Better • Learn Faster
+</p>
 
 <input
 id="nameInput"
-placeholder="Enter Your Name (for leaderboard)"
+placeholder="Enter Your Name to Start Practicing"
 style="
 width:100%;
 padding:12px;
@@ -140,7 +158,7 @@ border-radius:8px;
 class="subjectBtn"
 onclick="continueQuiz()">
 
-Continue
+Start Practicing
 
 </button>
 
