@@ -127,7 +127,7 @@ app.innerHTML=`
 
 <input
 id="nameInput"
-placeholder="Enter Your Name"
+placeholder="Enter Your Name (for leaderboard)"
 style="
 width:100%;
 padding:12px;
@@ -526,7 +526,10 @@ html+="Final: <span class='final'>"+final+"</span>";
 
 html+="</div>";
 
+```javascript
 html+="<h3>🏆 Leaderboard</h3>";
+
+let board=[];
 
 for(let i=0;i<data.length;i++){
 
@@ -536,20 +539,49 @@ data[i].subject==subject &&
 data[i].topic==topic
 ){
 
-html+=
-data[i].name+" - "+
-data[i].score+"<br>";
+board.push(data[i]);
 
 }
 
 }
 
-html+="<hr><h3>Question Review</h3>";
+board.sort((a,b)=>Number(b.score)-Number(a.score));
+
+for(let i=0;i<board.length;i++){
+
+html+=(i+1)+". "+board[i].name+
+" - "+board[i].score+"<br>";
+
+}
+
+board.sort((a,b)=>Number(b.score)-Number(a.score));
+
+for(let i=0;i<board.length;i++){
+
+html+=(i+1)+". "+board[i].name+
+" - "+board[i].score+"<br>";
+
+}
+
+html+="<hr><h2>📚 Detailed Question Review</h2>";
 
 for(let i=0;i<quiz.length;i++){
 
-html+="<div class='resultBox'>";
+let color="#f1f1f1";
 
+if(answers[i]==quiz[i].correct){
+
+color="#d4edda";
+
+}
+else if(answers[i]!=null){
+
+color="#f8d7da";
+
+}
+
+html+="<div class='resultBox' style='background:"+color+"'>";
+  
 html+="<b>Q"+(i+1)+". "
 +quiz[i].question+"</b><br><br>";
 
@@ -566,13 +598,40 @@ html+=quiz[i].options[answers[i]];
 }
 
 html+="<br><br>";
+if(answers[i]==quiz[i].correct){
 
+html+="<span style='color:green'><b>✓ Correct</b></span>";
+
+}
+else if(answers[i]==null){
+
+html+="<span style='color:gray'><b>Not Attempted</b></span>";
+
+}
+else{
+
+html+="<span style='color:red'><b>✗ Wrong</b></span>";
+
+}
+
+html+="<br><br>";
+  
 html+="Correct Answer : "
 +quiz[i].options[quiz[i].correct]
 +"<br><br>";
 
-html+="Explanation :<br>"
-+quiz[i].explanation;
+html+="Explanation :<br>";
+
+if(quiz[i].explanation){
+
+html+=quiz[i].explanation;
+
+}
+else{
+
+html+="Explanation will be added soon.";
+
+}
 
 html+="</div><br>";
 
