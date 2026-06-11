@@ -150,22 +150,129 @@ margin-top:10px;
 .wrong{color:red}
 .final{color:purple;font-weight:bold}
 
+header{
+
+background:#07112b;
+
+padding:15px 8%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+border-bottom:2px solid #1e3a8a;
+
+}
+
+.logo img{
+
+width:120px;
+
+height:auto;
+
+}
+
+nav{
+
+display:flex;
+
+gap:30px;
+
+}
+
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+font-size:18px;
+
+font-weight:600;
+
+}
+
+nav a:hover{
+
+color:#60a5fa;
+
+}
+
+footer{
+
+background:#07112b;
+
+color:white;
+
+text-align:center;
+
+padding:40px 20px;
+
+margin-top:50px;
+
+}
+
+.footer-links{
+
+margin-bottom:20px;
+
+}
+
+.footer-links a{
+
+color:white;
+
+text-decoration:none;
+
+margin:0 15px;
+
+font-size:18px;
+
+font-weight:500;
+
+}
+
+.footer-links a:hover{
+
+color:#60a5fa;
+
+}
+  
 </style>
 
 </head>
 
 <body>
 
-<div style="
-background:white;
-text-align:center;
-padding:10px;
-border-bottom:2px solid #1e3a8a;
-">
+<header>
 
-<img src="logo.png" style="width:200px;max-width:90%;">
+<div class="logo">
+
+<a href="https://padhoab.in">
+
+<img src="logo.png">
+
+</a>
 
 </div>
+
+<nav>
+
+<a href="https://padhoab.in">Home</a>
+
+<a href="https://padhoab.in/current-affairs.html">Current Affairs</a>
+
+<a href="https://padhoab.in/static-gk.html">Static GK</a>
+
+<a href="https://padhoab.in/contact.html">Contact</a>
+
+</nav>
+
+</header>
+
+<div id="app" class="container">
 
 <div id="app" class="container">
 Loading...
