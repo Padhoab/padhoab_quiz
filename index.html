@@ -287,15 +287,17 @@ dataAll[i].Topic==topic
 ){
 
 ```javascript
+
+```javascript
 quiz.push({
 
 question:dataAll[i].question,
 
 options:[
-dataAll[i].optionA,
-dataAll[i].optionB,
-dataAll[i].optionC,
-dataAll[i].optionD
+dataAll[i].op1,
+dataAll[i].op2,
+dataAll[i].op3,
+dataAll[i].op4
 ],
 
 correct:parseInt(dataAll[i].correct),
@@ -303,7 +305,6 @@ correct:parseInt(dataAll[i].correct),
 explanation:dataAll[i].Explanation
 
 });
-```
 
 
 answers.push(null);
@@ -507,6 +508,7 @@ showResult(correct,wrong,raw,final);
 }
 
 
+```javascript
 async function showResult(c,w,raw,final){
 
 let res=await fetch(rAPI);
@@ -524,7 +526,7 @@ html+="Final: <span class='final'>"+final+"</span>";
 
 html+="</div>";
 
-html+="<h3>Leaderboard</h3>";
+html+="<h3>🏆 Leaderboard</h3>";
 
 for(let i=0;i<data.length;i++){
 
@@ -539,6 +541,40 @@ data[i].name+" - "+
 data[i].score+"<br>";
 
 }
+
+}
+
+html+="<hr><h3>Question Review</h3>";
+
+for(let i=0;i<quiz.length;i++){
+
+html+="<div class='resultBox'>";
+
+html+="<b>Q"+(i+1)+". "
++quiz[i].question+"</b><br><br>";
+
+html+="Your Answer : ";
+
+if(answers[i]==null){
+
+html+="Not Attempted";
+
+}else{
+
+html+=quiz[i].options[answers[i]];
+
+}
+
+html+="<br><br>";
+
+html+="Correct Answer : "
++quiz[i].options[quiz[i].correct]
++"<br><br>";
+
+html+="Explanation :<br>"
++quiz[i].explanation;
+
+html+="</div><br>";
 
 }
 
