@@ -479,24 +479,6 @@ exams.push(e);
 
 }
 
-let html = menu();
-
-html += `
-
-<h2>Welcome, ${userName}</h2>
-
-<p class="subtitle">
-Select an Exam to Continue Your Preparation
-</p>
-
-<button class='subjectBtn'
-style='background:#dc2626'
-onclick='logout()'>
-🚪 Logout
-</button>
-
-`;
-
 for(let i=0;i<exams.length;i++){
 
 html+=
