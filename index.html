@@ -334,6 +334,8 @@ const rAPI =
 
 function start(){
 
+userName = localStorage.getItem("testkaroab_name") || "";
+
 app.innerHTML=`
 
 <h2>Welcome to Test KaroAB</h2>
@@ -345,6 +347,8 @@ Practice Smart • Compete Better • Learn Faster
 <input
 
 id="nameInput"
+
+value="${userName}"
 
 placeholder="Enter Your Name to Start Practicing"
 
