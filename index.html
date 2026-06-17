@@ -975,10 +975,17 @@ console.log(userName);
 
 let tests = 0;
 let questions = 0;
+let totalAccuracy = 0;
 
 for(let i=0;i<data.length;i++){
 
 if(data[i].name == userName){
+
+if(data[i].accuracy){
+
+totalAccuracy += Number(data[i].accuracy);
+
+}
 
 tests++;
 
@@ -988,6 +995,14 @@ questions += Number(data[i].total);
 
 }
 
+let avgAccuracy = 0;
+
+if(tests > 0){
+
+avgAccuracy = (totalAccuracy/tests).toFixed(1);
+
+}
+  
 app.innerHTML = menu() + `
 
 <h2>📊 My Progress</h2>
@@ -1014,8 +1029,8 @@ margin-top:30px;
 </div>
 
 <div class="resultBox">
-<h3>📈 Average Score</h3>
-<h2>Coming Soon</h2>
+<h3>🎯 Average Accuracy</h3>
+<h2>${avgAccuracy}%</h2>
 </div>
 
 <div class="resultBox">
