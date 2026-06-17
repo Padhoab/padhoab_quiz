@@ -313,26 +313,8 @@ Loading...
 
 </div>
 
-<script type="module">
+<script>
 
-import { auth,db } from "./firebase.js";
-
-import {
-createUserWithEmailAndPassword,
-signInWithEmailAndPassword,
-signOut,
-onAuthStateChanged
-}
-from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
-
-import {
-doc,
-setDoc
-}
-from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
-
-const app = document.getElementById("app");
-  
 let q=0;
 let quiz=[];
 let answers=[];
@@ -391,11 +373,9 @@ onclick="logout()">
 
 function start(){
 
-onAuthStateChanged(auth,(user)=>{
+userName = localStorage.getItem("testkaroab_name") || "";
 
-if(user){
-
-userName = user.displayName || "";
+if(userName!=""){
 
 fetch(qAPI)
 .then(res=>res.json())
@@ -404,28 +384,49 @@ dataAll=data;
 showExams();
 });
 
-}
-
-else{
-
-showLogin();
+return;
 
 }
 
-});
+app.innerHTML=`
+
+<h2>Welcome to Test KaroAB</h2>
+
+<p class="subtitle">
+Practice Smart • Compete Better • Learn Faster
+</p>
+
+<input
+
+id="nameInput"
+
+value="${userName}"
+
+placeholder="Enter Your Name to Start Practicing"
+
+style="
+width:100%;
+padding:20px;
+margin:25px 0;
+border:1px solid #d1d5db;
+border-radius:15px;
+font-size:22px;
+outline:none;
+box-sizing:border-box;
+"
+>
+
+<button
+class="subjectBtn"
+onclick="continueQuiz()">
+
+Start Practicing
+
+</button>
+
+`;
 
 }
-
-function showLogin(){
-
-function showLogin(){
-
-alert("showLogin reached");
-
-app.innerHTML = "<h1>HELLO</h1>";
-
-}
-  
 async function continueQuiz(){
 
 userName =
