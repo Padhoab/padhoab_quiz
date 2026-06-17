@@ -332,6 +332,48 @@ const qAPI =
 const rAPI =
 "https://sheetdb.io/api/v1/qejobk1s0ferj?sheet=results";
 
+const rAPI =
+"https://sheetdb.io/api/v1/qejobk1s0ferj?sheet=results";
+
+function menu(){
+
+return `
+<div style="
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-bottom:25px;
+">
+
+<button class="subjectBtn"
+style="flex:1;padding:12px;font-size:18px"
+onclick="showExams()">
+🏠 All Exams
+</button>
+
+<button class="subjectBtn"
+style="flex:1;padding:12px;font-size:18px"
+onclick="selectExam(exam)">
+📚 Subject
+</button>
+
+<button class="subjectBtn"
+style="flex:1;padding:12px;font-size:18px"
+onclick="showProgress()">
+📊 My Progress
+</button>
+
+<button class="subjectBtn"
+style="flex:1;padding:12px;font-size:18px;background:#dc2626"
+onclick="logout()">
+🚪 Logout
+</button>
+
+</div>
+`;
+
+}
+
 function start(){
 
 userName = localStorage.getItem("testkaroab_name") || "";
@@ -413,6 +455,22 @@ showExams();
   
 function showExams(){
 
+let html = menu();
+
+html += `
+<h2>Welcome, ${userName}</h2>
+
+<p class="subtitle">
+Select an Exam to Continue Your Preparation
+</p>
+
+<button class='subjectBtn'
+style='background:#dc2626'
+onclick='logout()'>
+🚪 Logout
+</button>
+`;
+
 let exams=[];
 
 for(let i=0;i<dataAll.length;i++){
@@ -424,14 +482,22 @@ exams.push(e);
 
 }
 
-let html = `
-<h2>Select Exam</h2>
+let html = menu();
+
+html += `
+
+<h2>Welcome, ${userName}</h2>
+
+<p class="subtitle">
+Select an Exam to Continue Your Preparation
+</p>
 
 <button class='subjectBtn'
 style='background:#dc2626'
 onclick='logout()'>
 🚪 Logout
 </button>
+
 `;
 
 for(let i=0;i<exams.length;i++){
@@ -467,7 +533,13 @@ subs.push(s);
 
 }
 
-let html="<h2>Select Subject</h2>";
+let html=`
+<h2>${exam}</h2>
+
+<p class="subtitle">
+Choose a Subject
+</p>
+`;
 
 for(let i=0;i<subs.length;i++){
 
@@ -505,8 +577,14 @@ topics.push(t);
 
 }
 
-let html="<h2>Select Topic</h2>";
+let html=`
+<h2>${subject}</h2>
 
+<p class="subtitle">
+Choose a Topic
+</p>
+`;
+  
 for(let i=0;i<topics.length;i++){
 
 html+=
@@ -763,6 +841,12 @@ let res=await fetch(rAPI);
 let data=await res.json();
 
 let html="<h2>Result</h2>";
+
+html += `
+<p class="subtitle">
+Well done, ${userName}! 🎉
+</p>
+`;
 
 html+="<div class='resultBox'>";
 
