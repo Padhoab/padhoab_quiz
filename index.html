@@ -991,25 +991,34 @@ app.innerHTML = menu() + `
 
 <div class="resultBox">
 
-<h3>Welcome, ${userName}</h3>
+<div style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:30px;
+">
 
-Tests Attempted : ${tests}
+<div class="resultBox">
+<h3>📝 Tests Attempted</h3>
+<h2>${tests}</h2>
+</div>
 
-<br><br>
+<div class="resultBox">
+<h3>📚 Questions Solved</h3>
+<h2>${questions}</h2>
+</div>
 
-Questions Solved : Coming Soon
+<div class="resultBox">
+<h3>📈 Average Score</h3>
+<h2>Coming Soon</h2>
+</div>
 
-<br><br>
+<div class="resultBox">
+<h3>🏆 Achievements</h3>
+<h2>Coming Soon</h2>
+</div>
 
-Average Score : Coming Soon
-
-<br><br>
-
-Recent Tests : Coming Soon
-
-<br><br>
-
-Achievements : Coming Soon
+</div>
 
 </div>
 
