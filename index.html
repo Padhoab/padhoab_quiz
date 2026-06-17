@@ -376,6 +376,8 @@ async function continueQuiz(){
 userName =
 document.getElementById("nameInput").value;
 
+localStorage.setItem("testkaroab_name", userName);
+
 if(userName==""){
 
 alert("Please enter your name");
