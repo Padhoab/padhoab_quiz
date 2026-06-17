@@ -313,8 +313,24 @@ Loading...
 
 </div>
 
-<script>
+<script type="module">
 
+import { auth,db } from "./firebase.js";
+
+import {
+createUserWithEmailAndPassword,
+signInWithEmailAndPassword,
+signOut,
+onAuthStateChanged
+}
+from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+
+import {
+doc,
+setDoc
+}
+from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+  
 let q=0;
 let quiz=[];
 let answers=[];
@@ -1094,8 +1110,7 @@ justify-content:space-between;
   
 start();
 
-</script>
-
+<script type="module">
 </body>
 
 </html>
