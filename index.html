@@ -336,6 +336,19 @@ function start(){
 
 userName = localStorage.getItem("testkaroab_name") || "";
 
+if(userName!=""){
+
+fetch(qAPI)
+.then(res=>res.json())
+.then(data=>{
+dataAll=data;
+showExams();
+});
+
+return;
+
+}
+
 app.innerHTML=`
 
 <h2>Welcome to Test KaroAB</h2>
@@ -856,8 +869,8 @@ html+="</div><br>";
 html += `
 <br><br>
 
-<button class="subjectBtn" onclick="showExams()">
-📝 Attempt Another Test
+<button class="subjectBtn" onclick="selectSubject(subject)">
+📝 More Tests from ${subject}
 </button>
 
 `;
