@@ -389,9 +389,11 @@ onclick="logout()">
 
 function start(){
 
-userName = localStorage.getItem("testkaroab_name") || "";
+onAuthStateChanged(auth,(user)=>{
 
-if(userName!=""){
+if(user){
+
+userName = user.displayName || "";
 
 fetch(qAPI)
 .then(res=>res.json())
@@ -400,9 +402,19 @@ dataAll=data;
 showExams();
 });
 
-return;
+}
+
+else{
+
+showLogin();
 
 }
+
+});
+
+}
+
+function showLogin(){
 
 app.innerHTML=`
 
@@ -443,6 +455,7 @@ Start Practicing
 `;
 
 }
+  
 async function continueQuiz(){
 
 userName =
