@@ -964,6 +964,56 @@ location.reload();
 
 }
 
+async function showProgress(){
+
+let res = await fetch(rAPI);
+
+let data = await res.json();
+
+let tests = 0;
+
+for(let i=0;i<data.length;i++){
+
+if(data[i].name == userName){
+
+tests++;
+
+}
+
+}
+
+app.innerHTML = menu() + `
+
+<h2>📊 My Progress</h2>
+
+<div class="resultBox">
+
+<h3>Welcome, ${userName}</h3>
+
+Tests Attempted : ${tests}
+
+<br><br>
+
+Questions Solved : Coming Soon
+
+<br><br>
+
+Average Score : Coming Soon
+
+<br><br>
+
+Recent Tests : Coming Soon
+
+<br><br>
+
+Achievements : Coming Soon
+
+</div>
+
+`;
+
+}
+  
 start();
 
 </script>
