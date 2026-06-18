@@ -624,9 +624,7 @@ startTimer();
 
 function startTimer(){
 
-clearInterval(timer);
-
-timeLeft = 30;
+if(timer) return;
 
 timer = setInterval(()=>{
 
@@ -637,6 +635,7 @@ timerBox.innerHTML = "Time: " + timeLeft;
 if(timeLeft <= 0){
 
 clearInterval(timer);
+timer = null;
 
 if(q < quiz.length-1){
 
@@ -654,7 +653,6 @@ submitTest();
 },1000);
 
 }
-
 
 function showQuiz(){
 
@@ -692,8 +690,11 @@ load();
 
 function load(){
 
-clearInterval(timer);
+if(!timer){
+
 startTimer();
+
+}
   
 qno.innerHTML=
 "Q "+(q+1)+" / "+quiz.length;
@@ -720,7 +721,16 @@ b.classList.add("selected");
 function answer(i){
 
 answers[q]=i;
-load();
+
+for(let j=0;j<4;j++){
+
+document.getElementById("b"+j)
+.classList.remove("selected");
+
+}
+
+document.getElementById("b"+i)
+.classList.add("selected");
 
 }
 
