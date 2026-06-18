@@ -851,6 +851,8 @@ board.push(data[i]);
 
 board.sort((a,b)=>Number(b.score)-Number(a.score));
 
+console.log(board);
+
 for(let i=0;i<board.length;i++){
 
 html+=(i+1)+". "+board[i].name+
