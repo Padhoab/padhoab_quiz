@@ -360,8 +360,11 @@ let exam="";
 let subject="";
 let topic="";
 let timer;
-let timeLeft=60;
 
+let questionTime = 30;
+
+let timeLeft = questionTime;
+  
 const qAPI =
 "https://script.google.com/macros/s/AKfycby2Hh9iPQC2mx44e4HBQQ6kemwUBcAi5O7UD1czaWJ0lxV5zUIA5RQr2KhjZql0451pMw/exec";
 
@@ -649,14 +652,13 @@ answers.push(null);
 
 }
 
-timeLeft = 30;
+timeLeft = questionTime;
 
 showQuiz();
 
 startTimer();
 
 }
-
 
 function startTimer(){
 
@@ -671,14 +673,20 @@ timerBox.innerHTML = "Time: " + timeLeft;
 if(timeLeft <= 0){
 
 clearInterval(timer);
+
 timer = null;
 
 if(q < quiz.length-1){
 
 q++;
+
+timeLeft = questionTime;
+
 load();
 
-}else{
+}
+
+else{
 
 submitTest();
 
