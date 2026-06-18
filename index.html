@@ -142,6 +142,40 @@ border-radius:6px;
 cursor:pointer;
 }
 
+.submitBtn{
+
+background:#16a34a !important;
+
+transition:0.15s;
+
+}
+
+.submitBtn:hover{
+
+background:#15803d !important;
+
+}
+
+.submitBtn:active{
+
+transform:scale(0.92);
+
+background:#166534 !important;
+
+}
+
+.nav button{
+
+transition:0.15s;
+
+}
+
+.nav button:active{
+
+transform:scale(0.95);
+
+}
+
 .resultBox{
 padding:10px;
 background:#f8fafc;
@@ -678,7 +712,7 @@ html+="<button class='option' id='b3' onclick='answer(3)'></button>";
 html+="<div class='nav'>";
 html+="<button onclick='prev()'>Prev</button>";
 html+="<button onclick='next()'>Next</button>";
-html+="<button onclick='submitTest()'>Submit</button>";
+html+="<button class='submitBtn' onclick='submitTest()'>Submit</button>";
 html+="</div>";
 
 app.innerHTML=html;
