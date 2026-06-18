@@ -849,6 +849,26 @@ board.push(data[i]);
 
 }
 
+let bestScores={};
+
+for(let i=0;i<board.length;i++){
+
+let name=board[i].name;
+
+if(
+!bestScores[name] ||
+Number(board[i].score)>
+Number(bestScores[name].score)
+){
+
+bestScores[name]=board[i];
+
+}
+
+}
+
+board=Object.values(bestScores);
+
 board.sort((a,b)=>Number(b.score)-Number(a.score));
 
 console.log(board);
