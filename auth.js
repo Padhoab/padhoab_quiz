@@ -107,11 +107,31 @@ if (user) {
 
 console.log("User is logged in");
 
+if (
+window.location.pathname.includes("login.html")
+||
+window.location.pathname.includes("signup.html")
+)
+{
+
+window.location.href = "index.html";
+
+}
+
 }
 
 else {
 
 console.log("No user found");
+
+if (
+window.location.pathname.includes("index.html")
+)
+{
+
+window.location.href = "login.html";
+
+}
 
 }
 
