@@ -181,6 +181,8 @@ forgotPassword.addEventListener(
 "click",
 async ()=>{
 
+console.log("Forgot password clicked");
+
 const email =
 document.getElementById("loginEmail").value;
 
