@@ -120,10 +120,13 @@ try{
 const provider =
 new GoogleAuthProvider();
 
+const result =
 await signInWithPopup(
 auth,
 provider
 );
+
+const user = result.user;
 
 alert(
 "Welcome to TestKaroAB!"
