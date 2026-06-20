@@ -3,7 +3,9 @@ createUserWithEmailAndPassword,
 signInWithEmailAndPassword,
 signOut,
 onAuthStateChanged,
-sendPasswordResetEmail
+sendPasswordResetEmail,
+GoogleAuthProvider,
+signInWithPopup
 }
 from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
 
@@ -91,6 +93,44 @@ password
 alert("Welcome to TestKaroAB!");
 
 window.location.href = "index.html";
+
+}
+
+catch(error){
+
+alert(error.message);
+
+}
+
+});
+
+}
+
+const googleLoginBtn =
+document.getElementById("googleLoginBtn");
+
+if (googleLoginBtn) {
+
+googleLoginBtn.addEventListener(
+"click",
+async ()=>{
+
+try{
+
+const provider =
+new GoogleAuthProvider();
+
+await signInWithPopup(
+auth,
+provider
+);
+
+alert(
+"Welcome to TestKaroAB!"
+);
+
+window.location.href =
+"index.html";
 
 }
 
