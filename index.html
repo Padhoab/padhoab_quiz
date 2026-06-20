@@ -412,21 +412,6 @@ onclick="logout()">
 
 function start(){
 
-userName = localStorage.getItem("testkaroab_name") || "";
-
-if(userName!=""){
-
-fetch(qAPI)
-.then(res=>res.json())
-.then(data=>{
-dataAll=data;
-showExams();
-});
-
-return;
-
-}
-
 app.innerHTML=`
 
 <h2>Welcome to Test KaroAB</h2>
@@ -1171,6 +1156,40 @@ justify-content:space-between;
 }
   
 start();
+
+</script>
+
+<script type="module">
+
+import {
+auth
+}
+from "./firebase.js";
+
+import {
+onAuthStateChanged
+}
+from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+
+onAuthStateChanged(auth,(user)=>{
+
+if(user){
+
+userName = user.displayName || "Test User";
+
+fetch(qAPI)
+.then(res=>res.json())
+.then(data=>{
+
+dataAll = data;
+
+showExams();
+
+});
+
+}
+
+});
 
 </script>
 
