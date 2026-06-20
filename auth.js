@@ -1,8 +1,12 @@
-import { auth, db } from "./firebase.js";
-
 import {
-createUserWithEmailAndPassword
-} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+createUserWithEmailAndPassword,
+signInWithEmailAndPassword,
+signOut,
+onAuthStateChanged
+}
+from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+
+import { auth, db } from "./firebase.js";
 
 import {
 doc,
@@ -54,6 +58,40 @@ window.location.href = "login.html";
 }
 
 catch (error) {
+
+alert(error.message);
+
+}
+
+});
+
+}
+
+const loginBtn = document.getElementById("loginBtn");
+
+if (loginBtn) {
+
+loginBtn.addEventListener("click", async () => {
+
+const email = document.getElementById("loginEmail").value;
+
+const password = document.getElementById("loginPassword").value;
+
+try {
+
+await signInWithEmailAndPassword(
+auth,
+email,
+password
+);
+
+alert("Welcome to TestKaroAB!");
+
+window.location.href = "index.html";
+
+}
+
+catch(error){
 
 alert(error.message);
 
