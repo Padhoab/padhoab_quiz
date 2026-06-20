@@ -10,8 +10,10 @@ import { auth, db } from "./firebase.js";
 
 import {
 doc,
-setDoc
-} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+setDoc,
+getDoc
+}
+from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
 const signupBtn = document.getElementById("signupBtn");
 
@@ -101,11 +103,24 @@ alert(error.message);
 
 }
 
-onAuthStateChanged(auth, (user) => {
-
+onAuthStateChanged(auth, async (user) => {
+  
 if (user) {
 
 console.log("User is logged in");
+
+const docRef = doc(db, "users", user.uid);
+
+const docSnap = await getDoc(docRef);
+
+if(docSnap.exists()){
+
+localStorage.setItem(
+"testkaroab_name",
+docSnap.data().name
+);
+
+}
 
 if (
 window.location.pathname.includes("login.html")
@@ -119,7 +134,6 @@ window.location.href = "index.html";
 }
 
 }
-
 else {
 
 console.log("No user found");
