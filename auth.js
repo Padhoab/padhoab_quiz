@@ -100,3 +100,19 @@ alert(error.message);
 });
 
 }
+
+onAuthStateChanged(auth, (user) => {
+
+if (user) {
+
+console.log("User is logged in");
+
+}
+
+else {
+
+console.log("No user found");
+
+}
+
+});
