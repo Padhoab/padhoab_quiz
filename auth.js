@@ -164,3 +164,9 @@ window.location.href = "login.html";
 });
 
 }
+
+window.firebaseSignOut = async function(){
+
+await signOut(auth);
+
+}
