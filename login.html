@@ -88,6 +88,11 @@ text-decoration:none;
 
 <h1>Login to TestKaroAB</h1>
 
+<input
+type="email"
+id="loginEmail"
+placeholder="Email Address">
+
 <div style="position:relative;">
 
 <input
@@ -100,22 +105,16 @@ id="togglePassword"
 style="
 position:absolute;
 right:15px;
-top:17px;
+top:15px;
 cursor:pointer;
-color:#666;
-font-size:14px;
+font-size:18px;
 ">
 
-👁 Show
+👁
 
 </span>
 
 </div>
-  
-<input
-type="password"
-id="loginPassword"
-placeholder="Password">
 
 <button id="loginBtn">
 
@@ -151,16 +150,16 @@ if(passwordField.type==="password"){
 
 passwordField.type="text";
 
-togglePassword.innerHTML="🙈 Hide";
-
+togglePassword.innerHTML="🙈";
+  
 }
 
 else{
 
 passwordField.type="password";
 
-togglePassword.innerHTML="👁 Show";
-
+togglePassword.innerHTML="👁";
+  
 }
 
 });
