@@ -9,12 +9,19 @@ getFirestore
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
 const firebaseConfig = {
-apiKey: "AIzaSyAiamPQ1P0FITBgFdJ2E10_rsTtfP9qvwI",
-authDomain: "testkaroab-6a803.firebaseapp.com",
-projectId: "testkaroab-6a803",
-storageBucket: "testkaroab-6a803.firebasestorage.app",
-messagingSenderId: "526146903268",
-appId: "1:526146903268:web:5b475833a690ec0600a0f1"
+
+apiKey: "AIzaSyDWV6geCgQOaniVug5QmXltyy-F-Bpbu1s",
+
+authDomain: "testkaroab-ef6a4.firebaseapp.com",
+
+projectId: "testkaroab-ef6a4",
+
+storageBucket: "testkaroab-ef6a4.firebasestorage.app",
+
+messagingSenderId: "58940119640",
+
+appId: "1:58940119640:web:e32dac1291f6e97087c82d"
+
 };
 
 const app = initializeApp(firebaseConfig);
@@ -23,4 +30,4 @@ const auth = getAuth(app);
 
 const db = getFirestore(app);
 
-export {auth,db};
+export { auth, db };
