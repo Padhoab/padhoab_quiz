@@ -1032,14 +1032,16 @@ app.innerHTML=html;
 
 }
 
-function logout(){
+async function logout(){
 
 localStorage.removeItem("testkaroab_name");
 
-location.reload();
+await window.firebaseSignOut();
+
+window.location.href = "login.html";
 
 }
-
+  
 async function showProgress(){
 
 let res = await fetch(rAPI);
