@@ -128,6 +128,37 @@ provider
 
 const user = result.user;
 
+const docRef = doc(
+db,
+"users",
+user.uid
+);
+
+const docSnap =
+await getDoc(docRef);
+
+if (!docSnap.exists()) {
+
+await setDoc(docRef, {
+
+name: user.displayName,
+
+email: user.email,
+
+photoURL: user.photoURL,
+
+createdAt: new Date(),
+
+testsAttempted: 0,
+
+totalScore: 0,
+
+accuracy: 0
+
+});
+
+}
+
 alert(
 "Welcome to TestKaroAB!"
 );
