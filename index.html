@@ -1037,6 +1037,58 @@ accuracy = ((c/attempted)*100).toFixed(1);
 
 html+="<br>Accuracy: "+accuracy+"%";
 
+let mentor="";
+
+if(accuracy>=80){
+
+mentor=
+"🌟 Excellent work! Your accuracy is impressive. Stay consistent and keep challenging yourself with tougher questions.";
+
+}
+
+else if(accuracy>=65){
+
+mentor=
+"📈 You are progressing well. A little more revision and practice can significantly improve your score. Keep going!";
+
+}
+
+else if(accuracy>=50){
+
+mentor=
+"💪 You're building momentum. Focus on understanding mistakes and revise regularly. Improvement is closer than you think.";
+
+}
+
+else{
+
+mentor=
+"🌱 Every topper starts somewhere. Don't worry about today's score. Learn from mistakes, stay consistent, and your results will improve with time.";
+
+}
+
+html+=`
+<div class="resultBox"
+style="
+margin-top:30px;
+padding:25px;
+text-align:left;
+">
+
+<h2 style="color:#1e3a8a;">
+🤖 Mentor Recommendation
+</h2>
+
+<p style="
+font-size:20px;
+line-height:1.8;
+">
+${mentor}
+</p>
+
+</div>
+`;
+
 html+="</div>";
 
 html+="<h3>🏆 Leaderboard</h3>";
