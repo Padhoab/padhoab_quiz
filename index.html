@@ -1025,6 +1025,18 @@ html+="Raw Score: "+raw+"<br>";
 html+="Negative Marks: -"+deduction+"<br>";
 html+="Final Score: <span class='final'>"+final+"</span>";
 
+let attempted = c+w;
+
+let accuracy = 0;
+
+if(attempted>0){
+
+accuracy = ((c/attempted)*100).toFixed(1);
+
+}
+
+html+="<br>Accuracy: "+accuracy+"%";
+
 html+="</div>";
 
 html+="<h3>🏆 Leaderboard</h3>";
