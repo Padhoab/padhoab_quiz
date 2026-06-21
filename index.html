@@ -994,6 +994,16 @@ time:new Date().toLocaleString()
 })
 
 });
+
+localStorage.setItem(
+"testsAttempted",
+parseInt(localStorage.getItem("testsAttempted")||0)+1
+);
+
+localStorage.setItem(
+"questionsSolved",
+parseInt(localStorage.getItem("questionsSolved")||0)+quiz.length
+);
   
 showResult(correct,wrong,raw,final);
 
