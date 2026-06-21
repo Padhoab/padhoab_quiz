@@ -908,6 +908,8 @@ document.getElementById("b"+j)
 document.getElementById("b"+i)
 .classList.add("selected");
 
+showQuiz();
+
 }
 
 
@@ -915,14 +917,14 @@ function next(){
 
 if(q<quiz.length-1){
 q++;
-load();
+showQuiz();
 }
 
 function goToQuestion(i){
 
 q=i;
 
-load();
+showQuiz ();
 
 }
 
@@ -933,7 +935,7 @@ function prev(){
 
 if(q>0){
 q--;
-load();
+showQuiz();
 }
 
 }
