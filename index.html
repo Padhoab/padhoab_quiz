@@ -747,6 +747,52 @@ function showQuiz(){
 
 let html="";
 
+html+=`
+<div id="palette"
+style="
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-bottom:20px;
+">
+`;
+
+for(let i=0;i<quiz.length;i++){
+
+let color="#e5e7eb";
+
+if(i===q){
+color="#2563eb";
+}
+
+else if(answers[i]!=null){
+color="#16a34a";
+}
+
+else if(visited[i]){
+color="#facc15";
+}
+
+html+=`
+<button
+onclick="goToQuestion(${i})"
+style="
+width:45px;
+height:45px;
+border:none;
+border-radius:10px;
+background:${color};
+font-weight:bold;
+cursor:pointer;
+">
+${i+1}
+</button>
+`;
+
+}
+
+html+=`</div>`;
+
 html+="<h2>"+exam+" - "+subject+" - "+topic+"</h2>";
 
 html+="<div>User: "+userName+"</div>";
@@ -794,6 +840,8 @@ html+="<button onclick='prev()'>Prev</button>";
 html+="<button onclick='next()'>Next</button>";
 html+="<button class='submitBtn' onclick='submitTest()'>Submit</button>";
 html+="</div>";
+
+
 
 app.innerHTML=html;
 
@@ -868,6 +916,14 @@ function next(){
 if(q<quiz.length-1){
 q++;
 load();
+}
+
+function goToQuestion(i){
+
+q=i;
+
+load();
+
 }
 
 }
