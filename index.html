@@ -1279,6 +1279,16 @@ let data = await res.json();
 console.log(data);
 console.log(userName);
 
+for(let i=0;i<data.length;i++){
+
+console.log(
+data[i].name,
+"|",
+userName
+);
+
+}
+
 let tests = 0;
 let questions = 0;
 let totalAccuracy = 0;
