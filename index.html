@@ -361,8 +361,42 @@ let subject="";
 let topic="";
 let timer;
 
-let questionTime = 30;
+const examConfig = {
 
+"UPSC":{
+timePerQuestion:120,
+positive:2,
+negative:0.66
+},
+
+"UPPCS":{
+timePerQuestion:48,
+positive:1.33,
+negative:0.44
+},
+
+"BPSC":{
+timePerQuestion:120,
+positive:1,
+negative:0.33
+},
+
+"SSC/Railway":{
+timePerQuestion:36,
+positive:2,
+negative:0.50
+},
+
+"Law":{
+timePerQuestion:60,
+positive:1,
+negative:0
+}
+
+};
+
+let questionTime;
+  
 let timeLeft = questionTime;
   
 const qAPI =
@@ -637,6 +671,9 @@ answers.push(null);
 
 }
 
+questionTime =
+examConfig[exam].timePerQuestion;
+
 timeLeft = questionTime;
 
 showQuiz();
@@ -712,8 +749,10 @@ app.innerHTML=html;
 
 timerBox=document.getElementById("timerBox");
 
-load();
+timerBox.innerHTML = "Time: " + timeLeft;
 
+load();
+  
 }
 
 
@@ -804,13 +843,11 @@ wrong++;
 
 }
 
-let pos=1;
-let neg=0;
+let pos =
+examConfig[exam].positive;
 
-if(exam=="UPSC"){pos=2;neg=0.66;}
-else if(exam=="SSC/Railway"){pos=2;neg=0.5;}
-else if(exam=="PCS"){pos=2;neg=0.66;}
-else if(exam=="Law"){pos=1;neg=0;}
+let neg =
+examConfig[exam].negative;
 
 let raw=correct*pos;
 
@@ -863,8 +900,12 @@ html+="<div class='resultBox'>";
 
 html+="Correct: <span class='correct'>"+c+"</span><br>";
 html+="Wrong: <span class='wrong'>"+w+"</span><br>";
-html+="Raw: "+raw+"<br>";
-html+="Final: <span class='final'>"+final+"</span>";
+
+let deduction = (raw-final).toFixed(2);
+
+html+="Raw Score: "+raw+"<br>";
+html+="Negative Marks: -"+deduction+"<br>";
+html+="Final Score: <span class='final'>"+final+"</span>";
 
 html+="</div>";
 
