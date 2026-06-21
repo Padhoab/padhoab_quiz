@@ -1033,37 +1033,47 @@ if(attempted>0){
 
 accuracy = ((c/attempted)*100).toFixed(1);
 
+let attemptRate =
+((attempted/quiz.length)*100).toFixed(1);
+
 }
 
 html+="<br>Accuracy: "+accuracy+"%";
 
 let mentor="";
 
-if(accuracy>=80){
+if(accuracy>=80 && attemptRate>=80){
 
 mentor=
-"🌟 Excellent work! Your accuracy is impressive. Stay consistent and keep challenging yourself with tougher questions.";
+"🌟 Excellent work! Your accuracy and attempt rate are both impressive. Keep maintaining consistency and challenge yourself with tougher tests.";
 
 }
 
-else if(accuracy>=65){
+else if(accuracy>=80 && attemptRate<60){
 
 mentor=
-"📈 You are progressing well. A little more revision and practice can significantly improve your score. Keep going!";
+"📈 Your accuracy is excellent, but you are under-attempting. Trust yourself more and gradually increase your attempts.";
 
 }
 
-else if(accuracy>=50){
+else if(accuracy>=60 && attemptRate>=80){
 
 mentor=
-"💪 You're building momentum. Focus on understanding mistakes and revise regularly. Improvement is closer than you think.";
+"💪 Good effort! You are attempting enough questions. Focus on reducing mistakes and your score will improve significantly.";
+
+}
+
+else if(accuracy<50 && attemptRate>85){
+
+mentor=
+"🎯 You are showing courage by attempting many questions. Now focus on improving accuracy. Learn from mistakes and avoid random guessing.";
 
 }
 
 else{
 
 mentor=
-"🌱 Every topper starts somewhere. Don't worry about today's score. Learn from mistakes, stay consistent, and your results will improve with time.";
+"🌱 Every topper starts somewhere. Don't worry about today's score. Stay consistent, revise regularly, and improvement will surely come.";
 
 }
 
