@@ -364,7 +364,7 @@ let timer;
 const examConfig = {
 
 "UPSC":{
-timePerQuestion:120,
+timePerQuestion:72,
 positive:2,
 negative:0.66
 },
@@ -376,7 +376,7 @@ negative:0.44
 },
 
 "BPSC":{
-timePerQuestion:120,
+timePerQuestion:48,
 positive:1,
 negative:0.33
 },
@@ -706,8 +706,18 @@ timeLeft = questionTime;
 
 load();
 
+startTimer();
+
 }
 
+else{
+
+submitTest();
+
+}
+
+}
+  
 else{
 
 submitTest();
@@ -736,22 +746,22 @@ display:flex;
 justify-content:center;
 gap:20px;
 flex-wrap:wrap;
-margin:15px 0;
+margin:20px 0;
 ">
 
 <div class="resultBox"
-style="padding:12px 20px;color:green;font-weight:600;">
+style="padding:15px 25px;font-size:20px;color:green;font-weight:600;">
 🟢 +${examConfig[exam].positive}
 </div>
 
 <div class="resultBox"
-style="padding:12px 20px;color:red;font-weight:600;">
+style="padding:15px 25px;font-size:20px;color:red;font-weight:600;">
 🔴 -${examConfig[exam].negative}
 </div>
 
 <div class="resultBox"
-style="padding:12px 20px;color:#1e3a8a;font-weight:600;">
-⏱ ${questionTime} sec/question
+style="padding:15px 25px;font-size:20px;color:#1e3a8a;font-weight:600;">
+⏱ ${Math.round(questionTime*selectedQuestions.length/60)} min / ${selectedQuestions.length} Q
 </div>
 
 </div>
