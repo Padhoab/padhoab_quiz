@@ -698,17 +698,11 @@ clearInterval(timer);
 
 timer = null;
 
-if(q < quiz.length-1){
+if(timeLeft <= 0){
 
-q++;
+clearInterval(timer);
 
-load();
-
-startTimer();
-
-}
-
-else{
+timer = null;
 
 submitTest();
 
