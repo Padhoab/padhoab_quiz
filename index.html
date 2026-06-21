@@ -730,6 +730,33 @@ html+="<div>User: "+userName+"</div>";
 
 html+="<div id='timerBox' class='timer'></div>";
 
+html+=`
+<div style="
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin:15px 0;
+">
+
+<div class="resultBox"
+style="padding:12px 20px;color:green;font-weight:600;">
+🟢 +${examConfig[exam].positive}
+</div>
+
+<div class="resultBox"
+style="padding:12px 20px;color:red;font-weight:600;">
+🔴 -${examConfig[exam].negative}
+</div>
+
+<div class="resultBox"
+style="padding:12px 20px;color:#1e3a8a;font-weight:600;">
+⏱ ${questionTime} sec/question
+</div>
+
+</div>
+`;
+
 html+="<h3 id='qno'></h3>";
 
 html+="<p id='question'></p>";
