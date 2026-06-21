@@ -409,7 +409,7 @@ negative:0
 
 let questionTime;
   
-let timeLeft = questionTime;
+let timeLeft = 0;
   
 const qAPI =
 "https://script.google.com/macros/s/AKfycby2Hh9iPQC2mx44e4HBQQ6kemwUBcAi5O7UD1czaWJ0lxV5zUIA5RQr2KhjZql0451pMw/exec";
@@ -689,7 +689,7 @@ console.log(examConfig[exam]);
 questionTime =
 examConfig[exam].timePerQuestion;
 
-timeLeft = questionTime;
+timeLeft = questionTime * quiz.length;
 
 showQuiz();
 
