@@ -504,8 +504,15 @@ async function continueQuiz(){
 userName =
 document.getElementById("nameInput").value;
 
-localStorage.setItem("testkaroab_name", userName);
+if(userName!=""){
 
+localStorage.setItem(
+"testkaroab_name",
+userName
+);
+
+}
+  
 if(userName==""){
 
 alert("Please enter your name");
@@ -519,6 +526,47 @@ let res = await fetch(qAPI);
 dataAll = await res.json();
 
 showExams();
+
+}
+
+function showNameBox(){
+
+app.innerHTML=`
+
+<h2>Welcome to Test KaroAB</h2>
+
+<p class="subtitle">
+
+Choose Your Name
+
+</p>
+
+<input
+
+id="nameInput"
+
+placeholder="Enter Your Name"
+
+style="
+width:100%;
+padding:20px;
+margin:25px 0;
+border:1px solid #d1d5db;
+border-radius:15px;
+font-size:22px;
+outline:none;
+box-sizing:border-box;
+">
+
+<button
+class="subjectBtn"
+onclick="continueQuiz()">
+
+Continue
+
+</button>
+
+`;
 
 }
   
@@ -1429,7 +1477,12 @@ onAuthStateChanged(auth,(user)=>{
 
 if(user){
 
-userName = user.displayName || "Test User";
+let savedName =
+localStorage.getItem("testkaroab_name");
+
+if(savedName){
+
+userName = savedName;
 
 fetch(qAPI)
 .then(res=>res.json())
@@ -1441,6 +1494,13 @@ showExams();
 
 });
 
+}
+else{
+
+showNameBox();
+
+}
+  
 }
 
 else{
