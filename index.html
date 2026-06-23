@@ -1354,8 +1354,8 @@ window.location.href = "login.html";
   
 async function showProgress(){
 
-let res = await fetch(rAPI);
-
+let res = await fetch(rAPI+"?sheet=results");
+  
 let data = await res.json();
 
 console.log(data);
