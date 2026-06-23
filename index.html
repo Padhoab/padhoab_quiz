@@ -993,6 +993,11 @@ async function submitTest(){
 
 clearInterval(timer);
 
+document.querySelector(".submitBtn").disabled=true;
+
+document.querySelector(".submitBtn").innerHTML=
+"Submitting...";
+
 let correct=0;
 let wrong=0;
 
