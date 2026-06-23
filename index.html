@@ -1486,11 +1486,15 @@ if(savedName){
 
 userName = savedName;
 
+console.time("Loading Questions");
+
 fetch(qAPI)
 .then(res=>res.json())
 .then(data=>{
 
 dataAll = data;
+
+console.timeEnd("Loading Questions");
 
 showExams();
 
