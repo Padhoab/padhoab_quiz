@@ -1486,6 +1486,8 @@ if(savedName){
 
 userName = savedName;
 
+showExams();
+
 console.time("Loading Questions");
 
 fetch(qAPI)
@@ -1496,10 +1498,8 @@ dataAll = data;
 
 console.timeEnd("Loading Questions");
 
-showExams();
-
 });
-
+  
 }
 
 else{
