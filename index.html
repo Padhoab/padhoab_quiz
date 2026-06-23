@@ -808,6 +808,11 @@ submitTest();
 
 function showQuiz(){
 
+localStorage.setItem(
+"inTest",
+"yes"
+);
+  
 q =
 parseInt(
 localStorage.getItem(
@@ -1047,6 +1052,10 @@ showQuiz();
 async function submitTest(){
 
 clearInterval(timer);
+
+localStorage.removeItem("inTest");
+localStorage.removeItem("answers");
+localStorage.removeItem("currentQuestion");
 
 document.querySelector(".submitBtn").disabled=true;
 
