@@ -1045,7 +1045,11 @@ let final=(correct*pos)-(wrong*neg);
 
 final=final.toFixed(2);
 
+console.time("Result Page");
+  
 showResult(correct,wrong,raw,final);
+
+console.timeEnd("Result Page");
 
 fetch(rAPI,{
 
