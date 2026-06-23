@@ -983,8 +983,16 @@ showQuiz();
 function next(){
 
 if(q<quiz.length-1){
+
 q++;
+
+localStorage.setItem(
+"currentQuestion",
+q
+);
+
 showQuiz();
+
 }
 
 }
@@ -992,6 +1000,11 @@ showQuiz();
 function goToQuestion(i){
 
 q=i;
+
+localStorage.setItem(
+"currentQuestion",
+q
+);
 
 showQuiz();
 
@@ -1001,12 +1014,19 @@ showQuiz();
 function prev(){
 
 if(q>0){
+
 q--;
+
+localStorage.setItem(
+"currentQuestion",
+q
+);
+
 showQuiz();
-}
 
 }
 
+}
 
 async function submitTest(){
 
