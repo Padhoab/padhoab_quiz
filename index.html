@@ -1508,7 +1508,10 @@ if(savedName){
 
 userName = savedName;
 
-showExams();
+app.innerHTML =
+menu()+`
+<h2>Loading...</h2>
+`;
 
 console.time("Loading Questions");
 
@@ -1518,9 +1521,13 @@ fetch(qAPI)
 
 dataAll = data;
 
+showExams();
+
 console.timeEnd("Loading Questions");
 
 });
+
+}
   
 }
 
