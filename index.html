@@ -1084,10 +1084,6 @@ parseInt(localStorage.getItem("questionsSolved")||0)+quiz.length
 
 async function showResult(c,w,raw,final){
 
-let res=await fetch(rAPI+"?sheet=results");
-  
-let data=await res.json();
-
 let html="<h2>Result</h2>";
 
 html += `
