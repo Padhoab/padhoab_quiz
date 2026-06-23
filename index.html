@@ -1088,6 +1088,8 @@ parseInt(localStorage.getItem("questionsSolved")||0)+quiz.length
 
 async function showResult(c,w,raw,final){
 
+console.time("showResult");
+
 let html="<h2>Result</h2>";
 
 html += `
@@ -1331,6 +1333,8 @@ onclick="showExams()">
 `;
   
 app.innerHTML=html;
+
+console.timeEnd("showResult");
 
 }
 
