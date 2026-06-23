@@ -961,6 +961,11 @@ function answer(i){
 
 answers[q]=i;
 
+localStorage.setItem(
+"answers",
+JSON.stringify(answers)
+);
+
 for(let j=0;j<4;j++){
 
 document.getElementById("b"+j)
@@ -974,7 +979,6 @@ document.getElementById("b"+i)
 showQuiz();
 
 }
-
 
 function next(){
 
