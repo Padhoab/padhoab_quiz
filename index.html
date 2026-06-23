@@ -612,6 +612,21 @@ function selectExam(e){
 
 exam=e;
 
+if(dataAll.length==0){
+
+app.innerHTML=
+menu()+`
+<h2>Loading Questions...</h2>
+`;
+
+setTimeout(()=>{
+selectExam(e);
+},500);
+
+return;
+
+}
+
 let subs=[];
 
 for(let i=0;i<dataAll.length;i++){
@@ -1502,8 +1517,6 @@ fetch(qAPI)
 .then(data=>{
 
 dataAll = data;
-
-showExams();
 
 console.timeEnd("Loading Questions");
 
