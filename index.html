@@ -808,6 +808,22 @@ submitTest();
 
 function showQuiz(){
 
+q =
+parseInt(
+localStorage.getItem(
+"currentQuestion"
+)
+)
+||0;
+
+answers =
+JSON.parse(
+localStorage.getItem(
+"answers"
+)
+)
+||answers;
+
 let html="";
 
 html+=`
