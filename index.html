@@ -1620,8 +1620,22 @@ showNameBox();
 
 else{
 
-// window.location.href="login.html";
-  
+userName = "Guest";
+
+app.innerHTML = menu() + `
+<h2>Loading...</h2>
+`;
+
+fetch(qAPI)
+.then(res => res.json())
+.then(data => {
+
+dataAll = data;
+
+showExams();
+
+});
+
 }
   
 });
