@@ -218,7 +218,7 @@ window.location.pathname.includes("index.html")
 )
 {
 
-window.location.href = "login.html";
+// window.location.href = "login.html";
 
 }
 
