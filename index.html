@@ -1620,21 +1620,7 @@ showNameBox();
 
 else{
 
-userName = "Guest";
-
-app.innerHTML = menu() + `
-<h2>Loading...</h2>
-`;
-
-fetch(qAPI)
-.then(res => res.json())
-.then(data => {
-
-dataAll = data;
-
-showExams();
-
-});
+window.location.href="login.html";
 
 }
   
@@ -1647,4 +1633,3 @@ showExams();
 </body>
 
 </html>
-
