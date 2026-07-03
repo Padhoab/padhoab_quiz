@@ -1176,6 +1176,14 @@ let final=(correct*pos)-(wrong*neg);
 final=final.toFixed(2);
 
 console.time("Result Page");
+
+console.log("=== DEBUG ===");
+console.log("Correct:", correct);
+console.log("Wrong:", wrong);
+console.log("Not Attempted:", notAttempted);
+console.log("Raw:", raw);
+console.log("Final:", final);
+console.log("Calling showResult with 5 parameters");
   
 showResult(correct,wrong,notAttempted,raw,final);
   
