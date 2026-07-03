@@ -997,7 +997,7 @@ qno.innerHTML = "Q " + (q+1) + " / " + quiz.length;
 
 question.innerHTML = quiz[q].question;
   
-let totalOptions = isBiharPattern ? 5 : 4;
+var totalOptions = isBiharPattern ? 5 : 4;
   
 for(let i=0;i<totalOptions;i++){
   
@@ -1033,7 +1033,7 @@ localStorage.setItem(
 JSON.stringify(answers)
 );
 
-let totalOptions = isBiharPattern ? 5 : 4;
+var totalOptions = isBiharPattern ? 5 : 4;
 
 for(let j=0;j<totalOptions;j++){
   
