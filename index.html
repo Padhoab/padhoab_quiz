@@ -433,6 +433,8 @@ negative:0
 };
 
 let questionTime;
+
+let isBiharPattern = false;
   
 let timeLeft = 0;
   
@@ -948,11 +950,7 @@ html+="<button class='option' id='b1' onclick='answer(1)'></button>";
 html+="<button class='option' id='b2' onclick='answer(2)'></button>";
 html+="<button class='option' id='b3' onclick='answer(3)'></button>";
 
-if(
-exam=="BPSC" ||
-exam=="Bihar APO" ||
-(exam=="Current affairs" && subject=="BPSC")
-){
+if(isBiharPattern){
   
 html+="<button class='option' id='b4' onclick='answer(4)'>Not Attempted</button>";
 
