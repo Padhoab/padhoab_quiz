@@ -993,12 +993,10 @@ startTimer();
 
 }
   
-qno.innerHTML=
-"Q "+(q+1)+" / "+quiz.length;
+qno.innerHTML = "Q " + (q+1) + " / " + quiz.length;
 
-question.innerHTML=
-quiz[q].question;
-
+question.innerHTML = quiz[q].question;
+  
 let totalOptions = isBiharPattern ? 5 : 4;
   
 for(let i=0;i<totalOptions;i++){
@@ -1123,13 +1121,23 @@ for(let i=0;i<quiz.length;i++){
 
 if(answers[i]!=null){
 
-if(answers[i]==quiz[i].correct)
-correct++;
-else
-wrong++;
+    if(isBiharPattern && answers[i]==4){
+
+        // Not Attempted
+
+    }
+    else if(answers[i]==quiz[i].correct){
+
+        correct++;
+
+    }
+    else{
+
+        wrong++;
+
+    }
 
 }
-
 }
 
 let pos =
