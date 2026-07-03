@@ -1116,30 +1116,53 @@ document.querySelector(".submitBtn").style.cursor="not-allowed";
 
 let correct=0;
 let wrong=0;
+let notAttempted = 0;
 
 for(let i=0;i<quiz.length;i++){
 
-if(answers[i]!=null){
+    // Bihar Pattern
+    if(isBiharPattern){
 
-    if(isBiharPattern && answers[i]==4){
+        if(answers[i] == 4){
 
-        // Not Attempted
+            notAttempted++;
+
+        }
+        else if(answers[i] == quiz[i].correct){
+
+            correct++;
+
+        }
+        else{
+
+            // A/B/C/D wrong OR nothing selected
+            wrong++;
+
+        }
 
     }
-    else if(answers[i]==quiz[i].correct){
 
-        correct++;
-
-    }
+    // Other Exams
     else{
 
-        wrong++;
+        if(answers[i] != null){
+
+            if(answers[i] == quiz[i].correct){
+
+                correct++;
+
+            }
+            else{
+
+                wrong++;
+
+            }
+
+        }
 
     }
 
 }
-}
-
 let pos =
 examConfig[exam].positive;
 
@@ -1155,7 +1178,7 @@ final=final.toFixed(2);
 console.time("Result Page");
   
 showResult(correct,wrong,raw,final);
-
+  
 console.timeEnd("Result Page");
 
 fetch(rAPI,{
@@ -1193,8 +1216,8 @@ parseInt(localStorage.getItem("questionsSolved")||0)+quiz.length
 }
 
 
-async function showResult(c,w,raw,final){
-
+async function showResult(c,w,na,raw,final){
+  
 let res=await fetch(rAPI+"?sheet=results");
 
 let data=await res.json();
@@ -1213,6 +1236,9 @@ html+="<div class='resultBox'>";
 
 html+="Correct: <span class='correct'>"+c+"</span><br>";
 html+="Wrong: <span class='wrong'>"+w+"</span><br>";
+if(isBiharPattern){
+    html+="Not Attempted: <span style='color:#f59e0b'>"+na+"</span><br>";
+}
 
 let deduction = (raw-final).toFixed(2);
 
