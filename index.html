@@ -943,8 +943,12 @@ html+="<button class='option' id='b1' onclick='answer(1)'></button>";
 html+="<button class='option' id='b2' onclick='answer(2)'></button>";
 html+="<button class='option' id='b3' onclick='answer(3)'></button>";
 
-if(exam=="BPSC" || exam=="Bihar APO"){
-
+if(
+exam=="BPSC" ||
+exam=="Bihar APO" ||
+(exam=="Current affairs" && subject=="BPSC")
+){
+  
 html+="<button class='option' id='b4' onclick='answer(4)'>Not Attempted</button>";
 
 }
@@ -993,8 +997,13 @@ question.innerHTML=
 quiz[q].question;
 
 let totalOptions =
-(exam=="BPSC" || exam=="Bihar APO") ? 5 : 4;
-
+let totalOptions =
+(
+exam=="BPSC" ||
+exam=="Bihar APO" ||
+(exam=="Current affairs" && subject=="BPSC")
+) ? 5 : 4;
+  
 for(let i=0;i<totalOptions;i++){
   
 let b=document.getElementById("b"+i);
