@@ -1184,6 +1184,17 @@ console.log("Not Attempted:", notAttempted);
 console.log("Raw:", raw);
 console.log("Final:", final);
 console.log("Calling showResult with 5 parameters");
+
+console.log("----- BEFORE showResult -----");
+console.log({
+  correct,
+  wrong,
+  notAttempted,
+  raw,
+  final,
+  pos,
+  neg
+});
   
 showResult(correct,wrong,notAttempted,raw,final);
   
@@ -1225,9 +1236,18 @@ parseInt(localStorage.getItem("questionsSolved")||0)+quiz.length
 
 
 async function showResult(c,w,na,raw,final){
-  
-let res=await fetch(rAPI+"?sheet=results");
 
+console.log("----- INSIDE showResult -----");
+console.log({
+  c,
+  w,
+  na,
+  raw,
+  final
+});
+
+let res=await fetch(rAPI+"?sheet=results");
+  
 let data=await res.json();
 
 console.time("showResult");
