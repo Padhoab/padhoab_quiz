@@ -735,6 +735,11 @@ function selectTopic(t){
 
 topic=t;
 
+isBiharPattern =
+exam=="BPSC" ||
+exam=="Bihar APO" ||
+(exam=="Current affairs" && subject=="BPSC");
+  
 quiz=[];
 answers=[];
 q=0;
@@ -996,13 +1001,7 @@ qno.innerHTML=
 question.innerHTML=
 quiz[q].question;
 
-let totalOptions =
-let totalOptions =
-(
-exam=="BPSC" ||
-exam=="Bihar APO" ||
-(exam=="Current affairs" && subject=="BPSC")
-) ? 5 : 4;
+let totalOptions = isBiharPattern ? 5 : 4;
   
 for(let i=0;i<totalOptions;i++){
   
@@ -1038,8 +1037,10 @@ localStorage.setItem(
 JSON.stringify(answers)
 );
 
-for(let j=0;j<4;j++){
+let totalOptions = isBiharPattern ? 5 : 4;
 
+for(let j=0;j<totalOptions;j++){
+  
 document.getElementById("b"+j)
 .classList.remove("selected");
 
