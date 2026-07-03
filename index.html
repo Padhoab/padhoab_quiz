@@ -943,6 +943,12 @@ html+="<button class='option' id='b1' onclick='answer(1)'></button>";
 html+="<button class='option' id='b2' onclick='answer(2)'></button>";
 html+="<button class='option' id='b3' onclick='answer(3)'></button>";
 
+if(exam=="BPSC" || exam=="Bihar APO"){
+
+html+="<button class='option' id='b4' onclick='answer(4)'>E. Not Attempted</button>";
+
+}
+
 html+="<div class='nav'>";
 html+="<button onclick='prev()'>Prev</button>";
 html+="<button onclick='next()'>Next</button>";
@@ -986,14 +992,26 @@ qno.innerHTML=
 question.innerHTML=
 quiz[q].question;
 
-for(let i=0;i<4;i++){
+let totalOptions =
+(exam=="BPSC" || exam=="Bihar APO") ? 5 : 4;
 
+for(let i=0;i<totalOptions;i++){
+  
 let b=document.getElementById("b"+i);
 
 b.className="option";
 
+if(i==4){
+
+b.innerHTML="E. Not Attempted";
+
+}
+else{
+
 b.innerHTML=quiz[q].options[i];
 
+}
+  
 if(answers[q]==i)
 b.classList.add("selected");
 
