@@ -756,7 +756,7 @@ dataAll[i].Topic==topic
 
 quiz.push({
 
-question:dataAll[i].question,
+question: formatQuestion(dataAll[i].question),
 
 options:[
 dataAll[i].op1,
@@ -770,7 +770,6 @@ correct:parseInt(dataAll[i].correct),
 explanation:dataAll[i].Explanation
 
 });
-
 
 answers.push(null);
 
@@ -987,6 +986,26 @@ function load(){
 
 visited[q]=true;
 
+const palette = document.querySelectorAll("#palette button");
+
+palette.forEach((btn, index) => {
+
+    let color = "#e5e7eb";
+
+    if(index === q){
+        color = "#2563eb";
+    }
+    else if(answers[index] != null){
+        color = "#16a34a";
+    }
+    else if(visited[index]){
+        color = "#facc15";
+    }
+
+    btn.style.background = color;
+
+});
+  
 if(!timer){
 
 startTimer();
@@ -1023,7 +1042,38 @@ b.classList.add("selected");
 
 }
 
+function formatQuestion(text){
 
+    if(!text) return "";
+
+    text = text.toString();
+
+    // Remove hidden spaces
+    text = text.replace(/\u00A0/g," ");
+
+    // Normalize spaces
+    text = text.replace(/\s+/g," ").trim();
+
+    // First statement
+    text = text.replace(/:\s*(1\.)/g,":<br><br>$1");
+
+    // Remaining statements
+    text = text.replace(/\s([2-9]|[1-9][0-9])\.\s*/g,"<br><br>$1. ");
+
+    // Final question
+    text = text.replace(
+        /\s*(Which of the (above|following)[^?]*\?)/gi,
+        "<br><br>$1"
+    );
+
+    text = text.replace(
+        /\s*(How many of the (above|following)[^?]*\?)/gi,
+        "<br><br>$1"
+    );
+
+    return text;
+
+}  
 function answer(i){
 
 answers[q]=i;
@@ -1045,7 +1095,7 @@ document.getElementById("b"+j)
 document.getElementById("b"+i)
 .classList.add("selected");
 
-showQuiz();
+load();
 
 }
 
@@ -1060,7 +1110,7 @@ localStorage.setItem(
 q
 );
 
-showQuiz();
+load();
 
 }
 
@@ -1075,7 +1125,7 @@ localStorage.setItem(
 q
 );
 
-showQuiz();
+load();
 
 }
 
@@ -1091,7 +1141,7 @@ localStorage.setItem(
 q
 );
 
-showQuiz();
+load();
 
 }
 
