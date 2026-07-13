@@ -1053,6 +1053,12 @@ function formatQuestion(text){
     // Normalize spaces
     text = text.replace(/\s+/g," ").trim();
 
+  // Move the first statement to a new line
+text = text.replace(
+    /:\s*1\.\s*/,
+    ":<br>1. "
+);
+
     // First statement
 for(let i=2;i<=20;i++){
 
