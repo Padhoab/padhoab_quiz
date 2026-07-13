@@ -1054,13 +1054,19 @@ function formatQuestion(text){
     text = text.replace(/\s+/g," ").trim();
 
     // First statement
-    text = text.replace(/:\s*(1\.)/g,":<br><br>$1");
+for(let i=2;i<=20;i++){
 
+    text = text.replace(
+        new RegExp("(^|\\s)"+i+"\\.\\s","g"),
+        "$1<br>"+i+". "
+    );
+
+}
     // Remaining statements
 for(let i=2;i<=20;i++){
     text = text.replace(
         new RegExp(" " + i + "\\. ","g"),
-        "<br><br>"+i+". "
+        "<br>"+i+". "
     );
 }
   
@@ -1086,6 +1092,7 @@ localStorage.setItem(
 "answers",
 JSON.stringify(answers)
 );
+
 
 let totalOptions = isBiharPattern ? 5 : 4;
 
