@@ -629,56 +629,60 @@ Start Practicing
 }
 async function continueQuiz(){
 
-userName =
-document.getElementById("nameInput").value;
+    userName =
+    document.getElementById("nameInput").value;
 
-if(userName!=""){
+    if(userName!=""){
 
-localStorage.setItem(
-"testkaroab_name",
-userName
-);
+        localStorage.setItem(
+        "testkaroab_name",
+        userName
+        );
+
+    }
+
+    if(userName==""){
+
+        alert("Please enter your name");
+
+        return;
+
+    }
+
+    // Wait only if background download is still running
+    while(dataAll.length==0){
+
+        await new Promise(r=>setTimeout(r,100));
+
+    }
+
+    showExams();
+
+}
+
+async function preloadQuestions(){
+
+    if(dataAll.length>0) return;
+
+    try{
+
+        console.log("Preloading questions...");
+
+        let res = await fetch(qAPI);
+
+        dataAll = await res.json();
+
+        console.log("Questions Ready:",dataAll.length);
+
+    }
+    catch(err){
+
+        console.error(err);
+
+    }
 
 }
   
-if(userName==""){
-
-alert("Please enter your name");
-
-return;
-
-}
-
-const CACHE_KEY = "testkaroab_questions_v1";
-
-const cached = localStorage.getItem(CACHE_KEY);
-
-if(cached){
-
-    console.log("Loaded from Cache");
-
-    dataAll = JSON.parse(cached);
-
-}
-else{
-
-    console.log("Downloading Questions...");
-
-    let res = await fetch(qAPI);
-
-    dataAll = await res.json();
-
-    localStorage.setItem(
-        CACHE_KEY,
-        JSON.stringify(dataAll)
-    );
-
-}
-  
-showExams();
-
-}
-
 function showNameBox(){
 
 app.innerHTML=`
@@ -719,6 +723,8 @@ Continue
 `;
 
 }
+
+
   
 function showExams(){
 
@@ -2017,24 +2023,22 @@ menu()+`
 
 console.time("Loading Questions");
 
-fetch(qAPI)
-.then(res=>res.json())
-.then(data=>{
+preloadQuestions().then(()=>{
 
-dataAll = data;
+    showExams();
 
-showExams();
-  
-console.timeEnd("Loading Questions");
+    console.timeEnd("Loading Questions");
 
 });
-
+  
 }
 
 else{
 
-showNameBox();
+preloadQuestions();
 
+showNameBox();
+  
 }
   
 }
