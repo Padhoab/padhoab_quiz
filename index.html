@@ -326,6 +326,19 @@ margin-bottom:20px;
 
 }
   
+
+#palette{
+display:flex!important;
+flex-wrap:nowrap!important;
+overflow-x:auto;
+gap:8px;
+padding:8px 4px;
+scroll-behavior:smooth;
+-webkit-overflow-scrolling:touch;
+}
+#palette::-webkit-scrollbar{display:none;}
+#palette button{flex:0 0 auto;width:44px!important;height:44px!important;}
+
 </style>
 
 </head>
@@ -371,6 +384,7 @@ let quiz=[];
 let answers=[];
 let visited=[];
 let review=[];
+const PALETTE_SIZE = 10;
 let dataAll=[];
 let userName="";
 let exam="";
@@ -902,53 +916,91 @@ localStorage.getItem(
 
 let html="";
 
-html+=`
-<div id="palette"
+let start = Math.max(0, q - 4);
+let end = Math.min(quiz.length, start + PALETTE_SIZE);
+
+if(end - start < PALETTE_SIZE){
+    start = Math.max(0, end - PALETTE_SIZE);
+}
+
+html += `
+<div id="paletteNav"
 style="
 display:flex;
-flex-wrap:wrap;
+align-items:center;
 gap:10px;
 margin-bottom:20px;
 ">
+
+<button onclick="palettePrev()">◀</button>
+
+<div id="palette"
+style="
+display:flex;
+gap:8px;
+overflow:hidden;
+flex:1;
+">
 `;
 
-for(let i=0;i<quiz.length;i++){
+for(let i=start;i<end;i++){
 
-let color="#e5e7eb";
+    let color="#e5e7eb";
 
-if(i===q){
-color="#2563eb";
-}
+    if(i===q){
 
-else if(answers[i]!=null){
-color="#16a34a";
-}
+        color="#2563eb";
 
-else if(visited[i]){
-color="#facc15";
-}
+    }
+    else if(review[i]){
 
-html+=`
+        color="#a855f7";
+
+    }
+    else if(answers[i]!=null){
+
+        if(isBiharPattern && answers[i]==4){
+
+            color="#9ca3af";
+
+        }else{
+
+            color="#16a34a";
+
+        }
+
+    }
+    else if(visited[i]){
+
+        color="#facc15";
+
+    }
+
+    html+=`
 <button
 onclick="goToQuestion(${i})"
 style="
-width:42px;
-height:42px;
-font-size:15px;
+width:44px;
+height:44px;
 border:none;
 border-radius:10px;
 background:${color};
 font-weight:bold;
 cursor:pointer;
+flex:0 0 auto;
 ">
 ${i+1}
-</button>
-`;
-
+</button>`;
 }
 
-html+=`</div>`;
+html+=`
+</div>
 
+<button onclick="paletteNext()">▶</button>
+
+</div>
+`;
+  
 html+="<h2 class='quizTitle'>"+topic+"</h2>";
   
 html+="<div>User: "+userName+"</div>";
@@ -1020,9 +1072,18 @@ timerBox.innerHTML =
 +String(seconds).padStart(2,"0");
   
 load();
+centerCurrentPalette();
   
 }
 
+
+
+function centerCurrentPalette(){
+ const p=document.getElementById("palette");
+ if(!p)return;
+ const btn=p.querySelectorAll("button")[q];
+ if(btn) btn.scrollIntoView({behavior:"smooth",inline:"center",block:"nearest"});
+}
 
 function load(){
 
@@ -1054,6 +1115,7 @@ palette.forEach((btn, index) => {
     btn.style.background = color;
 
 });
+centerCurrentPalette();
   
 if(!timer){
 
@@ -1186,6 +1248,33 @@ showQuiz();
 
 }
 
+function palettePrev(){
+
+    if(q>0){
+
+        q--;
+
+        localStorage.setItem("currentQuestion",q);
+
+        showQuiz();
+
+    }
+
+}
+
+function paletteNext(){
+
+    if(q<quiz.length-1){
+
+        q++;
+
+        localStorage.setItem("currentQuestion",q);
+
+        showQuiz();
+
+    }
+
+}
 
 function toggleReview(){
     review[q]=!review[q];
