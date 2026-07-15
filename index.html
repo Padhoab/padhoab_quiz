@@ -1248,22 +1248,6 @@ console.log({
   neg
 });
   
-let history =
-JSON.parse(localStorage.getItem("history")||"[]");
-
-history.push({
-date:new Date().toLocaleDateString(),
-exam,
-subject,
-topic,
-score:final,
-correct,
-wrong,
-accuracy
-});
-
-localStorage.setItem("history",JSON.stringify(history));
-
 showResult(correct,wrong,notAttempted,raw,final);
   
 console.timeEnd("Result Page");
