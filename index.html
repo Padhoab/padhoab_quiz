@@ -755,7 +755,7 @@ dataAll[i].Topic==topic
 
 quiz.push({
 
-question: dataAll[i].question,
+question: formatQuestion(dataAll[i].question),
   
 options:[
 dataAll[i].op1,
@@ -956,7 +956,7 @@ html+="<button class='option' id='b4' onclick='answer(4)'>Not Attempted</button>
 
 html+="<div class='nav'>";
 html+="<button onclick='prev()'>Prev</button>";
-html+="<button onclick='next()'>Next</button>";
+html+="<button onclick='next()'>Next</button><button onclick='toggleReview()'>Review</button>";
 html+="<button class='submitBtn' onclick='submitTest()'>Submit</button>";
 html+="</div>";
 
@@ -994,8 +994,15 @@ palette.forEach((btn, index) => {
     if(index === q){
         color = "#2563eb";
     }
+    else if(review[index]){
+        color="#a855f7";
+    }
     else if(answers[index] != null){
-        color = "#16a34a";
+        if(isBiharPattern && answers[index]==4){
+            color="#9ca3af";
+        }else{
+            color="#16a34a";
+        }
     }
     else if(visited[index]){
         color = "#facc15";
@@ -1013,9 +1020,7 @@ startTimer();
   
 qno.innerHTML = "Q " + (q+1) + " / " + quiz.length;
 
-alert(JSON.stringify(quiz[q].question));
-question.style.whiteSpace = "pre-line";
-question.textContent = quiz[q].question;
+question.innerHTML = quiz[q].question;
   
 let totalOptions = isBiharPattern ? 5 : 4;
   
@@ -1047,34 +1052,23 @@ function formatQuestion(text){
 
     if(!text) return "";
 
-    text = text.toString();
+    text = String(text).replace(/\r\n/g,"\n").replace(/\r/g,"\n");
 
-    text = text.replace(/\u00A0/g," ");
-    text = text.replace(/\s+/g," ").trim();
+    if(text.indexOf("\n") !== -1){
+        return text.replace(/\n/g,"<br>");
+    }
 
-    // First statement
-    text = text.replace(/:\s*1\.\s+/g,":<br><br>1. ");
-
-    // Statement 2 onwards (won't affect 8.6 or 54.8)
-    text = text.replace(/ (\d{1,2})\.\s/g,function(match,num){
-        return "<br><br>"+num+". ";
+    text = text.replace(/:\s*1\.\s*/g,":<br><br>1. ");
+    text = text.replace(/ (\d{1,2})\.\s/g,function(m,n){
+        return "<br><br>"+n+". ";
     });
 
-    // Final question
-    text = text.replace(
-        /\s*(Which of the (above|following)[^?]*\?)/gi,
-        "<br><br>$1"
-    );
-
-    text = text.replace(
-        /\s*(How many of the (above|following)[^?]*\?)/gi,
-        "<br><br>$1"
-    );
+    text = text.replace(/\s*(Which of the (above|following)[^?]*\?)/gi,"<br><br>$1");
+    text = text.replace(/\s*(How many of the (above|following)[^?]*\?)/gi,"<br><br>$1");
 
     return text;
-
 }
-  
+
 function answer(i){
 
 answers[q]=i;
@@ -1147,6 +1141,12 @@ showQuiz();
   
 }
 
+}
+
+
+function toggleReview(){
+    review[q]=!review[q];
+    showQuiz();
 }
 
 async function submitTest(){
@@ -1248,6 +1248,22 @@ console.log({
   neg
 });
   
+let history =
+JSON.parse(localStorage.getItem("history")||"[]");
+
+history.push({
+date:new Date().toLocaleDateString(),
+exam,
+subject,
+topic,
+score:final,
+correct,
+wrong,
+accuracy
+});
+
+localStorage.setItem("history",JSON.stringify(history));
+
 showResult(correct,wrong,notAttempted,raw,final);
   
 console.timeEnd("Result Page");
@@ -1352,6 +1368,9 @@ attemptRate =
 }
 
 html+="<br>Accuracy: "+accuracy+"%";
+html+="<br>Attempt Rate: "+attemptRate+"%";
+html+="<br>Attempted: "+attempted+" / "+quiz.length;
+html+="<br>Skipped: "+(quiz.length-attempted);
 
 let mentor="";
 
