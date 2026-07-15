@@ -755,7 +755,7 @@ dataAll[i].Topic==topic
 
 quiz.push({
 
-question: dataAll[i].question,
+question: formatQuestion(dataAll[i].question),
   
 options:[
 dataAll[i].op1,
@@ -1047,35 +1047,17 @@ function formatQuestion(text){
 
     text = text.toString();
 
-    // Remove hidden spaces
     text = text.replace(/\u00A0/g," ");
-
-    // Normalize spaces
     text = text.replace(/\s+/g," ").trim();
 
-  // Move the first statement to a new line
-text = text.replace(
-    /:\s*1\.\s*/,
-    ":<br>1. "
-);
-
     // First statement
-for(let i=2;i<=20;i++){
+    text = text.replace(/:\s*1\.\s+/g,":<br><br>1. ");
 
-    text = text.replace(
-        new RegExp("(^|\\s)"+i+"\\.\\s","g"),
-        "$1<br>"+i+". "
-    );
+    // Statement 2 onwards (won't affect 8.6 or 54.8)
+    text = text.replace(/ (\d{1,2})\.\s/g,function(match,num){
+        return "<br><br>"+num+". ";
+    });
 
-}
-    // Remaining statements
-for(let i=2;i<=20;i++){
-    text = text.replace(
-        new RegExp(" " + i + "\\. ","g"),
-        "<br>"+i+". "
-    );
-}
-  
     // Final question
     text = text.replace(
         /\s*(Which of the (above|following)[^?]*\?)/gi,
@@ -1089,7 +1071,8 @@ for(let i=2;i<=20;i++){
 
     return text;
 
-}  
+}
+  
 function answer(i){
 
 answers[q]=i;
