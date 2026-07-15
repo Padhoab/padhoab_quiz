@@ -755,7 +755,7 @@ dataAll[i].Topic==topic
 
 quiz.push({
 
-question: formatQuestion(dataAll[i].question),
+question: dataAll[i].question,
   
 options:[
 dataAll[i].op1,
@@ -1014,7 +1014,8 @@ startTimer();
 qno.innerHTML = "Q " + (q+1) + " / " + quiz.length;
 
 alert(JSON.stringify(quiz[q].question));
-question.innerHTML = quiz[q].question;
+question.style.whiteSpace = "pre-line";
+question.textContent = quiz[q].question;
   
 let totalOptions = isBiharPattern ? 5 : 4;
   
