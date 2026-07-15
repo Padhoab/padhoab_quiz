@@ -649,10 +649,32 @@ return;
 
 }
 
-let res = await fetch(qAPI);
+const CACHE_KEY = "testkaroab_questions_v1";
 
-dataAll = await res.json();
+const cached = localStorage.getItem(CACHE_KEY);
 
+if(cached){
+
+    console.log("Loaded from Cache");
+
+    dataAll = JSON.parse(cached);
+
+}
+else{
+
+    console.log("Downloading Questions...");
+
+    let res = await fetch(qAPI);
+
+    dataAll = await res.json();
+
+    localStorage.setItem(
+        CACHE_KEY,
+        JSON.stringify(dataAll)
+    );
+
+}
+  
 showExams();
 
 }
