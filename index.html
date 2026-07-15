@@ -824,6 +824,49 @@ clearInterval(timer);
 
 timer = null;
 
+function confirmSubmit(){
+
+    let attempted = 0;
+    let notAttempted = 0;
+    let reviewCount = 0;
+
+    for(let i=0;i<answers.length;i++){
+
+        if(review[i]) reviewCount++;
+
+        if(answers[i] == null){
+
+            notAttempted++;
+
+        }
+        else if(isBiharPattern && answers[i] == 4){
+
+            notAttempted++;
+
+        }
+        else{
+
+            attempted++;
+
+        }
+
+    }
+
+    const message =
+`Are you sure you want to submit?
+
+Attempted : ${attempted}
+Not Attempted : ${notAttempted}
+Marked for Review : ${reviewCount}
+
+After submission you cannot change your answers.`;
+
+    if(confirm(message)){
+        submitTest();
+    }
+
+}
+
 submitTest();
 
 }
@@ -957,7 +1000,7 @@ html+="<button class='option' id='b4' onclick='answer(4)'>Not Attempted</button>
 html+="<div class='nav'>";
 html+="<button onclick='prev()'>Prev</button>";
 html+="<button onclick='next()'>Next</button><button onclick='toggleReview()'>Review</button>";
-html+="<button class='submitBtn' onclick='submitTest()'>Submit</button>";
+html+="<button class='submitBtn' onclick='confirmSubmit()'>Submit</button>";
 html+="</div>";
 
 
