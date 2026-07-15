@@ -1013,6 +1013,7 @@ startTimer();
   
 qno.innerHTML = "Q " + (q+1) + " / " + quiz.length;
 
+alert(JSON.stringify(quiz[q].question));
 question.innerHTML = quiz[q].question;
   
 let totalOptions = isBiharPattern ? 5 : 4;
