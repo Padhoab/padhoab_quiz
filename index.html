@@ -1194,11 +1194,21 @@ html+="<button class='option' id='b4' onclick='answer(4)'>Not Attempted</button>
 }
 
 html+="<div class='nav'>";
-html+="<button onclick='prev()'>Prev</button>";
-html+="<button onclick='next()'>Next</button><button onclick='toggleReview()'>Review</button>";
-html+="<button class='submitBtn' onclick='confirmSubmit()'>Submit</button>";
-html+="</div>";
 
+if(q>0){
+html+="<button onclick='prev()'>⬅ Prev</button>";
+}
+
+html+="<button onclick='toggleReview()'>⭐ Review</button>";
+
+if(q<quiz.length-1){
+html+="<button onclick='next()'>Next ➡</button>";
+}
+
+html+="<button class='submitBtn' onclick='confirmSubmit()'>🟢 Submit Test</button>";
+
+html+="</div>";
+  
 html += `
 <div id="submitModal" class="modal">
 
