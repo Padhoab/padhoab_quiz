@@ -1708,30 +1708,40 @@ html += `
 
 <div class="summaryCard">
 <div class="summaryLabel">✅ Correct Answers</div>
-<div class="summaryValue">${c}</div>
+<div class="summaryValue" style="color:#16a34a">${c}</div>
 </div>
 
 <div class="summaryCard">
 <div class="summaryLabel">❌ Incorrect Answers</div>
-<div class="summaryValue">${w}</div>
+<div class="summaryValue" style="color:#dc2626">${w}</div>
 </div>
-`;
 
-if(isBiharPattern){
-
-html += `
+${
+isBiharPattern
+?
+`
 <div class="summaryCard">
 <div class="summaryLabel">⭕ Not Attempted</div>
-<div class="summaryValue">${na}</div>
+<div class="summaryValue" style="color:#f59e0b">${na}</div>
 </div>
-`;
-
+`
+:
+`
+<div class="summaryCard">
+<div class="summaryLabel">📚 Total Questions</div>
+<div class="summaryValue">${quiz.length}</div>
+</div>
+`
 }
 
-html += `
 </div>
+
+<hr style="margin:30px 0;border:none;border-top:1px solid #e5e7eb;">
+
+<h3 style="color:#1e3a8a;margin-bottom:15px;">
+📈 Performance Insights
+</h3>
 `;
-}
 
 let deduction = (raw-final).toFixed(2);
 
