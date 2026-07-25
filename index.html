@@ -329,6 +329,77 @@ font-size:30px;
 }
 
 }
+
+/* ===== Breadcrumb ===== */
+
+.breadcrumb{
+
+display:inline-flex;
+flex-wrap:wrap;
+align-items:center;
+gap:8px;
+
+padding:10px 16px;
+
+margin-bottom:18px;
+
+background:#f8fafc;
+
+border:1px solid #e2e8f0;
+
+border-radius:14px;
+
+box-shadow:0 4px 10px rgba(0,0,0,.04);
+
+font-size:15px;
+
+font-weight:600;
+
+}
+
+.breadcrumbLink{
+
+color:#2563eb;
+
+cursor:pointer;
+
+transition:.2s;
+
+text-decoration:none;
+
+}
+
+.breadcrumbLink:hover{
+
+color:#1d4ed8;
+
+text-decoration:underline;
+
+}
+
+.breadcrumbCurrent{
+
+color:#111827;
+
+font-weight:700;
+
+cursor:default;
+
+}
+
+.breadcrumbCurrent:hover{
+
+text-decoration:none;
+
+}
+
+.breadcrumbSeparator{
+
+color:#94a3b8;
+
+user-select:none;
+
+}
   
 @media (max-width:768px){
 
@@ -642,44 +713,59 @@ onclick="logout()">
 
 function breadcrumb(){
 
-return `
-<div style="
-margin-bottom:25px;
-font-size:15px;
-font-weight:600;
-color:#64748b;
-">
+let html=`<div class="breadcrumb">`;
 
-<span onclick="showExams()"
-style="cursor:pointer;color:#2563eb;">
+html+=`
+<span
+class="breadcrumbLink"
+onclick="showExams()">
 🏠 All Exams
 </span>
-
-${exam ? `
-<span> › </span>
-<span onclick="selectExam(exam)"
-style="cursor:pointer;color:#2563eb;">
-${exam}
-</span>
-` : ""}
-
-${subject ? `
-<span> › </span>
-<span onclick="selectSubject(subject)"
-style="cursor:pointer;color:#2563eb;">
-${subject}
-</span>
-` : ""}
-
-${topic ? `
-<span> › </span>
-<span style="color:#111827;">
-${topic}
-</span>
-` : ""}
-
-</div>
 `;
+
+if(exam){
+
+html+=`
+<span class="breadcrumbSeparator">›</span>
+
+<span
+class="breadcrumbLink"
+onclick="selectExam(exam)">
+📘 ${exam}
+</span>
+`;
+
+}
+
+if(subject){
+
+html+=`
+<span class="breadcrumbSeparator">›</span>
+
+<span
+class="breadcrumbLink"
+onclick="selectSubject(subject)">
+📚 ${subject}
+</span>
+`;
+
+}
+
+if(topic){
+
+html+=`
+<span class="breadcrumbSeparator">›</span>
+
+<span class="breadcrumbCurrent">
+📖 ${topic}
+</span>
+`;
+
+}
+
+html+=`</div>`;
+
+return html;
 
 }
   
