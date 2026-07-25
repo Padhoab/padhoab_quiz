@@ -1586,6 +1586,19 @@ let final=(correct*pos)-(wrong*neg);
 
 final=final.toFixed(2);
 
+let attempted = correct + wrong;
+
+let accuracy = 0;
+let attemptRate = 0;
+
+if(attempted > 0){
+
+    accuracy = ((correct/attempted)*100).toFixed(1);
+
+    attemptRate = ((attempted/quiz.length)*100).toFixed(1);
+
+}
+
 console.time("Result Page");
 
 console.log("=== DEBUG ===");
