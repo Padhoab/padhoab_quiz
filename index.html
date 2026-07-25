@@ -644,21 +644,45 @@ function breadcrumb(){
 
 return `
 <div style="
-margin-bottom:20px;
+margin-bottom:25px;
 font-size:15px;
+font-weight:600;
 color:#64748b;
 ">
 
-🏠 Home
-${exam ? ` › ${exam}` : ""}
-${subject ? ` › ${subject}` : ""}
-${topic ? ` › ${topic}` : ""}
+<span onclick="showExams()"
+style="cursor:pointer;color:#2563eb;">
+🏠 All Exams
+</span>
+
+${exam ? `
+<span> › </span>
+<span onclick="selectExam(exam)"
+style="cursor:pointer;color:#2563eb;">
+${exam}
+</span>
+` : ""}
+
+${subject ? `
+<span> › </span>
+<span onclick="selectSubject(subject)"
+style="cursor:pointer;color:#2563eb;">
+${subject}
+</span>
+` : ""}
+
+${topic ? `
+<span> › </span>
+<span style="color:#111827;">
+${topic}
+</span>
+` : ""}
 
 </div>
 `;
 
 }
-
+  
 function start(){
 
 app.innerHTML=`
@@ -1709,7 +1733,9 @@ let data=await res.json();
 
 console.time("showResult");
 
-let html = `
+let html = breadcrumb();
+
+html += `
 <div style="
 text-align:center;
 margin-bottom:30px;
