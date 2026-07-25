@@ -276,6 +276,60 @@ color:#60a5fa;
 
 }
 
+/* ===== Performance Summary ===== */
+
+.summaryGrid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+gap:16px;
+margin:30px 0;
+}
+
+.summaryCard{
+background:#f8fafc;
+border-radius:18px;
+padding:20px;
+text-align:center;
+box-shadow:0 8px 20px rgba(0,0,0,.06);
+}
+
+.summaryLabel{
+font-size:16px;
+color:#64748b;
+margin-bottom:12px;
+font-weight:600;
+}
+
+.summaryValue{
+font-size:38px;
+font-weight:700;
+color:#1e3a8a;
+}
+
+@media(max-width:768px){
+
+.summaryGrid{
+
+grid-template-columns:repeat(2,1fr);
+
+gap:12px;
+
+}
+
+.summaryCard{
+
+padding:18px 12px;
+
+}
+
+.summaryValue{
+
+font-size:30px;
+
+}
+
+}
+  
 @media (max-width:768px){
 
 header{
