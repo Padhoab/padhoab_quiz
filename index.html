@@ -640,6 +640,25 @@ onclick="logout()">
 
 }
 
+function breadcrumb(){
+
+return `
+<div style="
+margin-bottom:20px;
+font-size:15px;
+color:#64748b;
+">
+
+🏠 Home
+${exam ? ` › ${exam}` : ""}
+${subject ? ` › ${subject}` : ""}
+${topic ? ` › ${topic}` : ""}
+
+</div>
+`;
+
+}
+
 function start(){
 
 app.innerHTML=`
