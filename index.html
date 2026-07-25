@@ -1696,23 +1696,41 @@ Well done, ${userName}! 🎉
 </div>
 `;
   
-html+="<div class='resultBox'>";
+html += `
+<div class="resultBox">
 
-html+=`
 <div class="summaryGrid">
-`;
 
-html+=`
 <div class="summaryCard">
-    <div class="summaryLabel">🎯 Final Score</div>
-    <div class="summaryValue">${final}</div>
+<div class="summaryLabel">🎯 Final Score</div>
+<div class="summaryValue">${final}</div>
+</div>
+
+<div class="summaryCard">
+<div class="summaryLabel">✅ Correct Answers</div>
+<div class="summaryValue">${c}</div>
+</div>
+
+<div class="summaryCard">
+<div class="summaryLabel">❌ Incorrect Answers</div>
+<div class="summaryValue">${w}</div>
 </div>
 `;
 
-html+="Correct: <span class='correct'>"+c+"</span><br>";
-html+="Wrong: <span class='wrong'>"+w+"</span><br>";
 if(isBiharPattern){
-    html+="Not Attempted: <span style='color:#f59e0b'>"+na+"</span><br>";
+
+html += `
+<div class="summaryCard">
+<div class="summaryLabel">⭕ Not Attempted</div>
+<div class="summaryValue">${na}</div>
+</div>
+`;
+
+}
+
+html += `
+</div>
+`;
 }
 
 let deduction = (raw-final).toFixed(2);
