@@ -392,6 +392,86 @@ color:#64748b;
 
 }
 
+/* ===== Exam Cards ===== */
+
+.examCard{
+
+background:#fff;
+
+border:2px solid #e8eefc;
+
+border-radius:20px;
+
+padding:24px;
+
+margin-bottom:18px;
+
+cursor:pointer;
+
+transition:.25s;
+
+box-shadow:0 10px 25px rgba(15,23,42,.08);
+
+}
+
+.examCard:hover{
+
+transform:translateY(-4px);
+
+border-color:#2563eb;
+
+box-shadow:0 16px 35px rgba(37,99,235,.15);
+
+}
+
+.examHeader{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+margin-bottom:12px;
+
+}
+
+.examTitle{
+
+font-size:28px;
+
+font-weight:700;
+
+color:#1e3a8a;
+
+}
+
+.examSubtitle{
+
+color:#64748b;
+
+font-size:15px;
+
+margin-bottom:18px;
+
+}
+
+.examFooter{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+font-size:14px;
+
+font-weight:600;
+
+color:#2563eb;
+
+}
+
 @media(max-width:768px){
 
 .heroInfo{
@@ -1060,13 +1140,90 @@ exams.push(e);
 
 for(let i=0;i<exams.length;i++){
 
-html+=
-"<button class='subjectBtn' onclick=\"selectExam('"+exams[i]+"')\">"+
-exams[i]+
-"</button>";
+let icon="📘";
+let subtitle="General Studies";
+
+switch(exams[i]){
+
+case "UPSC":
+icon="🏛️";
+subtitle="Civil Services Examination";
+break;
+
+case "SSC CGL":
+icon="💼";
+subtitle="Combined Graduate Level";
+break;
+
+case "Law":
+icon="⚖️";
+subtitle="Judiciary • APO • ADA";
+break;
+
+case "Current affairs":
+icon="📰";
+subtitle="Daily Current Affairs";
+break;
+
+case "SSC/Railway":
+icon="🚆";
+subtitle="Railway & SSC Exams";
+break;
+
+case "BPSC":
+icon="🌾";
+subtitle="Bihar Public Service Commission";
+break;
+
+case "Bihar APO":
+icon="🏛️";
+subtitle="Assistant Prosecution Officer";
+break;
 
 }
 
+html+=`
+
+<div class="examCard"
+
+onclick="selectExam('${exams[i]}')">
+
+<div class="examHeader">
+
+<div class="examTitle">
+
+${icon} ${exams[i]}
+
+</div>
+
+<div>
+
+➡️
+
+</div>
+
+</div>
+
+<div class="examSubtitle">
+
+${subtitle}
+
+</div>
+
+<div class="examFooter">
+
+<span>Start Preparation</span>
+
+<span>Explore →</span>
+
+</div>
+
+</div>
+
+`;
+
+}
+  
 app.innerHTML=html;
 
 }
