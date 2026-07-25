@@ -1702,6 +1702,13 @@ html+=`
 <div class="summaryGrid">
 `;
 
+html+=`
+<div class="summaryCard">
+    <div class="summaryLabel">🎯 Final Score</div>
+    <div class="summaryValue">${final}</div>
+</div>
+`;
+
 html+="Correct: <span class='correct'>"+c+"</span><br>";
 html+="Wrong: <span class='wrong'>"+w+"</span><br>";
 if(isBiharPattern){
