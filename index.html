@@ -1698,6 +1698,10 @@ Well done, ${userName}! 🎉
   
 html+="<div class='resultBox'>";
 
+html+=`
+<div class="summaryGrid">
+`;
+
 html+="Correct: <span class='correct'>"+c+"</span><br>";
 html+="Wrong: <span class='wrong'>"+w+"</span><br>";
 if(isBiharPattern){
@@ -1729,6 +1733,10 @@ html+="<br>Accuracy: "+accuracy+"%";
 html+="<br>Attempt Rate: "+attemptRate+"%";
 html+="<br>Attempted: "+attempted+" / "+quiz.length;
 html+="<br>Skipped: "+(quiz.length-attempted);
+
+html+=`
+</div>
+`;
 
 let mentor="";
 
