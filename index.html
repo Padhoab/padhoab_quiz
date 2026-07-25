@@ -895,14 +895,16 @@ subs.push(s);
 
 }
 
-let html=`
+let html = breadcrumb();
+
+html += `
 <h2>${exam}</h2>
 
 <p class="subtitle">
 Choose a Subject
 </p>
 `;
-
+  
 for(let i=0;i<subs.length;i++){
 
 html+=
@@ -939,7 +941,9 @@ topics.push(t);
 
 }
 
-let html=`
+let html = breadcrumb();
+
+html += `
 <h2>${subject}</h2>
 
 <p class="subtitle">
@@ -1078,8 +1082,7 @@ localStorage.getItem(
 )
 ||answers;
 
-let html="";
-
+let html = breadcrumb();
 let start = Math.max(0, q - 4);
 let end = Math.min(quiz.length, start + PALETTE_SIZE);
 
