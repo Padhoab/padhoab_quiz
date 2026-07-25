@@ -1620,7 +1620,15 @@ console.log({
   neg
 });
   
-showResult(correct,wrong,notAttempted,raw,final);
+showResult(
+correct,
+wrong,
+notAttempted,
+raw,
+final,
+accuracy,
+attemptRate
+);
   
 console.timeEnd("Result Page");
 
@@ -1666,10 +1674,16 @@ parseInt(localStorage.getItem("questionsSolved")||0)+quiz.length
 }
 
 
-async function 
+async function showResult(
+c,
+w,
+na,
+raw,
+final,
+accuracy,
+attemptRate
+){
   
-showResult(c,w,na,raw,final){
-
 console.log("----- INSIDE showResult -----");
 console.log({
   c,
@@ -1786,21 +1800,6 @@ let deduction = (raw-final).toFixed(2);
 
 html+="Raw Score: "+raw+"<br>";
 html+="Negative Marks: -"+deduction+"<br>";
-
-let attempted = c+w;
-
-let accuracy = 0;
-
-let attemptRate = 0;
-
-if(attempted>0){
-
-accuracy = ((c/attempted)*100).toFixed(1);
-
-attemptRate =
-((attempted/quiz.length)*100).toFixed(1);
-
-}
 
 html+="<br>Accuracy: "+accuracy+"%";
 html+="<br>Attempt Rate: "+attemptRate+"%";
