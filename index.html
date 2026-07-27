@@ -2072,6 +2072,7 @@ function finalSubmit(){
 async function submitTest(){
 
 clearInterval(timer);
+timer = null;
 
 localStorage.removeItem("inTest");
 localStorage.removeItem("answers");
