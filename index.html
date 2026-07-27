@@ -525,6 +525,34 @@ margin-top:30px;
 
 }
 
+.questionCard{
+
+background:#fff;
+
+border-radius:20px;
+
+padding:28px;
+
+margin:20px 0;
+
+box-shadow:0 10px 25px rgba(15,23,42,.08);
+
+border:2px solid #e8eefc;
+
+}
+
+.questionCard p{
+
+font-size:22px;
+
+line-height:1.8;
+
+margin:0;
+
+font-weight:500;
+
+}
+
 @media(max-width:1024px){
 
 .examGrid{
@@ -1697,7 +1725,13 @@ white-space:nowrap;
 </div>
 `;
   
-html+="<p id='question' style='font-size:22px;line-height:1.7;'></p>";
+html+=`
+<div class="questionCard">
+
+<p id="question"></p>
+
+</div>
+`;
   
 html+="<button class='option' id='b0' onclick='answer(0)'></button>";
 html+="<button class='option' id='b1' onclick='answer(1)'></button>";
