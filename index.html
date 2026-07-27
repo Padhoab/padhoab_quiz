@@ -1128,10 +1128,18 @@ async function preloadQuestions(){
 
         console.log("Preloading questions...");
 
-        let res = await fetch(qAPI);
+console.time("Fetch Questions");
 
-        dataAll = await res.json();
+let res = await fetch(qAPI);
 
+console.timeEnd("Fetch Questions");
+
+console.time("Parse JSON");
+
+dataAll = await res.json();
+
+console.timeEnd("Parse JSON");
+      
         console.log("Questions Ready:",dataAll.length);
 
     }
