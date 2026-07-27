@@ -1312,15 +1312,37 @@ Choose a Subject
 </p>
 `;
   
+html += `<div class="examGrid">`;
+
 for(let i=0;i<subs.length;i++){
 
-html+=
-"<button class='subjectBtn' onclick=\"selectSubject('"+subs[i]+"')\">"+
-subs[i]+
-"</button>";
+html += `
+<div class="examCard"
+onclick="selectSubject('${subs[i]}')">
+
+<div class="examHeader">
+
+<div class="examTitle">
+📚 ${subs[i]}
+</div>
+
+<div class="examArrow">
+→
+</div>
+
+</div>
+
+<div class="examSubtitle">
+Choose Subject
+</div>
+
+</div>
+`;
 
 }
 
+html += `</div>`;
+  
 app.innerHTML=html;
 
 }
@@ -1358,15 +1380,37 @@ Choose a Topic
 </p>
 `;
   
+html += `<div class="examGrid">`;
+
 for(let i=0;i<topics.length;i++){
 
-html+=
-"<button class='subjectBtn' onclick=\"selectTopic('"+topics[i]+"')\">"+
-topics[i]+
-"</button>";
+html += `
+<div class="examCard"
+onclick="selectTopic('${topics[i]}')">
+
+<div class="examHeader">
+
+<div class="examTitle">
+📖 ${topics[i]}
+</div>
+
+<div class="examArrow">
+→
+</div>
+
+</div>
+
+<div class="examSubtitle">
+Start Practice
+</div>
+
+</div>
+`;
 
 }
 
+html += `</div>`;
+  
 app.innerHTML=html;
 
 }
