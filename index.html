@@ -2432,8 +2432,8 @@ html+="Explanation :<br>";
 
 if(quiz[i].explanation){
 
-html+=quiz[i].explanation;
-
+html += quiz[i].explanation.replace(/\n/g,"<br>");
+  
 }
 else{
 
