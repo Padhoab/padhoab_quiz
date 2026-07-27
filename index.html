@@ -1130,8 +1130,8 @@ async function preloadQuestions(){
 
 console.time("Fetch Questions");
 
-let res = await fetch(qAPI);
-
+let res = await fetch("questions.json");
+      
 console.timeEnd("Fetch Questions");
 
 console.time("Parse JSON");
