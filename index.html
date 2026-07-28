@@ -563,6 +563,66 @@ font-weight:500;
 
 }
 
+.topMenu{
+
+display:flex;
+justify-content:flex-end;
+position:relative;
+margin-bottom:25px;
+
+}
+
+.accountDropdown{
+
+display:none;
+
+position:absolute;
+
+top:55px;
+right:0;
+
+width:260px;
+
+background:#fff;
+
+border:1px solid #e5e7eb;
+
+border-radius:16px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+overflow:hidden;
+
+z-index:1000;
+
+}
+
+.accountDropdown button{
+
+width:100%;
+
+padding:15px 18px;
+
+border:none;
+
+background:#fff;
+
+text-align:left;
+
+font-size:16px;
+
+cursor:pointer;
+
+transition:.2s;
+
+}
+
+.accountDropdown button:hover{
+
+background:#f8fafc;
+
+}
+
 @media(max-width:1024px){
 
 .examGrid{
@@ -962,36 +1022,40 @@ const rAPI =
 function menu(){
 
 return `
-<div style="
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-margin-bottom:25px;
-">
+<div class="topMenu">
 
 <button class="subjectBtn"
-style="flex:1;padding:12px;font-size:18px"
-onclick="showExams()">
-🏠 All Exams
+onclick="toggleAccountMenu()">
+
+👤 ${userName || "My Account"} ▾
+
 </button>
 
-<button class="subjectBtn"
-style="flex:1;padding:12px;font-size:18px"
-onclick="selectSubject(subject)">
-📖 Topic
+<div class="accountDropdown" id="accountDropdown">
+
+<button onclick="changeDisplayName()">
+✏️ Change Display Name
 </button>
 
-<button class="subjectBtn"
-style="flex:1;padding:12px;font-size:18px"
-onclick="showProgress()">
+<button onclick="showProgress()">
 📊 My Progress
 </button>
 
-<button class="subjectBtn"
-style="flex:1;padding:12px;font-size:18px;background:#dc2626"
+<button onclick="selectSubject(subject)">
+📖 Topic
+</button>
+
+<button onclick="showExams()">
+🏠 All Exams
+</button>
+
+<button
+style="color:#dc2626"
 onclick="logout()">
 🚪 Logout
 </button>
+
+</div>
 
 </div>
 `;
