@@ -1870,7 +1870,7 @@ startTimer();
   
 qno.innerHTML = "Q " + (q+1) + " / " + quiz.length;
 
-question.innerHTML = quiz[q].question;
+question.innerHTML = formatQuestion(quiz[q].question);
   
 let totalOptions = isBiharPattern ? 5 : 4;
   
@@ -1885,9 +1885,17 @@ if(i==4){
 b.innerHTML="Not Attempted";
 
 }
+  
 else{
 
-b.innerHTML=quiz[q].options[i];
+const options = [
+    quiz[q].optionA,
+    quiz[q].optionB,
+    quiz[q].optionC,
+    quiz[q].optionD
+];
+
+b.innerHTML = options[i];
 
 }
   
