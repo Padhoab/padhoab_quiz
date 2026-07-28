@@ -581,25 +581,25 @@ display:flex;
 
 align-items:center;
 
-gap:16px;
+gap:12px;
 
-padding:14px 20px;
+padding:10px 16px;
 
-background:linear-gradient(135deg,#2563eb,#1d4ed8);
+background:#ffffff;
 
-border:none;
+border:1px solid #e5e7eb;
 
-border-radius:18px;
-
-color:white;
+border-radius:16px;
 
 cursor:pointer;
 
-box-shadow:0 12px 28px rgba(37,99,235,.28);
+box-shadow:0 6px 20px rgba(15,23,42,.08);
 
 transition:.25s;
 
-min-width:280px;
+min-width:220px;
+
+color:#111827;
 
 }
 
@@ -607,17 +607,22 @@ min-width:280px;
 
 transform:translateY(-2px);
 
+box-shadow:0 12px 30px rgba(15,23,42,.12);
+
+border-color:#2563eb;
+
 }
+  
 
 .accountAvatar{
 
-width:46px;
+width:42px;
 
-height:46px;
+height:42px;
 
 border-radius:50%;
 
-background:rgba(255,255,255,.18);
+background:#2563eb;
 
 display:flex;
 
@@ -625,10 +630,14 @@ align-items:center;
 
 justify-content:center;
 
-font-size:22px;
+font-size:20px;
+
+color:white;
+
+flex-shrink:0;
 
 }
-
+  
 .accountInfo{
 
 flex:1;
@@ -655,10 +664,14 @@ opacity:.8;
 
 .accountArrow{
 
-font-size:18px;
+font-size:15px;
+
+color:#64748b;
+
+margin-left:auto;
 
 }
-
+  
 .accountDropdown{
 
 display:none;
@@ -1469,19 +1482,26 @@ let html = menu();
 html += `
 <div class="heroSection">
 
-<div class="heroBadge">
-🎯 TestKaroAB Dashboard
-</div>
+<h2 style="
+font-size:44px;
+margin-bottom:12px;
+line-height:1.2;
+">
+Welcome Back, ${userName} 👋
+</h2>
 
-<h2>Welcome Back, ${userName} 👋</h2>
-
-<p class="subtitle">
-Choose your exam and continue your preparation journey.
+<p class="subtitle"
+style="
+max-width:650px;
+margin:auto;
+font-size:20px;
+">
+Continue your preparation journey.
 </p>
 
 </div>
 `;
-  
+
 let exams=[];
 
 for(let i=0;i<dataAll.length;i++){
