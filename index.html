@@ -2677,6 +2677,64 @@ await window.firebaseSignOut();
 window.location.href = "login.html";
 
 }
+
+function toggleAccountMenu(){
+
+const menu=document.getElementById("accountDropdown");
+
+if(!menu) return;
+
+menu.style.display=
+menu.style.display==="block"
+?"none":"block";
+
+}
+
+document.addEventListener("click",function(e){
+
+const menu=document.getElementById("accountDropdown");
+
+if(!menu) return;
+
+if(
+!e.target.closest(".topMenu")
+){
+
+menu.style.display="none";
+
+}
+
+});
+
+function changeDisplayName(){
+
+let name=prompt(
+"Enter Display Name",
+userName
+);
+
+if(!name) return;
+
+name=name.trim();
+
+if(name==="") return;
+
+userName=name;
+
+localStorage.setItem(
+"testkaroab_name",
+name
+);
+
+start();
+
+}
+
+function showExams(){
+
+start();
+
+}
   
 async function showProgress(){
 
