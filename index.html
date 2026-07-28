@@ -1919,9 +1919,9 @@ function formatQuestion(text){
         return text.replace(/\n/g,"<br>");
     }
 
-    text = text.replace(/:\s*1\.\s*/g,":<br><br>1. ");
+    text = text.replace(/:\s*1\.\s*/g,":<br>1. ");
     text = text.replace(/ (\d{1,2})\.\s/g,function(m,n){
-        return "<br><br>"+n+". ";
+        return "<br>"+n+". ";
     });
 
     text = text.replace(/\s*(Which of the (above|following)[^?]*\?)/gi,"<br><br>$1");
