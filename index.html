@@ -1508,32 +1508,37 @@ q=0;
   
 for(let i=0;i<dataAll.length;i++){
 
-if(
-dataAll[i].exam==exam &&
-dataAll[i].subject==subject &&
-dataAll[i].topic==topic
-)
+if (
+    dataAll[i].exam == exam &&
+    dataAll[i].subject == subject &&
+    dataAll[i].topic == topic
+) {
 
-quiz.push({
+    quiz.push({
 
-question: formatQuestion(dataAll[i].question),
+        question: formatQuestion(dataAll[i].question),
 
-optionA: dataAll[i].optionA,
-optionB: dataAll[i].optionB,
-optionC: dataAll[i].optionC,
-optionD: dataAll[i].optionD,
+        optionA: dataAll[i].optionA,
+        optionB: dataAll[i].optionB,
+        optionC: dataAll[i].optionC,
+        optionD: dataAll[i].optionD,
 
-correct: Number(dataAll[i].correct),
+        options: [
+            dataAll[i].optionA,
+            dataAll[i].optionB,
+            dataAll[i].optionC,
+            dataAll[i].optionD
+        ],
 
-explanation: dataAll[i].explanation
-  
-});
+        correct: Number(dataAll[i].correct),
 
-answers.push(null);
+        explanation: dataAll[i].explanation
 
-visited.push(false);
+    });
 
-review.push(false);
+    answers.push(null);
+    visited.push(false);
+    review.push(false);
 
 }
 
