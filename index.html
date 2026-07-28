@@ -566,9 +566,96 @@ font-weight:500;
 .topMenu{
 
 display:flex;
+
 justify-content:flex-end;
+
 position:relative;
-margin-bottom:25px;
+
+margin-bottom:28px;
+
+}
+
+.accountBtn{
+
+display:flex;
+
+align-items:center;
+
+gap:16px;
+
+padding:14px 20px;
+
+background:linear-gradient(135deg,#2563eb,#1d4ed8);
+
+border:none;
+
+border-radius:18px;
+
+color:white;
+
+cursor:pointer;
+
+box-shadow:0 12px 28px rgba(37,99,235,.28);
+
+transition:.25s;
+
+min-width:280px;
+
+}
+
+.accountBtn:hover{
+
+transform:translateY(-2px);
+
+}
+
+.accountAvatar{
+
+width:46px;
+
+height:46px;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.18);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:22px;
+
+}
+
+.accountInfo{
+
+flex:1;
+
+text-align:left;
+
+}
+
+.accountName{
+
+font-size:20px;
+
+font-weight:700;
+
+}
+
+.accountText{
+
+font-size:13px;
+
+opacity:.8;
+
+}
+
+.accountArrow{
+
+font-size:18px;
 
 }
 
@@ -578,22 +665,81 @@ display:none;
 
 position:absolute;
 
-top:55px;
+top:76px;
+
 right:0;
 
-width:260px;
+width:320px;
 
-background:#fff;
+background:white;
 
-border:1px solid #e5e7eb;
-
-border-radius:16px;
-
-box-shadow:0 15px 35px rgba(0,0,0,.15);
+border-radius:20px;
 
 overflow:hidden;
 
-z-index:1000;
+box-shadow:0 25px 60px rgba(15,23,42,.18);
+
+border:1px solid #edf2f7;
+
+z-index:999;
+
+}
+
+.dropdownHeader{
+
+display:flex;
+
+gap:14px;
+
+align-items:center;
+
+padding:20px;
+
+background:#f8fbff;
+
+border-bottom:1px solid #eef2f7;
+
+}
+
+.dropdownAvatar{
+
+width:54px;
+
+height:54px;
+
+border-radius:50%;
+
+background:#2563eb;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+color:white;
+
+font-size:24px;
+
+}
+
+.dropdownName{
+
+font-size:18px;
+
+font-weight:700;
+
+color:#111827;
+
+}
+
+.dropdownEmail{
+
+font-size:13px;
+
+color:#64748b;
+
+margin-top:4px;
 
 }
 
@@ -601,11 +747,11 @@ z-index:1000;
 
 width:100%;
 
-padding:15px 18px;
+padding:17px 22px;
+
+background:white;
 
 border:none;
-
-background:#fff;
 
 text-align:left;
 
@@ -621,8 +767,15 @@ transition:.2s;
 
 background:#f8fafc;
 
+padding-left:28px;
+
 }
 
+.logoutBtn{
+
+color:#dc2626;
+
+}
 @media(max-width:1024px){
 
 .examGrid{
@@ -1022,16 +1175,58 @@ const rAPI =
 function menu(){
 
 return `
+
 <div class="topMenu">
 
-<button class="subjectBtn"
+<button
+class="accountBtn"
 onclick="toggleAccountMenu()">
 
-👤 ${userName || "My Account"} ▾
+<div class="accountAvatar">
+👤
+</div>
+
+<div class="accountInfo">
+
+<div class="accountName">
+${userName}
+</div>
+
+<div class="accountText">
+My Account
+</div>
+
+</div>
+
+<div class="accountArrow">
+▾
+</div>
 
 </button>
 
-<div class="accountDropdown" id="accountDropdown">
+<div
+id="accountDropdown"
+class="accountDropdown">
+
+<div class="dropdownHeader">
+
+<div class="dropdownAvatar">
+👤
+</div>
+
+<div>
+
+<div class="dropdownName">
+${userName}
+</div>
+
+<div class="dropdownEmail">
+Ready to Practice
+</div>
+
+</div>
+
+</div>
 
 <button onclick="changeDisplayName()">
 ✏️ Change Display Name
@@ -1046,18 +1241,18 @@ onclick="toggleAccountMenu()">
 </button>
 
 <button
-style="color:#dc2626"
+class="logoutBtn"
 onclick="logout()">
+
 🚪 Logout
+
 </button>
 
 </div>
 
 </div>
+
 `;
-
-}
-
 function breadcrumb(){
 
 let html=`<div class="breadcrumb">`;
