@@ -1240,7 +1240,7 @@ let exams=[];
 
 for(let i=0;i<dataAll.length;i++){
 
-let e=dataAll[i].Exam;
+let e = dataAll[i].exam;
 
 if(!exams.includes(e))
 exams.push(e);
@@ -1366,10 +1366,10 @@ let subs=[];
 
 for(let i=0;i<dataAll.length;i++){
 
-if(dataAll[i].Exam==exam){
+if(dataAll[i].exam==exam){
 
-let s=dataAll[i].Subject;
-
+let s=dataAll[i].subject;
+  
 if(!subs.includes(s))
 subs.push(s);
 
@@ -1432,12 +1432,12 @@ let topics=[];
 for(let i=0;i<dataAll.length;i++){
 
 if(
-dataAll[i].Exam==exam &&
-dataAll[i].Subject==subject
+dataAll[i].exam==exam &&
+dataAll[i].subject==subject
 ){
 
-let t=dataAll[i].Topic;
-
+let t=dataAll[i].topic;
+  
 if(!topics.includes(t))
 topics.push(t);
 
@@ -1509,26 +1509,24 @@ q=0;
 for(let i=0;i<dataAll.length;i++){
 
 if(
-dataAll[i].Exam==exam &&
-dataAll[i].Subject==subject &&
-dataAll[i].Topic==topic
-){
+dataAll[i].exam==exam &&
+dataAll[i].subject==subject &&
+dataAll[i].topic==topic
+)
 
 quiz.push({
 
 question: formatQuestion(dataAll[i].question),
+
+optionA: dataAll[i].optionA,
+optionB: dataAll[i].optionB,
+optionC: dataAll[i].optionC,
+optionD: dataAll[i].optionD,
+
+correct: Number(dataAll[i].correct),
+
+explanation: dataAll[i].explanation
   
-options:[
-dataAll[i].op1,
-dataAll[i].op2,
-dataAll[i].op3,
-dataAll[i].op4
-],
-
-correct:parseInt(dataAll[i].correct),
-
-explanation:dataAll[i].Explanation
-
 });
 
 answers.push(null);
