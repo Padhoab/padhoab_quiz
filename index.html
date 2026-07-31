@@ -2197,21 +2197,33 @@ function formatQuestion(text){
 
     text = String(text).replace(/\r\n/g,"\n").replace(/\r/g,"\n");
 
-    if(text.indexOf("\n") !== -1){
-        return text.replace(/\n/g,"<br>");
-    }
-
-    text = text.replace(/:\s*1\.\s*/g,":<br>1. ");
-    text = text.replace(/ (\d{1,2})\.\s/g,function(m,n){
-        return "<br>"+n+". ";
+    // Protect image tags before formatting
+    const images = [];
+    text = text.replace(/<img[^>]*>/gi, function(match){
+        images.push(match);
+        return `__IMG_${images.length-1}__`;
     });
 
-    text = text.replace(/\s*(Which of the (above|following)[^?]*\?)/gi,"<br><br>$1");
-    text = text.replace(/\s*(How many of the (above|following)[^?]*\?)/gi,"<br><br>$1");
+    if(text.indexOf("\n") !== -1){
+        text = text.replace(/\n/g,"<br>");
+    }else{
+        text = text.replace(/:\s*1\.\s*/g,":<br>1. ");
+        text = text.replace(/ (\d{1,2})\.\s/g,function(m,n){
+            return "<br>"+n+". ";
+        });
+
+        text = text.replace(/\s*(Which of the (above|following)[^?]*\?)/gi,"<br><br>$1");
+        text = text.replace(/\s*(How many of the (above|following)[^?]*\?)/gi,"<br><br>$1");
+    }
+
+    // Restore image tags
+    text = text.replace(/__IMG_(\d+)__/g,function(match,index){
+        return images[index];
+    });
 
     return text;
 }
-
+  
 function answer(i){
 
 answers[q]=i;
