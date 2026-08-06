@@ -32370,7 +32370,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 1",
     "question": "Which of the following is the best definition of 'software' in computer science?",
     "optionA": "The physical, tangible components of a computer system.",
     "optionB": "A collection of instructions, data, or programs used to operate computers and execute specific tasks.",
@@ -32384,7 +32384,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 1",
     "question": "Which of the following is categorized as 'System Software', acting as an interface between the computer hardware and application programs?",
     "optionA": "Word Processor",
     "optionB": "Spreadsheet Software",
@@ -32398,7 +32398,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 1",
     "question": "A translator program that converts a high-level language program into machine language all at once (as a whole) is called a:",
     "optionA": "Compiler",
     "optionB": "Interpreter",
@@ -32412,7 +32412,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 1",
     "question": "How does an 'Interpreter' differ from a 'Compiler' in program translation?",
     "optionA": "An interpreter only translates assembly language into machine language.",
     "optionB": "An interpreter does not require any execution time.",
@@ -32426,7 +32426,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 1",
     "question": "Which translator program is specifically designed to convert assembly language programs into machine language?",
     "optionA": "Compiler",
     "optionB": "Interpreter",
@@ -32440,7 +32440,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 1",
     "question": "What is the primary function of an Operating System (OS)?",
     "optionA": "To perform high-speed mathematical calculations inside the ALU.",
     "optionB": "To manage computer hardware and software resources, providing common services for programs.",
@@ -32454,7 +32454,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 1",
     "question": "When a computer is powered on, which program stored in ROM executes a diagnostic check of all hardware components?",
     "optionA": "Device Drivers loading into RAM",
     "optionB": "Operating System kernel scheduling processes",
@@ -32468,7 +32468,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 1",
     "question": "The process of starting or restarting a computer system, which involves loading the operating system from storage into main memory, is called:",
     "optionA": "Booting",
     "optionB": "Saving",
@@ -32482,7 +32482,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 1",
     "question": "An operating system that allows multiple programs or tasks to run simultaneously by sharing the CPU's processing time is classified as:",
     "optionA": "Single-User Single-Tasking OS",
     "optionB": "Multitasking Operating System",
@@ -32496,7 +32496,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 1",
     "question": "Which type of operating system is designed to process data and respond to inputs within extremely strict, predefined time constraints?",
     "optionA": "Batch Operating System",
     "optionB": "Time-Sharing Operating System",
@@ -32510,7 +32510,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 1",
     "question": "Which of the following is NOT an example of a Real-Time Operating System (RTOS)?",
     "optionA": "Palm OS",
     "optionB": "VxWorks",
@@ -32524,7 +32524,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 1",
     "question": "Which subsystem of the operating system is responsible for allocating and deallocating primary memory (RAM) space to active processes?",
     "optionA": "Device Driver",
     "optionB": "File System",
@@ -32538,7 +32538,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 1",
     "question": "In process scheduling, 'Round Robin' is a pre-emptive algorithm characterized by which of the following features?",
     "optionA": "The shortest job is always executed first to completion.",
     "optionB": "Each process is assigned a small, fixed slice of CPU time (time quantum) in a cyclic order.",
@@ -32552,7 +32552,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 1",
     "question": "In computer memory organization, a 'Stack' uses a LIFO structure, while a 'Queue' uses a FIFO structure. What do these acronyms represent?",
     "optionA": "LIFO stands for Last-In First-Out; FIFO stands for First-In First-Out",
     "optionB": "LIFO stands for Loop-In File-Out; FIFO stands for Fast-In File-Out",
@@ -32566,7 +32566,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 1",
     "question": "In computing, what does the accuracy-related principle 'GIGO' stand for?",
     "optionA": "Good Input, Good Output",
     "optionB": "Global Input, Global Output",
@@ -32580,7 +32580,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 1",
     "question": "In the context of user interfaces, what does the abbreviation 'CLI' stand for?",
     "optionA": "Computer Language Instruction",
     "optionB": "Command Line Interface",
@@ -32594,7 +32594,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 1",
     "question": "A user interface that allows users to interact with electronic devices through graphical icons, menus, and visual indicators is called:",
     "optionA": "GUI (Graphical User Interface)",
     "optionB": "CLI (Command Line Interface)",
@@ -32608,7 +32608,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 1",
     "question": "Which of the following is NOT an operating system?",
     "optionA": "Linux",
     "optionB": "Unix",
@@ -32622,7 +32622,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 1",
     "question": "Which of the following statements is correct regarding the 'Linux' operating system?",
     "optionA": "It is a proprietary, closed-source, single-tasking OS owned by Microsoft.",
     "optionB": "It is a free, open-source, multitasking, and multi-user operating system.",
@@ -32636,7 +32636,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 1",
     "question": "In which programming language was the 'Unix' operating system primarily written, making it highly portable?",
     "optionA": "FORTRAN",
     "optionB": "Assembly language",
@@ -32650,7 +32650,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 1",
     "question": "What is the key characteristic of a 'High-Level Programming Language'?",
     "optionA": "It is understood directly by the computer hardware without any translation.",
     "optionB": "It consists solely of binary numbers (0s and 1s).",
@@ -32664,7 +32664,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 1",
     "question": "Which of the following was the first high-level programming language, developed by John Backus in 1957 primarily for scientific and mathematical calculations?",
     "optionA": "COBOL",
     "optionB": "BASIC",
@@ -32678,7 +32678,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 1",
     "question": "Which programming language was developed by Grace Hopper in 1959 specifically for business applications and data processing?",
     "optionA": "COBOL",
     "optionB": "FORTRAN",
@@ -32692,7 +32692,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 1",
     "question": "Which easy-to-use programming language was developed by John G. Kemeny and Thomas E. Kurtz in 1964 for beginners and non-science students?",
     "optionA": "Pascal",
     "optionB": "COBOL",
@@ -32706,7 +32706,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 1",
     "question": "Which structured high-level programming language was developed by Niklaus Wirth in 1970 to teach structured programming and data structuring?",
     "optionA": "Pascal",
     "optionB": "Java",
@@ -32720,7 +32720,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 1",
     "question": "Who is the creator of the 'C' programming language, developed in 1972 at Bell Labs to write the Unix operating system?",
     "optionA": "Bjarne Stroustrup",
     "optionB": "Niklaus Wirth",
@@ -32734,7 +32734,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 1",
     "question": "Which programming language was developed by Bjarne Stroustrup in 1979 as an extension of C, introducing object-oriented programming (OOP) concepts?",
     "optionA": "Java",
     "optionB": "C++",
@@ -32748,7 +32748,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 1",
     "question": "To be classified as a 'pure object-oriented programming language', a language must support which set of core features?",
     "optionA": "Arrays, Structs, and Pointers",
     "optionB": "Sequential executing, GOTO statements, and loops",
@@ -32762,7 +32762,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 1",
     "question": "The unauthorized copying, modification, or distribution of copyrighted software is known as:",
     "optionA": "Software Piracy",
     "optionB": "Open Source software",
@@ -32776,7 +32776,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 1",
     "question": "In software development, an error, flaw, or fault in a program that causes it to behave unexpectedly is called a 'bug'. A quick software update released to fix this issue is called a:",
     "optionA": "Version",
     "optionB": "Tutorial",
@@ -32790,7 +32790,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 2",
     "question": "The word 'Computer' in the English language is derived from which of the following words?",
     "optionA": "Compute",
     "optionB": "Calculare",
@@ -32804,7 +32804,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 2",
     "question": "What is the literal meaning of the word 'Compute' from which the term computer has been derived?",
     "optionA": "Addition",
     "optionB": "Subtraction",
@@ -32818,7 +32818,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 2",
     "question": "On which of the following dates is 'World Computer Literacy Day' celebrated annually across the globe?",
     "optionA": "5th July",
     "optionB": "2nd December",
@@ -32832,7 +32832,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 2",
     "question": "What is a person who uses or operates a computer commonly referred to as in technical terminology?",
     "optionA": "Information",
     "optionB": "Scientist",
@@ -32846,7 +32846,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 2",
     "question": "To convert raw data input into usable information, all computer systems follow a basic operational cycle. Which of the following sequences correctly represents this cycle?",
     "optionA": "Input -> Process -> Store -> Output -> Control",
     "optionB": "Input -> Store -> Process -> Output -> Control",
@@ -32860,7 +32860,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 2",
     "question": "The core computer processing cycle (Processing Cycle) consists of which of the following functional groups?",
     "optionA": "Systems and Applications",
     "optionB": "Data, Information, and Applications",
@@ -32874,7 +32874,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 2",
     "question": "Which of the following characteristics ensures that a computer does not experience fatigue, boredom, or a lack of consistency during continuous operations?",
     "optionA": "Speed",
     "optionB": "Accuracy",
@@ -32888,7 +32888,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 2",
     "question": "The ability of a computer to perform various types of tasks with equal accuracy, efficiency, and flexibility represents which of the following qualities?",
     "optionA": "Diligence",
     "optionB": "Reliability",
@@ -32902,7 +32902,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 2",
     "question": "Which of the following characteristics represents the computer's unique capability to perform error-free calculations?",
     "optionA": "Speed",
     "optionB": "IQ",
@@ -32916,7 +32916,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 2",
     "question": "A theoretical computer equipped with infinite memory and used to analyze computational problems and the limits of algorithms is known as a:",
     "optionA": "Tab Calculator",
     "optionB": "Babbage Machine",
@@ -32930,7 +32930,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 2",
     "question": "Who perfected the tabulating system and developed the Census Tabulator machine to help process U.S. census data in 1890?",
     "optionA": "Alan Turing",
     "optionB": "Herman Hollerith",
@@ -32944,7 +32944,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 2",
     "question": "In computer history, who initiated the fundamental concept of the 'Stored Program' in the 1940s?",
     "optionA": "John von Neumann",
     "optionB": "Charles Babbage",
@@ -32958,7 +32958,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 2",
     "question": "Which ancient calculation device, constructed using a wooden frame with sliding beads on wires, was originally discovered by Mesopotamians around 3000 BC?",
     "optionA": "Abacus",
     "optionB": "Analytical Engine",
@@ -32972,7 +32972,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 2",
     "question": "Blaise Pascal, who developed the famous mechanical Pascaline Adding Machine in 1642, was a resident of which country?",
     "optionA": "America",
     "optionB": "Germany",
@@ -32986,7 +32986,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 2",
     "question": "In which of the following years was the premier microwave and RF systems research laboratory 'SAMEER' established in India?",
     "optionA": "1984",
     "optionB": "1981",
@@ -33000,7 +33000,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 2",
     "question": "Which of the following Indian cities is celebrated as India's 'Silicon Valley' due to the massive concentration of IT and software development companies?",
     "optionA": "Hyderabad",
     "optionB": "Noida",
@@ -33014,7 +33014,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 2",
     "question": "The Indian Institute of Remote Sensing (IIRS), a constituent unit of ISRO specializing in remote sensing, is situated at which of the following locations?",
     "optionA": "Ahmedabad",
     "optionB": "Dehradun",
@@ -33028,7 +33028,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 2",
     "question": "Which of the following developers are credited with building the first practical general-purpose electronic digital computer ENIAC in 1946?",
     "optionA": "J. Presper Eckert",
     "optionB": "John Mauchly",
@@ -33042,7 +33042,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 2",
     "question": "Which of the following options correctly lists the physical hardware technologies used from the First to the Fifth generation of computers respectively?",
     "optionA": "Transistor -> Vacuum Tube -> IC -> VLSI -> ULSI",
     "optionB": "Vacuum Tube -> Transistor -> Integrated Circuit -> VLSI Microprocessor -> ULSI Microprocessor",
@@ -33056,7 +33056,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 2",
     "question": "Which of the following was the first commercial digital computer developed and produced in America, delivered to the U.S. Census Bureau in 1951?",
     "optionA": "Maniac",
     "optionB": "ENIAC",
@@ -33070,7 +33070,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 2",
     "question": "During which computer generation was the operating system first introduced and utilized to manage computing tasks?",
     "optionA": "First generation",
     "optionB": "Second generation",
@@ -33084,7 +33084,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 2",
     "question": "Historically, the development and assembly of the first practical digital computer system took place in which country?",
     "optionA": "Russia",
     "optionB": "Britain",
@@ -33098,7 +33098,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 2",
     "question": "Which of the following inventors is credited with the development of the silicon-based Integrated Circuit (IC) chip in 1958?",
     "optionA": "Charles Babbage",
     "optionB": "Blaise Pascal",
@@ -33112,7 +33112,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 2",
     "question": "Integrated Circuit (IC) chips or microchips used in modern computers are primarily made of which of the following semiconductor elements?",
     "optionA": "Silicon",
     "optionB": "Lead",
@@ -33126,7 +33126,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 2",
     "question": "Which type of computer is a large, highly expensive multi-user system capable of processing data for hundreds or thousands of users simultaneously?",
     "optionA": "Mini computer",
     "optionB": "Supercomputer",
@@ -33140,7 +33140,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 2",
     "question": "Which of the following represents India's first indigenous supercomputer series, conceptualized and built by C-DAC in Pune?",
     "optionA": "Aryabhatta",
     "optionB": "Vishal",
@@ -33154,7 +33154,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 2",
     "question": "Where was India's first digital electronic computer, the HEC-2M, imported and successfully installed in the year 1956?",
     "optionA": "Indian Statistical Institute, Kolkata",
     "optionB": "Indian Institute of Science, Bangalore",
@@ -33168,7 +33168,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 2",
     "question": "In computer architecture, what does the performance-measuring abbreviation 'MIPS' stand for?",
     "optionA": "Marginal Input Storage",
     "optionB": "Million Instructions Per Second",
@@ -33182,7 +33182,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 2",
     "question": "In computer programming, which of the following represents an invalid variable name according to standard syntax rules?",
     "optionA": "myVariable",
     "optionB": "_myVariable",
@@ -33196,7 +33196,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 2",
     "question": "In a Relational Database Management System (RDBMS), a single horizontal row containing a collection of related fields in a table is known as a:",
     "optionA": "Tuple",
     "optionB": "Attribute",
@@ -33210,7 +33210,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 3",
     "question": "In 1968, after which French mathematician was a computer language named in his memory?",
     "optionA": "Charles Babbage",
     "optionB": "Herman Hollerith",
@@ -33224,7 +33224,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 3",
     "question": "Who perfected the tabulating system and developed the Census Tabulator machine to help process U.S. census data in 1890?",
     "optionA": "Charles Babbage",
     "optionB": "Herman Hollerith",
@@ -33238,7 +33238,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 3",
     "question": "What does the term 'compatibility' mean in the context of computer software and hardware systems?",
     "optionA": "The software is working correctly for the user.",
     "optionB": "The software is versatile enough to handle the job.",
@@ -33252,7 +33252,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 3",
     "question": "In which of the following years was the premier microwave and RF systems research laboratory 'SAMEER' established in India?",
     "optionA": "1984",
     "optionB": "1981",
@@ -33266,7 +33266,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 3",
     "question": "In March 1983, IBM launched a computer named IBM PC-'XT' in the market. What does the abbreviation 'XT' stand for in this context?",
     "optionA": "Personal Computer External Technology",
     "optionB": "Personal Computer Extended Technology",
@@ -33280,7 +33280,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 3",
     "question": "What type of computer system can be found operating inside a typical digital watch?",
     "optionA": "Mainframe Computer",
     "optionB": "Supercomputer",
@@ -33294,7 +33294,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 3",
     "question": "While the word length limit for standard personal computers is typically up to 32 bits, what is the word length limit for supercomputers?",
     "optionA": "Up to 16 bits",
     "optionB": "Up to 32 bits",
@@ -33308,7 +33308,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 3",
     "question": "Which of the following is an indigenous supercomputer series developed by the Bhabha Atomic Research Centre (BARC) starting in 1991?",
     "optionA": "Param Padma",
     "optionB": "FlowSolver",
@@ -33322,7 +33322,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 3",
     "question": "In the context of cyber laws in India, what does the abbreviation 'ITA-2000' stand for?",
     "optionA": "Indian Technology Act - 2000",
     "optionB": "Informer Tech Act - 2000",
@@ -33336,7 +33336,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 3",
     "question": "The Information Technology (Amendment) Act, 2008, passed by the Indian Parliament, officially came into effect on which of the following dates?",
     "optionA": "27 October 2009",
     "optionB": "27 October 2016",
@@ -33350,7 +33350,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 3",
     "question": "Which of the following software processes can be used to store many files in a limited storage space by reducing their individual physical sizes?",
     "optionA": "File Adjustment",
     "optionB": "File Copying",
@@ -33364,7 +33364,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 3",
     "question": "If an existing document needs to be saved with a different name in another location, which command should be used in word processors?",
     "optionA": "Use the 'Rename' command",
     "optionB": "Copy and paste the text into a new document",
@@ -33378,7 +33378,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 3",
     "question": "In computer science, which of the following processes is defined as using a computer system and program to produce a faithful replica of a real physical system?",
     "optionA": "Monitoring",
     "optionB": "Data Aggregation",
@@ -33392,7 +33392,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 3",
     "question": "An input signal that interrupts the CPU while performing a task, indicating the start or completion of a process, is known as a/an:",
     "optionA": "Virus",
     "optionB": "Worm",
@@ -33406,7 +33406,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 3",
     "question": "What is the term used for the technology that enables the creation of a three-dimensional virtual world allowing people to interact in real-time?",
     "optionA": "Remote Reality",
     "optionB": "Augmented Reality",
@@ -33420,7 +33420,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 3",
     "question": "Which of the following is considered an emerging advanced hardware technology in computer engineering designed to execute multiple instructions simultaneously?",
     "optionA": "Integrated Circuit Technology",
     "optionB": "Parallel Processing System",
@@ -33434,7 +33434,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 3",
     "question": "Which of the following persons associated with computers co-authored the famous business-technology book 'Business @ the Speed of Thought' in 1999?",
     "optionA": "Steve Paul Jobs",
     "optionB": "N. R. Narayana Murthy",
@@ -33448,7 +33448,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 3",
     "question": "What was the primary concern or issue related to the famous 'Y2K' (Year 2000) computer problem that arose at the turn of the century?",
     "optionA": "Finding a solution to control aggressive computer viruses",
     "optionB": "Efforts to bring global uniformity to operating systems",
@@ -33462,7 +33462,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 3",
     "question": "What is the process of transferring files or data from a local client computer to a remote network server called?",
     "optionA": "Upload",
     "optionB": "Installation",
@@ -33476,7 +33476,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 3",
     "question": "Which of the following is NOT a common bitmap-based graphical image file type extension?",
     "optionA": "PCX",
     "optionB": "PNG",
@@ -33490,7 +33490,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 3",
     "question": "In a computer processor instruction set, each machine-level instruction is represented using which of the following?",
     "optionA": "Microcode",
     "optionB": "Mini code",
@@ -33504,7 +33504,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 3",
     "question": "What type of system bus or interface is utilized to increase the connectivity of the processor bus by connecting expansion cards to the motherboard?",
     "optionA": "PCI bus",
     "optionB": "Multiple bus",
@@ -33518,7 +33518,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 3",
     "question": "In multitasking operating systems, the specific time interval allocated to each process in a round-robin scheduling sequence is known as:",
     "optionA": "Time Gap",
     "optionB": "Time Quantum",
@@ -33532,7 +33532,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 3",
     "question": "What is the term used to represent the exact amount of time taken by the CPU to read or write a character to a specific location in memory?",
     "optionA": "Instruction Cycle",
     "optionB": "Memory Formatting Time",
@@ -33546,7 +33546,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 3",
     "question": "In CPU architecture, where is a machine instruction stored when it is fetched from memory but cannot be executed immediately?",
     "optionA": "Current Instruction Register (CIR)",
     "optionB": "Instruction Buffer Register (IBR)",
@@ -33560,7 +33560,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 3",
     "question": "In a computer processor, what is the immediate effect of writing new data into an active internal register?",
     "optionA": "It erases the previous content of the register.",
     "optionB": "It appends to the current content without destroying it.",
@@ -33574,7 +33574,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 3",
     "question": "In microprocessor architecture, which internal register holds the memory address of the next instruction to be fetched and executed in the cycle?",
     "optionA": "Program Counter (PC)",
     "optionB": "Instruction Register (IR)",
@@ -33588,7 +33588,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 3",
     "question": "What is the term used for the designated area of free hard disk space used by the operating system to temporarily increase the capacity of physical RAM?",
     "optionA": "Cache Memory",
     "optionB": "Cache Disk",
@@ -33602,7 +33602,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 3",
     "question": "In floppy disk storage systems, what is the small hole located near the center of the disk called, which acts as a starting reference point for disk tracks?",
     "optionA": "Tracking Hole",
     "optionB": "Index Hole",
@@ -33616,7 +33616,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 3",
     "question": "In database systems, what term is used to describe the separation of the logical perspective of data from its physical implementation to reduce system complexity?",
     "optionA": "Control Structure",
     "optionB": "Data Separation",
@@ -33630,7 +33630,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "On which of the following dates is 'World Computer Literacy Day' celebrated annually across the globe?",
     "optionA": "5th July",
     "optionB": "2nd December",
@@ -33644,7 +33644,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "According to standard criteria, a person is considered 'computer literate' if they are capable of doing which of the following?",
     "optionA": "Operating only necessary applications",
     "optionB": "Creating antivirus software",
@@ -33658,7 +33658,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "Which of the following is a dedicated video collaboration tool used for real-time communication on the internet?",
     "optionA": "AnyDesk",
     "optionB": "Docker",
@@ -33672,7 +33672,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "In computer systems, the Intel 8085 microprocessor is a highly popular chip. To which generation of microprocessors does it belong?",
     "optionA": "First generation",
     "optionB": "Second generation",
@@ -33686,7 +33686,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "IBM 7094 and IBM 1620 are prime examples of computing systems belonging to which generation?",
     "optionA": "First generation",
     "optionB": "Second generation",
@@ -33700,7 +33700,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "What is the barrier potential of a standard silicon-based semiconductor diode at normal room temperature?",
     "optionA": "0.3V",
     "optionB": "0.5V",
@@ -33714,7 +33714,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "What was the maximum logical random-access memory (RAM) capacity supported by third-generation microprocessors?",
     "optionA": "1MB",
     "optionB": "16MB",
@@ -33728,7 +33728,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "In the evolutionary history of digital computer systems, the development of online systems first occurred during which generation?",
     "optionA": "First generation",
     "optionB": "Second generation",
@@ -33742,7 +33742,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "In microchip manufacturing, what does the abbreviation 'LSI' stand for, which represents the process of embedding thousands of transistors?",
     "optionA": "Large Scale Integration",
     "optionB": "Large Scale Integrity",
@@ -33756,7 +33756,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "A hybrid computer is a specialized system that combines the key functional features of which of the following?",
     "optionA": "Supercomputers and microcomputers",
     "optionB": "Minicomputers and microcomputers",
@@ -33770,7 +33770,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "In large mainframe and supercomputer networks, users generally connect to and access the central resources using which of the following?",
     "optionA": "Terminal",
     "optionB": "Node",
@@ -33784,7 +33784,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "An emerging class of computing systems that performs calculations based on the principles of atoms and subatomic particles is known as a:",
     "optionA": "Hybrid Computer",
     "optionB": "Mainframe Computer",
@@ -33798,7 +33798,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "Special-purpose computer systems are extensively designed and deployed for applications in which of the following areas?",
     "optionA": "Agricultural science",
     "optionB": "Weather forecasting and meteorology",
@@ -33812,7 +33812,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "What is the name of the supercomputer developed by India in 1998, which was designed by the Pune-based C-DAC and had a speed of 100 Gigaflops?",
     "optionA": "Anupam",
     "optionB": "Param 10,000",
@@ -33826,7 +33826,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "In December 2016, India's National Payments Corporation (NPCI) launched the BHIM mobile payment application. How many security authentication layers does BHIM use?",
     "optionA": "One layer",
     "optionB": "Two layers",
@@ -33840,7 +33840,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "Which specialized hardware component is placed between different devices to temporarily hold data and compensate for the difference in their processing speeds?",
     "optionA": "Main memory",
     "optionB": "Auxiliary memory",
@@ -33854,7 +33854,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "Which type of computer memory is composed of primary semiconductor chips, magnetic media, and optical disks?",
     "optionA": "Internal Memory only",
     "optionB": "External Memory only",
@@ -33868,7 +33868,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "How is the data stored on an Erasable Programmable Read-Only Memory (EPROM) chip erased so that it can be reprogrammed?",
     "optionA": "Exposing the chip to ultraviolet light",
     "optionB": "Applying a high-voltage electrical charge",
@@ -33882,7 +33882,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "Magnetic disks (such as hard disks and floppy disks) are coated with which of the following chemical substances to allow data recording?",
     "optionA": "Phosphorus Oxide",
     "optionB": "Magnesium Oxide",
@@ -33896,7 +33896,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "A standard single-layer Blu-ray Disc (BD) can hold approximately how much digital data compared to a traditional single-layer DVD?",
     "optionA": "4.7 GB on DVD, 25 GB on Blu-ray",
     "optionB": "1.44 MB on DVD, 4.7 GB on Blu-ray",
@@ -33910,7 +33910,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "In optical disc technology, the microscopic recessed indentations on the surface of a CD or DVD where data is recorded are called:",
     "optionA": "Lands",
     "optionB": "Pits",
@@ -33924,7 +33924,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "How many bits are used to represent a single decimal digit when using the Binary-Coded Decimal (BCD) encoding scheme?",
     "optionA": "2 bits",
     "optionB": "4 bits",
@@ -33938,7 +33938,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "If the ASCII (7-bit) code assigned to the English alphabet 'M' is 01001101, what is the correct binary ASCII code for the letter 'N'?",
     "optionA": "1011110",
     "optionB": "1011111",
@@ -33952,7 +33952,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "In computer networking history, which agency of the U.S. Department of Defense was responsible for funding and developing ARPANET, the precursor to the internet?",
     "optionA": "Pentagon",
     "optionB": "ARPA",
@@ -33966,7 +33966,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "Which type of internet account allows users to connect to the internet through the computer of an Internet Service Provider (ISP), rather than being directly connected?",
     "optionA": "Shell account",
     "optionB": "Kernel account",
@@ -33980,7 +33980,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "According to standard web protocols, how many functional parts does an HTTP request sent from a client to a server contain?",
     "optionA": "2 parts",
     "optionB": "3 parts",
@@ -33994,7 +33994,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "Which of the following is considered the first graphical web browser capable of displaying images inline with text, rather than in separate windows?",
     "optionA": "Mosaic",
     "optionB": "Opera",
@@ -34008,7 +34008,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "Which software program was the first web browser to implement the 'Omnibox', which combines both the address bar and search bar into a single field?",
     "optionA": "Mozilla Firefox",
     "optionB": "Google Chrome",
@@ -34022,7 +34022,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "A search engine designed to send user queries simultaneously to multiple individual search engines and then compile and de-duplicate the results is known as a:",
     "optionA": "Meta Search Engine",
     "optionB": "Individual Search Engine",
@@ -34036,7 +34036,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "In computer systems, which type of data communication mode does the physical connection between a computer and a keyboard utilize?",
     "optionA": "Automatic transmission",
     "optionB": "Half-Duplex transmission",
@@ -35310,7 +35310,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 5",
     "question": "The word 'Computer' in the English language is derived from which of the following words?",
     "optionA": "Compute",
     "optionB": "Digital",
@@ -35324,7 +35324,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 5",
     "question": "Which of the following is considered the first practical general-purpose electronic digital computer, developed in 1946?",
     "optionA": "EDSAC",
     "optionB": "UNIVAC",
@@ -35338,7 +35338,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 5",
     "question": "The ability of a computer to perform various types of tasks with equal accuracy and efficiency represents which of the following characteristics?",
     "optionA": "Reliability",
     "optionB": "Versatility",
@@ -35352,7 +35352,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 5",
     "question": "Who initiated the concept of 'Stored Program' in the 1940s, which stored both instructions and data in the same physical memory?",
     "optionA": "Charles Babbage",
     "optionB": "John von Neumann",
@@ -35366,7 +35366,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 5",
     "question": "Which ancient calculation device, constructed using a wooden frame with sliding beads on wires, was originally discovered by Mesopotamians around 3000 BC?",
     "optionA": "Analytical Engine",
     "optionB": "Difference Engine",
@@ -35380,7 +35380,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 5",
     "question": "Where was India's first digital electronic computer, the HEC-2M, imported and successfully installed in the year 1956?",
     "optionA": "Indian Iron and Steel Company Ltd., Burnpur",
     "optionB": "Indian Institute of Science, Bangalore",
@@ -35394,7 +35394,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 5",
     "question": "In computer systems, the performance or processing power of a CPU is typically measured by which of the following metrics?",
     "optionA": "Digital Clock",
     "optionB": "Binary Code",
@@ -35408,7 +35408,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 5",
     "question": "To convert raw input into usable information, all computer systems follow a fundamental basic processing cycle. Which of the following sequences represents this cycle?",
     "optionA": "Process -> Control -> Output -> Store -> Input",
     "optionB": "Input -> Store -> Process -> Output -> Control",
@@ -35422,7 +35422,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 5",
     "question": "On which of the following dates is 'World Computer Literacy Day' celebrated annually to promote digital literacy across the globe?",
     "optionA": "14th November",
     "optionB": "3rd November",
@@ -35436,7 +35436,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 5",
     "question": "Herman Hollerith perfected his tabulating system and developed which machine to help process U.S. census data in the year 1890?",
     "optionA": "Census Tabulator",
     "optionB": "Difference Engine",
@@ -35450,7 +35450,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 5",
     "question": "The Indian Institute of Remote Sensing (IIRS), a constituent unit of ISRO specializing in remote sensing, is situated at which of the following locations?",
     "optionA": "Ahmedabad",
     "optionB": "Dehradun",
@@ -35464,7 +35464,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 5",
     "question": "What was the name of the first commercial digital computer developed and produced in America, delivered to the U.S. Census Bureau in 1951?",
     "optionA": "ENIAC",
     "optionB": "UNIVAC",
@@ -35478,7 +35478,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 5",
     "question": "During which computer generation was the operating system first introduced and utilized to manage computing tasks?",
     "optionA": "Third generation",
     "optionB": "First generation",
@@ -35492,7 +35492,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 5",
     "question": "In programming languages, which of the following constitutes an invalid variable name because of syntax rules?",
     "optionA": "variable123",
     "optionB": "_myVariable",
@@ -35506,7 +35506,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 5",
     "question": "Charles Babbage, known as the 'Father of the Computer', invented which mechanical programmable machine in 1834?",
     "optionA": "Turing Machine",
     "optionB": "Difference Engine",
@@ -35520,7 +35520,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 5",
     "question": "A person who operates or interacts with a computer is commonly referred to as which of the following in technical terminology?",
     "optionA": "Engineer",
     "optionB": "Scientist",
@@ -35534,7 +35534,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 5",
     "question": "The core computer processing cycle (Processing Cycle) consists of which of the following functional groups?",
     "optionA": "Data, Information, and Applications",
     "optionB": "Input, Processing, and Output",
@@ -35548,7 +35548,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 5",
     "question": "The ability of a computer to perform error-free calculations represents which of the following characteristics?",
     "optionA": "Capability",
     "optionB": "Speed",
@@ -35562,7 +35562,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 5",
     "question": "In the context of computers, what does the term 'compatibility' mean regarding software?",
     "optionA": "The software is versatile enough to handle the job.",
     "optionB": "The software is capable of running on the computer.",
@@ -35576,7 +35576,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 5",
     "question": "A theoretical computer equipped with infinite memory and used to analyze computational problems and the limits of algorithms is known as a:",
     "optionA": "Babbage Machine",
     "optionB": "Turing Machine",
@@ -35590,7 +35590,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 5",
     "question": "In computer systems, the performance-measuring abbreviation 'MIPS' stands for which of the following?",
     "optionA": "Marginal Input Storage",
     "optionB": "Million Instructions Per Second",
@@ -35604,7 +35604,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 5",
     "question": "In a Relational Database Management System (RDBMS), a single horizontal row containing a collection of related fields in a table is known as a:",
     "optionA": "Degree",
     "optionB": "Tuple",
@@ -35618,7 +35618,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 5",
     "question": "What is the literal meaning of the word 'Compute' from which the term computer has been derived?",
     "optionA": "Addition",
     "optionB": "Subtraction",
@@ -35632,7 +35632,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 5",
     "question": "Which of the following characteristics ensures that a computer does not experience fatigue, boredom, or a lack of consistency during continuous operations?",
     "optionA": "Accuracy",
     "optionB": "Diligence",
@@ -35646,7 +35646,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 5",
     "question": "To find and load a file saved on the computer, which of the following menu command options is used?",
     "optionA": "Select the Close command",
     "optionB": "Select the New command",
@@ -35660,7 +35660,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 5",
     "question": "Which of the following is NOT considered a fundamental function (Basic Work) of a computer?",
     "optionA": "Scanning text",
     "optionB": "Accepting and processing data",
@@ -35674,7 +35674,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 5",
     "question": "A computer lacks its own feelings, desires, or independent understanding. Therefore, which of the following statements about computer systems is incorrect?",
     "optionA": "It has high memory and storage capacity.",
     "optionB": "The processing speed is very high.",
@@ -35688,7 +35688,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 5",
     "question": "Which of the following human cognitive tasks or processes is NOT performed by a computer?",
     "optionA": "Executing",
     "optionB": "Processing",
@@ -35702,7 +35702,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 5",
     "question": "Blaise Pascal, the inventor of the mechanical Pascaline Adding Machine in 1642, was a resident of which country?",
     "optionA": "Germany",
     "optionB": "Russia",
@@ -35716,7 +35716,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 1",
+    "topic": "Test 5",
     "question": "Which SQL command is used to permanently delete all data records from an existing table and reset the storage without deleting the table structure itself?",
     "optionA": "DELETE",
     "optionB": "DROP",
@@ -35730,7 +35730,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 6",
     "question": "Which of the following software development models is also popularly referred to as the 'Linear Sequential Model'?",
     "optionA": "Spiral Model",
     "optionB": "Iterative Model",
@@ -35744,7 +35744,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 6",
     "question": "In the context of computer networking, what is the exact physical length (in bits) of a unique MAC address assigned to each Network Interface Card (NIC)?",
     "optionA": "32 bits",
     "optionB": "64 bits",
@@ -35758,7 +35758,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 6",
     "question": "Which of the following networking devices is specifically designed to boost and regenerate data signals to prevent them from weakening during long-range communication?",
     "optionA": "Router",
     "optionB": "Gateway",
@@ -35772,7 +35772,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 6",
     "question": "In computer networks, what term is used to describe the difference between the highest and lowest frequencies of a transmission channel?",
     "optionA": "Baud",
     "optionB": "Modulation",
@@ -35786,7 +35786,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 6",
     "question": "Which type of computer memory is composed of volatile semiconductor chips that are more expensive but significantly faster than DRAM, and does not require constant refreshing?",
     "optionA": "SDRAM",
     "optionB": "SRAM",
@@ -35800,7 +35800,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 6",
     "question": "In database systems, what term is used to describe the separation of the logical perspective of data from its physical, low-level implementation?",
     "optionA": "Control Structure",
     "optionB": "Data Separation",
@@ -35814,7 +35814,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 6",
     "question": "Which of the following is an example of a self-complementing binary-coded decimal (BCD) code used in computer data representation?",
     "optionA": "8411 BCD",
     "optionB": "Gray Code",
@@ -35828,7 +35828,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 6",
     "question": "In the context of computer hardware and system units, which of the following represents the full form of the abbreviation 'SMPS'?",
     "optionA": "Switched Mode Power Shortage",
     "optionB": "Switched Memory Power Supply",
@@ -35842,7 +35842,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 6",
     "question": "Which software engineering term is used to describe a quick, temporary repair for a known software bug that is typically made available on the internet for free?",
     "optionA": "Version",
     "optionB": "Patch",
@@ -35856,7 +35856,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 6",
     "question": "In a Relational Database Management System (RDBMS), what data type represents the set of all acceptable and valid values that can be stored in a specific column of a table?",
     "optionA": "Domain",
     "optionB": "Attribute",
@@ -35870,7 +35870,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 6",
     "question": "Which of the following is NOT a valid software development lifecycle (SDLC) model used in software project management?",
     "optionA": "Circular Model",
     "optionB": "Waterfall Model",
@@ -35884,7 +35884,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 6",
     "question": "In computer networks, what term is used to describe the process of transferring files or data from a local client computer to a remote web server over the internet?",
     "optionA": "Downloading",
     "optionB": "Forwarding",
@@ -35898,7 +35898,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 6",
     "question": "Which of the following is historically recognized as the world's first packet-switching network and the precursor to the modern global internet?",
     "optionA": "ARPANET",
     "optionB": "USANET",
@@ -35912,7 +35912,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 6",
     "question": "In modern operating systems, which essential software component is considered the 'heart' or core of the OS, responsible for directly interacting with computer hardware?",
     "optionA": "Shell",
     "optionB": "Kernel",
@@ -35926,7 +35926,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 6",
     "question": "Which data structure follows the Last-In-First-Out (LIFO) principle and is commonly utilized to implement a recursive algorithm in computer science?",
     "optionA": "Queue",
     "optionB": "Stack",
@@ -35940,7 +35940,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 6",
     "question": "To connect hardware expansion cards (such as sound cards, network cards, and modems) directly to the motherboard, which bus standard is used to increase CPU bus connectivity?",
     "optionA": "Multiple Bus",
     "optionB": "SCSI Bus",
@@ -35954,7 +35954,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 6",
     "question": "In the context of computer database systems, what does the abbreviation 'DBA' stand for?",
     "optionA": "Database Administrator",
     "optionB": "Database Attribute",
@@ -35968,7 +35968,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 6",
     "question": "Which of the following is a non-volatile, user-modifiable Read-Only Memory (ROM) that can be erased and reprogrammed repeatedly by applying a higher electrical charge?",
     "optionA": "EEPROM",
     "optionB": "PROM",
@@ -35982,7 +35982,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 6",
     "question": "In computer-aided design and engineering drawing, what is the widely recognized full form of the abbreviation 'CAD'?",
     "optionA": "Computer-Aided Diagram",
     "optionB": "Computer Applications in Design",
@@ -35996,7 +35996,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 6",
     "question": "In data communication and networking, which transmission mode is strictly unidirectional, allowing data to travel in only one direction (e.g., from keyboard to computer)?",
     "optionA": "Simplex",
     "optionB": "Half-Duplex",
@@ -36010,7 +36010,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 6",
     "question": "In modern operating systems, what is the term used to describe the tiny, designated time interval allocated to each process in a round-robin scheduling sequence?",
     "optionA": "Time Gap",
     "optionB": "Time Interval Slot",
@@ -36024,7 +36024,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 6",
     "question": "In any standard database management system, where does the actual, physical data of a database reside?",
     "optionA": "Schema",
     "optionB": "Triggers",
@@ -36038,7 +36038,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 6",
     "question": "Which of the following is NOT a valid feature or concept of Object-Oriented Programming (OOP) paradigms?",
     "optionA": "Inheritance",
     "optionB": "Polymorphism",
@@ -36052,7 +36052,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 6",
     "question": "In the Windows operating system, which of the following keyboard shortcut combinations is used to lock your PC immediately?",
     "optionA": "Ctrl + L",
     "optionB": "Windows logo key + D",
@@ -36066,7 +36066,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 6",
     "question": "Which of the following is a text-based network protocol used over the internet or a local area network to log into and access remote computers?",
     "optionA": "HTTP",
     "optionB": "FTP",
@@ -36080,7 +36080,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 6",
     "question": "In computer networks, what is the name of the standard protocol used to retrieve and collect email messages from a remote mail server to a local mail client?",
     "optionA": "SMTP",
     "optionB": "POP",
@@ -36094,7 +36094,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 6",
     "question": "Which of the following is considered a 'WORM' (Write Once, Read Many) optical disc, allowing data to be recorded only once but read multiple times?",
     "optionA": "CD-RW",
     "optionB": "DVD-ROM",
@@ -36108,7 +36108,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 6",
     "question": "In software development, which type of error is classified as a compile-time error and is checked and reported by compilers during compilation?",
     "optionA": "Logical Error",
     "optionB": "Semantic Error",
@@ -36122,7 +36122,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 6",
     "question": "In the context of computer programming, what are words called that a programming language has permanently reserved for its own syntax and use?",
     "optionA": "Control Structures",
     "optionB": "Pseudocode",
@@ -36136,7 +36136,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 2",
+    "topic": "Test 6",
     "question": "Which of the following is a network topology where all computers and devices are connected in a closed loop, and data circulates sequentially in one direction?",
     "optionA": "Bus Topology",
     "optionB": "Star Topology",
@@ -36150,7 +36150,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 7",
     "question": "On which of the following dates is 'World Computer Literacy Day' celebrated annually across the globe?",
     "optionA": "5th July",
     "optionB": "2nd December",
@@ -36164,7 +36164,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 7",
     "question": "According to standard criteria, a person is considered 'computer literate' if they are capable of doing which of the following?",
     "optionA": "Creating antivirus software",
     "optionB": "Operating only necessary applications",
@@ -36178,7 +36178,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 7",
     "question": "Which of the following is a dedicated video collaboration tool used for real-time communication on the internet?",
     "optionA": "Zoom",
     "optionB": "Docker",
@@ -36192,7 +36192,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 7",
     "question": "In computer systems, the Intel 8085 microprocessor is a highly popular chip. To which generation of microprocessors does it belong?",
     "optionA": "First generation",
     "optionB": "Third generation",
@@ -36206,7 +36206,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 7",
     "question": "IBM 7094 and IBM 1620 are prime examples of computing systems belonging to which generation?",
     "optionA": "First generation",
     "optionB": "Third generation",
@@ -36220,7 +36220,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 7",
     "question": "What is the barrier potential of a standard silicon-based semiconductor diode at normal room temperature?",
     "optionA": "0.3V",
     "optionB": "0.5V",
@@ -36234,7 +36234,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 7",
     "question": "What was the maximum logical random-access memory (RAM) capacity supported by third-generation microprocessors?",
     "optionA": "1MB",
     "optionB": "16MB",
@@ -36248,7 +36248,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 7",
     "question": "In the evolutionary history of digital computer systems, the development of online systems first occurred during which generation?",
     "optionA": "First generation",
     "optionB": "Second generation",
@@ -36262,7 +36262,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 7",
     "question": "In microchip manufacturing, what does the abbreviation 'LSI' stand for, which represents the process of embedding thousands of transistors?",
     "optionA": "Large Scale Integration",
     "optionB": "Low Scale Integration",
@@ -36276,7 +36276,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 7",
     "question": "A hybrid computer is a specialized system that combines the key functional features of which of the following?",
     "optionA": "Supercomputers and microcomputers",
     "optionB": "Analog and digital computers",
@@ -36290,7 +36290,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 7",
     "question": "In large mainframe and supercomputer networks, users generally connect to and access the central resources using which of the following?",
     "optionA": "Terminal",
     "optionB": "Node",
@@ -36304,7 +36304,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 7",
     "question": "An emerging class of computing systems that performs calculations based on the principles of atoms and subatomic particles is known as a:",
     "optionA": "Hybrid Computer",
     "optionB": "Mainframe Computer",
@@ -36318,7 +36318,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 7",
     "question": "Special-purpose computer systems are extensively designed and deployed for applications in which of the following areas?",
     "optionA": "Agricultural science",
     "optionB": "Weather forecasting and meteorology",
@@ -36332,7 +36332,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 7",
     "question": "What is the name of the supercomputer developed by India in 1998, which was designed by the Pune-based C-DAC and had a speed of 100 Gigaflops?",
     "optionA": "Anupam",
     "optionB": "FlowSolver",
@@ -36346,7 +36346,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 7",
     "question": "In December 2016, India's National Payments Corporation (NPCI) launched the BHIM mobile payment application. How many security authentication layers does BHIM use?",
     "optionA": "One layer",
     "optionB": "Three layers",
@@ -36360,7 +36360,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 7",
     "question": "Which specialized hardware component is placed between different devices to temporarily hold data and compensate for the difference in their processing speeds?",
     "optionA": "Main memory",
     "optionB": "Buffer register",
@@ -36374,7 +36374,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 7",
     "question": "Which type of computer memory is composed of primary semiconductor chips, magnetic media, and optical disks?",
     "optionA": "Internal Memory only",
     "optionB": "External Memory only",
@@ -36388,7 +36388,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 7",
     "question": "How is the data stored on an Erasable Programmable Read-Only Memory (EPROM) chip erased so that it can be reprogrammed?",
     "optionA": "Exposing the chip to ultraviolet light",
     "optionB": "Applying a high-voltage electrical charge",
@@ -36402,7 +36402,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 7",
     "question": "Magnetic disks (such as hard disks and floppy disks) are coated with which of the following chemical substances to allow data recording?",
     "optionA": "Phosphorus Oxide",
     "optionB": "Magnesium Oxide",
@@ -36416,7 +36416,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 7",
     "question": "A standard single-layer Blu-ray Disc (BD) can hold approximately how much digital data compared to a traditional single-layer DVD?",
     "optionA": "4.7 GB on DVD, 25 GB on Blu-ray",
     "optionB": "1.44 MB on DVD, 4.7 GB on Blu-ray",
@@ -36430,7 +36430,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 7",
     "question": "In optical disc technology, the microscopic recessed indentations on the surface of a CD or DVD where data is recorded are called:",
     "optionA": "Lands",
     "optionB": "Clusters",
@@ -36444,7 +36444,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 7",
     "question": "How many bits are used to represent a single decimal digit when using the Binary-Coded Decimal (BCD) encoding scheme?",
     "optionA": "2 bits",
     "optionB": "7 bits",
@@ -36458,7 +36458,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 7",
     "question": "If the ASCII (7-bit) code assigned to the English alphabet 'M' is 01001101, what is the correct binary ASCII code for the letter 'N'?",
     "optionA": "1011110",
     "optionB": "1001110",
@@ -36472,7 +36472,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 7",
     "question": "In computer networking history, which agency of the U.S. Department of Defense was responsible for funding and developing ARPANET, the precursor to the internet?",
     "optionA": "Pentagon",
     "optionB": "NSF",
@@ -36486,7 +36486,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 7",
     "question": "Which type of internet account allows users to connect to the internet through the computer of an Internet Service Provider (ISP), rather than being directly connected?",
     "optionA": "Shell account",
     "optionB": "Kernel account",
@@ -36500,7 +36500,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 7",
     "question": "According to standard web protocols, how many functional parts does an HTTP request sent from a client to a server contain?",
     "optionA": "2 parts",
     "optionB": "4 parts",
@@ -36514,7 +36514,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 7",
     "question": "Which of the following is considered the first graphical web browser capable of displaying images inline with text, rather than in separate windows?",
     "optionA": "Mosaic",
     "optionB": "Opera",
@@ -36528,7 +36528,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 7",
     "question": "Which web browser was the first to implement the 'Omnibox' feature that combines both the address bar and search box into a single unified field?",
     "optionA": "Mozilla Firefox",
     "optionB": "Safari",
@@ -36542,7 +36542,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 7",
     "question": "A search engine designed to send user queries simultaneously to multiple individual search engines and then compile and de-duplicate the results is known as a:",
     "optionA": "Individual Search Engine",
     "optionB": "Meta Search Engine",
@@ -36556,7 +36556,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 7",
     "question": "In computer systems, which type of data communication mode does the physical connection between a computer and a keyboard utilize?",
     "optionA": "Automatic transmission",
     "optionB": "Half-Duplex transmission",
@@ -39090,7 +39090,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 8",
     "question": "Yosemite, Mavericks, Mountain Lion, and Snow Leopard are celebrated historical code names used for various versions of which operating system?",
     "optionA": "Windows NT",
     "optionB": "Mac OS X",
@@ -39104,7 +39104,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 8",
     "question": "In the bottom strip of a standard bank cheque used in India, how many digits make up the MICR (Magnetic Character Ink Recognition) code that identifies the bank branch?",
     "optionA": "6 digits",
     "optionB": "9 digits",
@@ -39118,7 +39118,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 8",
     "question": "Which of the following database software programs is classified as a classic Relational Database Management System (RDBMS) developed by Borland?",
     "optionA": "Paradox",
     "optionB": "Organizer",
@@ -39132,7 +39132,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 8",
     "question": "In computer history, which 17th-century manual calculating device made of ivory or wooden rods was invented by John Napier and introduced the concept of logarithms for multiplication?",
     "optionA": "Pascaline",
     "optionB": "Stepped Reckoner",
@@ -39146,7 +39146,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 8",
     "question": "Which networking hardware device acts as an entry/exit point for a network and is designed to perform 'protocol conversion' between different network architectures?",
     "optionA": "Hub",
     "optionB": "Switch",
@@ -39160,7 +39160,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 8",
     "question": "Who is globally celebrated as the 'Father of Artificial Intelligence' for coining the term and organizing the historic Dartmouth workshop in 1956?",
     "optionA": "Alan Turing",
     "optionB": "John McCarthy",
@@ -39174,7 +39174,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 8",
     "question": "Under the Information Technology Act of India (IT Act, 2000), which specific section prescribes severe punishment and life imprisonment for committing Cyber Terrorism?",
     "optionA": "Section 66A",
     "optionB": "Section 66C",
@@ -39188,7 +39188,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 8",
     "question": "Which of the following describes a computer virus that attaches itself to other files and is capable of reproducing itself when infected software runs?",
     "optionA": "Malicious code that self-replicates",
     "optionB": "Hardware device that records keys",
@@ -39202,7 +39202,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 8",
     "question": "What is the dedicated toll-free telephone helpline number launched by the Government of Uttar Pradesh to handle public grievances under the Chief Minister Helpline?",
     "optionA": "1090",
     "optionB": "112",
@@ -39216,7 +39216,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 8",
     "question": "In custom user interfaces of modern computer systems, BitLocker is a full-volume encryption service. In which of the following bit sizes does BitLocker typically secure data?",
     "optionA": "32-bit or 64-bit",
     "optionB": "64-bit or 128-bit",
@@ -39230,7 +39230,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 8",
     "question": "Which of the following computer security and legal terms refers to the unauthorized copying, distribution, and commercial exploitation of copyrighted software?",
     "optionA": "Hacking",
     "optionB": "Cracking",
@@ -39244,7 +39244,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 8",
     "question": "In which type of non-QWERTY keyboard layout are both the M and L keys present in the same row, with the L key located to the left of the M key?",
     "optionA": "QWERTY",
     "optionB": "DVORAK",
@@ -39258,7 +39258,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 8",
     "question": "When a user clicks on the Start menu of a Windows operating system, they find several utility program groups. Which of the following is considered a group of programs rather than a single application software?",
     "optionA": "Paint",
     "optionB": "Word",
@@ -39272,7 +39272,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 8",
     "question": "In computer number systems and binary arithmetic, what is the base (or Radix) of the Hexadecimal Number System?",
     "optionA": "16",
     "optionB": "2",
@@ -39286,7 +39286,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 8",
     "question": "The internal system bus that connects the CPU to other hardware components is divided into three functional groups. Which of the following represents these three groups?",
     "optionA": "Star bus, Mesh bus, and Data bus",
     "optionB": "Control bus, Data bus, and Star bus",
@@ -39300,7 +39300,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 8",
     "question": "In standard Internet Protocol version 4 (IPv4) addressing, which of the following represents the correct decimal octet range for Class C networks?",
     "optionA": "1 to 126",
     "optionB": "128 to 191",
@@ -39314,7 +39314,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 8",
     "question": "In Microsoft Word, which of the following file extensions is used to identify a saved Word Document Template?",
     "optionA": ".dot",
     "optionB": ".doc",
@@ -39328,7 +39328,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 8",
     "question": "In spreadsheet applications like Microsoft Excel, what does the functional formula 'NOW()' return when entered into a cell?",
     "optionA": "Current Date and Time",
     "optionB": "Current Date only",
@@ -39342,7 +39342,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 8",
     "question": "In algorithm flowcharts, which geometric shape is standardly used to represent input and output operations?",
     "optionA": "Oval",
     "optionB": "Rectangle",
@@ -39356,7 +39356,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 8",
     "question": "In which of the following years was the BHIM (Bharat Interface for Money) mobile payment application launched by the National Payments Corporation of India?",
     "optionA": "2014",
     "optionB": "2018",
@@ -39370,7 +39370,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 8",
     "question": "Which of the following electromechanical calculating machines was designed and built by Konrad Zuse between 1936 and 1941, and is recognized as the world's first working programmable, fully automatic digital computer?",
     "optionA": "ENIAC",
     "optionB": "Mark I",
@@ -39384,7 +39384,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 8",
     "question": "Which specialized regulatory body acts as the parent umbrella organization for managing retail payments and settlement systems (like UPI, IMPS, and BHIM) in India?",
     "optionA": "National Payments Corporation of India (NPCI)",
     "optionB": "Reserve Bank of India (RBI)",
@@ -39398,7 +39398,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 8",
     "question": "Inside a central processing unit (CPU), which bus component is strictly unidirectional and carries physical memory locations from the CPU to primary memory?",
     "optionA": "Data Bus",
     "optionB": "Control Bus",
@@ -39412,7 +39412,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 8",
     "question": "In the context of Uttar Pradesh's E-Governance initiatives, what is the primary purpose of the 'Nivesh Mitra' single-window web portal?",
     "optionA": "Digital land records monitoring",
     "optionB": "Student scholarship distribution",
@@ -39426,7 +39426,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 8",
     "question": "Which of the following is historically recognized as the world's largest satellite-based computer communication network, launched by India's National Informatics Centre (NIC)?",
     "optionA": "ARPANET",
     "optionB": "INSAT 2D",
@@ -39440,7 +39440,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 8",
     "question": "In Big Data characteristics, which term (known as one of the 5 Vs) refers specifically to the quality, accuracy, and trustworthiness of the collected data?",
     "optionA": "Volume",
     "optionB": "Velocity",
@@ -39454,7 +39454,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 8",
     "question": "In modern Windows operating systems, what is the command utilized to permanently remove or delete an empty directory?",
     "optionA": "rd",
     "optionB": "md",
@@ -39468,7 +39468,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 8",
     "question": "Which specific layer of the Open Systems Interconnection (OSI) reference model is responsible for data encryption, compression, and translation of syntax?",
     "optionA": "Application Layer",
     "optionB": "Session Layer",
@@ -39482,7 +39482,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 8",
     "question": "In the Windows operating system, which of the following keyboard shortcut combinations is used to immediately open the security options screen or restart/shut down the computer?",
     "optionA": "Ctrl + Del",
     "optionB": "Alt + Del",
@@ -39496,7 +39496,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 8",
     "question": "Which of the following was India's first indigenously designed supercomputer, developed by the Pune-based C-DAC and launched in the year 1991?",
     "optionA": "PARAM 10000",
     "optionB": "Anupam",
@@ -39510,7 +39510,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 9",
     "question": "In machine learning, what category of algorithms learns by interacting with an environment through a system of rewards and penalties without requiring labeled training data?",
     "optionA": "Semi-Supervised Learning",
     "optionB": "Supervised Learning",
@@ -39524,7 +39524,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 9",
     "question": "Who is historically recognized as the pioneer who coined the term 'Internet of Things' (IoT) in 1999 during his presentation at Procter and Gamble?",
     "optionA": "Kevin Ashton",
     "optionB": "Tim Berners-Lee",
@@ -39538,7 +39538,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 9",
     "question": "In Microsoft Word, which of the following keyboard shortcut combinations is used to quickly center-align the selected paragraph or text block?",
     "optionA": "Ctrl + C",
     "optionB": "Ctrl + L",
@@ -39552,7 +39552,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 9",
     "question": "Which diagnostic testing process is executed automatically by the BIOS immediately after the computer is turned on to verify that the CPU, RAM, and storage are working?",
     "optionA": "Booting",
     "optionB": "Power-On Self-Test (POST)",
@@ -39566,7 +39566,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 9",
     "question": "Which type of computer software is pre-installed on non-volatile ROM chips during manufacturing and is generally not updated or modified during daily operations?",
     "optionA": "Application Software",
     "optionB": "Shareware",
@@ -39580,7 +39580,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 9",
     "question": "Which specific class of cyber threat encrypts the user's computer files, rendering them completely inaccessible, and demands a payment in cryptocurrency to restore access?",
     "optionA": "Adware",
     "optionB": "Trojan",
@@ -39594,7 +39594,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 9",
     "question": "In spreadsheet applications like Microsoft Excel, which of the following file extensions is used standardly for saving spreadsheet workbooks in XML format?",
     "optionA": ".xlsx",
     "optionB": ".xls",
@@ -39608,7 +39608,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 9",
     "question": "In database systems, which of the following database design architectures represents a collection of conceptual tools that describe data, relationships, semantics, and constraints?",
     "optionA": "ER Model only",
     "optionB": "Table Structure only",
@@ -39622,7 +39622,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 9",
     "question": "In computer programming algorithms and flowcharts, what does an Oval (or pill-shaped) boundary box represent?",
     "optionA": "Start or End of the process",
     "optionB": "Input/Output operation",
@@ -39636,7 +39636,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 9",
     "question": "The AePS (Aadhaar Enabled Payment System) allows retail financial transactions at Point of Sale (Micro ATM) devices. Which biometric verification is used to authorize AePS transactions?",
     "optionA": "Standard PIN and OTP",
     "optionB": "Signature verification",
@@ -39650,7 +39650,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 9",
     "question": "In computer networks, what is the exact number of physical cable links required to build a fully connected Full Mesh network topology with exactly 6 computer nodes?",
     "optionA": "15 links",
     "optionB": "12 links",
@@ -39664,7 +39664,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 9",
     "question": "Which type of primary computer memory is composed of transistors and capacitors, requiring constant electrical refreshing cycles thousands of times per second to maintain stored data?",
     "optionA": "Static RAM (SRAM)",
     "optionB": "Read-Only Memory (ROM)",
@@ -39678,7 +39678,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 9",
     "question": "The UMANG (Unified Mobile Application for New-age Governance) app developed by MeitY provides access to which of the following services?",
     "optionA": "Private banking transactions only",
     "optionB": "A single platform for major central and state government services",
@@ -39692,7 +39692,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 9",
     "question": "In computer memory measurement, how many bits are contained within exactly one standard Byte of digital information?",
     "optionA": "4 bits",
     "optionB": "16 bits",
@@ -39706,7 +39706,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 9",
     "question": "Within a central processing unit (CPU), which component is dedicated to performing mathematical operations and making comparisons using logical functions?",
     "optionA": "Control Unit (CU)",
     "optionB": "Arithmetic and Logic Unit (ALU)",
@@ -39720,7 +39720,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 9",
     "question": "In computer networking and internet protocols, what is the exact physical address size (in bits) of a standard IPv4 address?",
     "optionA": "64 bits",
     "optionB": "48 bits",
@@ -39734,7 +39734,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 9",
     "question": "Charles Babbage designed the 'Difference Engine' in 1822. Which mechanical general-purpose computer did he design later in 1837, establishing the early computer architecture of input, store, processing, and output?",
     "optionA": "Analytical Engine",
     "optionB": "Difference Engine II",
@@ -39748,7 +39748,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 9",
     "question": "In digital financial services, which dialing code is used on a mobile phone to access banking services without internet via USSD (Unstructured Supplementary Service Data)?",
     "optionA": "*99#",
     "optionB": "*121#",
@@ -39762,7 +39762,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 9",
     "question": "The 'Jan Sunwai' portal launched by the Uttar Pradesh government is designed for which of the following public services?",
     "optionA": "Public grievance redressal",
     "optionB": "Land record digitization",
@@ -39776,7 +39776,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 9",
     "question": "If a computer system does not have an operating system installed, what is the consequence during startup?",
     "optionA": "The system cannot boot and will display an error",
     "optionB": "The system will boot into MS-DOS",
@@ -39790,7 +39790,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 9",
     "question": "Which type of malicious software program (malware) disguises itself as legitimate, safe, and helpful software to trick users into installing it, only to steal data later?",
     "optionA": "Worm",
     "optionB": "Spyware",
@@ -39804,7 +39804,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 9",
     "question": "Which computer program or system is specifically designed to distinguish human inputs from machine inputs, verifying that a human is interacting with a website?",
     "optionA": "Antivirus",
     "optionB": "CAPTCHA",
@@ -39818,7 +39818,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 9",
     "question": "Which built-in software program, permanently embedded on a motherboard ROM chip, is responsible for executing early startup instructions and checking all hardware during computer booting?",
     "optionA": "Kernel",
     "optionB": "Bootstrap Loader",
@@ -39832,7 +39832,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 9",
     "question": "Who is historically recognized as the world's first computer programmer for writing an algorithm to calculate Bernoulli numbers using Babbage's Analytical Engine in 1843?",
     "optionA": "Grace Hopper",
     "optionB": "Ada Lovelace",
@@ -39846,7 +39846,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 9",
     "question": "Which layer of the 7-layer OSI reference model is responsible for establishing, managing, and terminating logical sessions between end-user applications?",
     "optionA": "Transport Layer",
     "optionB": "Presentation Layer",
@@ -39860,7 +39860,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 9",
     "question": "Which application layer internet protocol is designed specifically to push and transmit outgoing emails from a client's computer to an email server?",
     "optionA": "SMTP",
     "optionB": "POP3",
@@ -39874,7 +39874,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 9",
     "question": "In business and enterprise software applications, what does the abbreviation 'CRM' stand for?",
     "optionA": "Customer Relationship Management",
     "optionB": "Customer Relatives Meet",
@@ -39888,7 +39888,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 9",
     "question": "In modern quantum computing, what is the term used to describe the physical phenomenon where two or more subatomic particles become permanently connected, allowing quantum computers to process complex calculations?",
     "optionA": "Binary Switching",
     "optionB": "Silicon Integration",
@@ -39902,7 +39902,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 9",
     "question": "Which computer feature allows a user to connect, remove, or replace external hardware peripherals (like USB flash drives) without shutting down the computer?",
     "optionA": "Bootstrap Loading",
     "optionB": "Warm Booting",
@@ -39916,7 +39916,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 4",
+    "topic": "Test 9",
     "question": "The expansion card plugged into the motherboard to feed output images directly to a computer monitor is known by which of the following names?",
     "optionA": "Network Card only",
     "optionB": "Sound Card only",
