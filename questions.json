@@ -32370,7 +32370,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "Which of the following is the best definition of 'software' in computer science?",
     "optionA": "The physical, tangible components of a computer system.",
     "optionB": "A collection of instructions, data, or programs used to operate computers and execute specific tasks.",
@@ -32384,7 +32384,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "Which of the following is categorized as 'System Software', acting as an interface between the computer hardware and application programs?",
     "optionA": "Word Processor",
     "optionB": "Spreadsheet Software",
@@ -32398,7 +32398,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "A translator program that converts a high-level language program into machine language all at once (as a whole) is called a:",
     "optionA": "Compiler",
     "optionB": "Interpreter",
@@ -32412,7 +32412,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "How does an 'Interpreter' differ from a 'Compiler' in program translation?",
     "optionA": "An interpreter only translates assembly language into machine language.",
     "optionB": "An interpreter does not require any execution time.",
@@ -32426,7 +32426,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "Which translator program is specifically designed to convert assembly language programs into machine language?",
     "optionA": "Compiler",
     "optionB": "Interpreter",
@@ -32440,7 +32440,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "What is the primary function of an Operating System (OS)?",
     "optionA": "To perform high-speed mathematical calculations inside the ALU.",
     "optionB": "To manage computer hardware and software resources, providing common services for programs.",
@@ -32454,7 +32454,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "When a computer is powered on, which program stored in ROM executes a diagnostic check of all hardware components?",
     "optionA": "Device Drivers loading into RAM",
     "optionB": "Operating System kernel scheduling processes",
@@ -32468,7 +32468,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "The process of starting or restarting a computer system, which involves loading the operating system from storage into main memory, is called:",
     "optionA": "Booting",
     "optionB": "Saving",
@@ -32482,7 +32482,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "An operating system that allows multiple programs or tasks to run simultaneously by sharing the CPU's processing time is classified as:",
     "optionA": "Single-User Single-Tasking OS",
     "optionB": "Multitasking Operating System",
@@ -32496,7 +32496,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "Which type of operating system is designed to process data and respond to inputs within extremely strict, predefined time constraints?",
     "optionA": "Batch Operating System",
     "optionB": "Time-Sharing Operating System",
@@ -32510,7 +32510,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "Which of the following is NOT an example of a Real-Time Operating System (RTOS)?",
     "optionA": "Palm OS",
     "optionB": "VxWorks",
@@ -32524,7 +32524,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "Which subsystem of the operating system is responsible for allocating and deallocating primary memory (RAM) space to active processes?",
     "optionA": "Device Driver",
     "optionB": "File System",
@@ -32538,7 +32538,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "In process scheduling, 'Round Robin' is a pre-emptive algorithm characterized by which of the following features?",
     "optionA": "The shortest job is always executed first to completion.",
     "optionB": "Each process is assigned a small, fixed slice of CPU time (time quantum) in a cyclic order.",
@@ -32552,7 +32552,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "In computer memory organization, a 'Stack' uses a LIFO structure, while a 'Queue' uses a FIFO structure. What do these acronyms represent?",
     "optionA": "LIFO stands for Last-In First-Out; FIFO stands for First-In First-Out",
     "optionB": "LIFO stands for Loop-In File-Out; FIFO stands for Fast-In File-Out",
@@ -32566,7 +32566,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "In computing, what does the accuracy-related principle 'GIGO' stand for?",
     "optionA": "Good Input, Good Output",
     "optionB": "Global Input, Global Output",
@@ -32580,7 +32580,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "In the context of user interfaces, what does the abbreviation 'CLI' stand for?",
     "optionA": "Computer Language Instruction",
     "optionB": "Command Line Interface",
@@ -32594,7 +32594,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "A user interface that allows users to interact with electronic devices through graphical icons, menus, and visual indicators is called:",
     "optionA": "GUI (Graphical User Interface)",
     "optionB": "CLI (Command Line Interface)",
@@ -32608,7 +32608,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "Which of the following is NOT an operating system?",
     "optionA": "Linux",
     "optionB": "Unix",
@@ -32622,7 +32622,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "Which of the following statements is correct regarding the 'Linux' operating system?",
     "optionA": "It is a proprietary, closed-source, single-tasking OS owned by Microsoft.",
     "optionB": "It is a free, open-source, multitasking, and multi-user operating system.",
@@ -32636,7 +32636,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "In which programming language was the 'Unix' operating system primarily written, making it highly portable?",
     "optionA": "FORTRAN",
     "optionB": "Assembly language",
@@ -32650,7 +32650,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "What is the key characteristic of a 'High-Level Programming Language'?",
     "optionA": "It is understood directly by the computer hardware without any translation.",
     "optionB": "It consists solely of binary numbers (0s and 1s).",
@@ -32664,7 +32664,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "Which of the following was the first high-level programming language, developed by John Backus in 1957 primarily for scientific and mathematical calculations?",
     "optionA": "COBOL",
     "optionB": "BASIC",
@@ -32678,7 +32678,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "Which programming language was developed by Grace Hopper in 1959 specifically for business applications and data processing?",
     "optionA": "COBOL",
     "optionB": "FORTRAN",
@@ -32692,7 +32692,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "Which easy-to-use programming language was developed by John G. Kemeny and Thomas E. Kurtz in 1964 for beginners and non-science students?",
     "optionA": "Pascal",
     "optionB": "COBOL",
@@ -32706,7 +32706,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "Which structured high-level programming language was developed by Niklaus Wirth in 1970 to teach structured programming and data structuring?",
     "optionA": "Pascal",
     "optionB": "Java",
@@ -32720,7 +32720,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "Who is the creator of the 'C' programming language, developed in 1972 at Bell Labs to write the Unix operating system?",
     "optionA": "Bjarne Stroustrup",
     "optionB": "Niklaus Wirth",
@@ -32734,7 +32734,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "Which programming language was developed by Bjarne Stroustrup in 1979 as an extension of C, introducing object-oriented programming (OOP) concepts?",
     "optionA": "Java",
     "optionB": "C++",
@@ -32748,7 +32748,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "To be classified as a 'pure object-oriented programming language', a language must support which set of core features?",
     "optionA": "Arrays, Structs, and Pointers",
     "optionB": "Sequential executing, GOTO statements, and loops",
@@ -32762,7 +32762,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "The unauthorized copying, modification, or distribution of copyrighted software is known as:",
     "optionA": "Software Piracy",
     "optionB": "Open Source software",
@@ -32776,7 +32776,7 @@
   {
     "exam": "Lower PCS",
     "subject": "Computer",
-    "topic": "Test 3",
+    "topic": "Test 4",
     "question": "In software development, an error, flaw, or fault in a program that causes it to behave unexpectedly is called a 'bug'. A quick software update released to fix this issue is called a:",
     "optionA": "Version",
     "optionB": "Tutorial",
